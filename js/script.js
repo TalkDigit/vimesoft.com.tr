@@ -9,10 +9,20 @@ $(function(){
 });
 
 
+$(".account-edit-text-button").click(function(){
+	$(".editable").val("");
+	$(this).hide();
+	$(".account-edit-completed").show();
+})
+$(".account-edit-complete").click(function(){
+	$(".account-edit-text-button").show();
+	$(".account-edit-completed").hide();
+})
+
+
 
 // SSS content toggle
 $(".sss-content-box-title").click(function(){
-	
 	$(this).toggleClass("active");
 })
 
@@ -264,6 +274,16 @@ $(document).ready(function() {
 }); // end ready
 
 
+// Password hide show
+$(".password-icon").click(function() {
+    $(this).toggleClass("icon-change");
+    input = $(this).parent().find("input");
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
+});
 
 
 
