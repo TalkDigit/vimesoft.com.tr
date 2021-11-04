@@ -113,7 +113,7 @@ a {
   @media (max-width: 767px) {
     .btn-buy2 {
       padding: 10px 10px;
-      font-size: 15px; } }
+      font-size: 13px; } }
 
 .btn-buy-xl, .btn-buy-xl2 {
   border-radius: 32px;
@@ -1099,12 +1099,22 @@ a {
 
 .contact-box2 {
   background-color: #fff;
-  padding: 25px 25px 25px 25px;
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11); }
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
+  position: relative;
+  z-index: 100; }
+  @media (min-width: 1400px) {
+    .contact-box2 {
+      padding: 25px 25px 25px 25px; } }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .contact-box2 {
+      padding: 25px 0px 25px 25px; } }
+  @media (max-width: 1199px) {
+    .contact-box2 {
+      padding: 25px 20px 25px 20px; } }
 
 .contact-box-flex .contact-input-box {
   width: 100%; }
@@ -2154,20 +2164,21 @@ a {
       width: 30%; } }
   @media (max-width: 767px) {
     .content-flex .sticky-menu ul li.sticky-first-li .sd-div {
-      width: 80%; } }
+      width: 95%; } }
   .content-flex .sticky-menu ul li.sticky-first-li .sticky-menu-icon:first-child {
-    height: 64px;
-    line-height: 64px;
     text-align: center; }
     @media (min-width: 1200px) {
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-menu-icon:first-child {
-        width: 20%; } }
-    @media (min-width: 768px) and (max-width: 1199px) {
+        width: 64px;
+        height: 64px;
+        line-height: 64px; } }
+    @media (max-width: 1199px) {
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-menu-icon:first-child {
-        width: 10%; } }
-    @media (max-width: 767px) {
-      .content-flex .sticky-menu ul li.sticky-first-li .sticky-menu-icon:first-child {
-        width: 20%; } }
+        width: 50px;
+        height: 50px;
+        line-height: 50px; }
+        .content-flex .sticky-menu ul li.sticky-first-li .sticky-menu-icon:first-child svg {
+          width: 18px; } }
   .content-flex .sticky-menu ul li.sticky-first-li span {
     font-size: 17px;
     font-weight: 500;
@@ -2179,10 +2190,10 @@ a {
     display: none; }
     @media (min-width: 1200px) {
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul {
-        margin-left: 104px; } }
+        margin-left: 120px; } }
     @media (max-width: 1199px) {
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul {
-        margin-left: 10%; } }
+        margin-left: 100px; } }
     .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li {
       padding-bottom: 27px; }
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li:hover span {
@@ -2190,9 +2201,6 @@ a {
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li:hover path {
         fill: #007BFF; }
       @media (min-width: 768px) and (max-width: 1199px) {
-        .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li .sticky-drop {
-          width: 20%; } }
-      @media (max-width: 767px) {
         .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li .sticky-drop {
           width: 20%; } }
       .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li .sticky-drop.active span {
@@ -2228,15 +2236,12 @@ a {
     transition: all .2s ease-in-out; }
     .content-flex .sticky-menu ul li.sticky-first-li .sticky-opener.active .sticky-menu-arrow path {
       fill: #007BFF; }
-  .content-flex .sticky-menu ul li.sticky-first-li .sticky-opener.active .sticky-menu-icon {
-    transition: all .2s ease-in-out; }
-    .content-flex .sticky-menu ul li.sticky-first-li .sticky-opener.active .sticky-menu-icon:first-child {
-      border-top-right-radius: 32px;
-      border-bottom-right-radius: 32px;
-      background: #007BFF;
-      transition: all .2s ease-in-out; }
-      .content-flex .sticky-menu ul li.sticky-first-li .sticky-opener.active .sticky-menu-icon:first-child path {
-        fill: #fff; }
+  .content-flex .sticky-menu ul li.sticky-first-li .sticky-opener.active .sticky-menu-icon:first-child {
+    border-top-right-radius: 32px;
+    border-bottom-right-radius: 32px;
+    background: #007BFF; }
+    .content-flex .sticky-menu ul li.sticky-first-li .sticky-opener.active .sticky-menu-icon:first-child path {
+      fill: #fff; }
 @media (min-width: 1200px) {
   .content-flex .sticky-menu .sticky-nav {
     display: block; } }
@@ -2547,6 +2552,9 @@ a {
   font-size: 16px;
   font-weight: 500;
   margin-bottom: 20px; }
+  @media (max-width: 768px) {
+    .user-invite-title {
+      font-size: 14px; } }
 
 .label-control {
   height: 58px; }
@@ -2587,10 +2595,16 @@ a {
     font-size: 16px;
     font-weight: 500;
     cursor: pointer; }
+    @media (max-width: 768px) {
+      .label-control .psw-yes, .label-control .psw-no {
+        font-size: 14px; } }
   .label-control .camera-yes, .label-control .camera-no {
     font-size: 16px;
     font-weight: 500;
     cursor: pointer; }
+    @media (max-width: 768px) {
+      .label-control .camera-yes, .label-control .camera-no {
+        font-size: 14px; } }
   .label-control .camera-yes {
     color: #93A0B1; }
   .label-control .psw-yes {
@@ -2614,8 +2628,17 @@ a {
 .moderator-management, .camera-auto {
   padding-bottom: 40px; }
 
+@media (max-width: 767px) {
+  .moderator-management button:last-child {
+    padding: 10px 28px !important; } }
+.moderator-management button {
+  margin-bottom: 10px; }
+
 .password-guard-check {
   width: 100%; }
+  @media (min-width: 375px) {
+    .password-guard-check {
+      display: flex; } }
   .password-guard-check .label-x {
     padding-right: 7%; }
 
@@ -3165,10 +3188,15 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
         padding: 0px 9px 0px 9px;
         margin: 0 15px 30px 15px; } }
     .personal-popup .personal-popup-content .personal-popup-content-wrapper {
-      height: 380px;
       overflow-y: scroll;
       padding-right: 20px;
       margin: 10px 0; }
+      @media (min-width: 768px) {
+        .personal-popup .personal-popup-content .personal-popup-content-wrapper {
+          height: 380px; } }
+      @media (max-width: 767px) {
+        .personal-popup .personal-popup-content .personal-popup-content-wrapper {
+          height: 300px; } }
       .personal-popup .personal-popup-content .personal-popup-content-wrapper::-webkit-scrollbar {
         width: 6px;
         border-radius: 10px;
@@ -3250,7 +3278,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
         font-size: 17px; } }
     @media (max-width: 1679px) {
       .personal-popup-search .personal-popup-search-item input::placeholder {
-        font-size: 14px; } }
+        font-size: 13px; } }
 
 .personal-popup-search-icon {
   position: absolute;
@@ -3259,7 +3287,6 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   text-align: center;
   top: 50%;
   transform: translateY(-50%);
-  right: 10px;
   cursor: pointer; }
   @media (min-width: 1680px) {
     .personal-popup-search-icon {
@@ -3268,9 +3295,17 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       line-height: 40px; } }
   @media (max-width: 1679px) {
     .personal-popup-search-icon {
-      width: 35px;
-      height: 35px;
-      line-height: 35px; } }
+      width: 30px;
+      height: 30px;
+      line-height: 30px; }
+      .personal-popup-search-icon img {
+        width: 50%; } }
+  @media (min-width: 1400px) {
+    .personal-popup-search-icon {
+      right: 10px; } }
+  @media (max-width: 1399px) {
+    .personal-popup-search-icon {
+      right: 5px; } }
 
 .ui-datepicker {
   display: none; }
@@ -3298,7 +3333,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     padding: 12px 27px; } }
 @media (max-width: 767px) {
   .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
-    padding: 8px 20px; } }
+    padding: 8px 18px; } }
 @media (min-width: 1400px) {
   .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
     margin-right: 14px; }
@@ -3338,10 +3373,13 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     display: none; }
     @media (min-width: 1200px) {
       .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
-        width: 15%; } }
+        width: 15%;
+        margin-right: 15px; } }
     @media (max-width: 1199px) {
       .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
-        width: 100%; } }
+        width: 100%;
+        margin-left: 35px;
+        margin-bottom: 20px; } }
     .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1::after {
       position: absolute;
       content: " ";
@@ -3353,12 +3391,8 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       background: url(../img/calendar-week.svg);
       background-position: center center;
       background-repeat: no-repeat; }
-  @media (min-width: 1200px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item2 {
-      width: 32%; } }
-  @media (max-width: 1199px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item2 {
-      width: 100%; } }
+    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1.active {
+      display: block; }
   @media (min-width: 1200px) {
     .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item3 {
       width: 53%; } }
@@ -3388,7 +3422,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 .contact-box2 .my-meeting-toptitle .spe-proid .calendar {
   border-radius: 30px;
   border-color: #007BFF;
-  padding-left: 24px; }
+  padding-left: 18px; }
   .contact-box2 .my-meeting-toptitle .spe-proid .calendar::placeholder {
     font-weight: 500;
     font-style: italic;
@@ -3398,7 +3432,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
         font-size: 17px; } }
     @media (max-width: 1679px) {
       .contact-box2 .my-meeting-toptitle .spe-proid .calendar::placeholder {
-        font-size: 14px; } }
+        font-size: 13px; } }
 
 .sp-ac.top .spe-proid-name {
   top: -10px; }
@@ -3664,6 +3698,9 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 .by-date {
   position: relative;
   cursor: pointer; }
+  @media (max-width: 1199px) {
+    .by-date {
+      margin-left: 20px; } }
   .by-date .by-date-pop {
     display: none;
     position: absolute;
@@ -3709,12 +3746,17 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
         width: 25px;
         height: 25px; }
 
-@media (min-width: 1200px) {
-  #gecmis .meeting-box-content-title {
-    margin-bottom: 58px; } }
-@media (max-width: 1199px) {
-  #gecmis .meeting-box-content-title {
-    margin-bottom: 38px; } }
+#gecmis {
+  margin-top: -55px; }
+  @media (min-width: 1200px) {
+    #gecmis .meeting-box-content-title {
+      margin-bottom: 58px; } }
+  @media (max-width: 1199px) {
+    #gecmis .meeting-box-content-title {
+      margin-bottom: 38px; } }
+
+#anlik, #kisisel {
+  margin-top: 30px; }
 
 .disable-link {
   pointer-events: none;
@@ -3728,15 +3770,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 .content-box-scroll {
   height: 650px;
   width: 100%;
+  padding-top: 85px;
   overflow-y: scroll;
   -ms-overflow-style: none;
   scrollbar-width: none; }
-  @media (min-width: 1200px) {
-    .content-box-scroll {
-      padding-left: 15px; } }
-  @media (max-width: 1199px) {
-    .content-box-scroll {
-      padding-left: 0px; } }
   .content-box-scroll::-webkit-scrollbar {
     display: none; }
 
