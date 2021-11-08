@@ -73,6 +73,7 @@ a {
 /* Buttons */
 .btn-login, .btn-buy {
   display: inline-block;
+  cursor: pointer;
   background-color: #fff;
   border-radius: 20px;
   font-size: 17px;
@@ -81,10 +82,10 @@ a {
     background-color: #EFF2F4; }
 
 .btn-bg-blue {
-  background: #007BFF;
-  color: #fff; }
+  background: #007BFF !important;
+  color: #fff !important; }
   .btn-bg-blue:hover {
-    background: #0069E1; }
+    background: #0069E1 !important; }
 
 .btn-login {
   padding: 10px 30px;
@@ -117,6 +118,7 @@ a {
       font-size: 13px; } }
 
 .btn-buy-xl, .btn-buy-xl2 {
+  cursor: pointer;
   border-radius: 32px;
   display: inline-block;
   font-weight: 500; }
@@ -159,7 +161,8 @@ a {
   border-radius: 30px;
   font-size: 17px;
   font-weight: 500;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   @media (min-width: 968px) {
     .btn-subs {
       font-size: 17px;
@@ -179,7 +182,8 @@ a {
   background: #fff;
   font-size: 17px;
   font-weight: 500;
-  display: inline-block; }
+  display: inline-block;
+  cursor: pointer; }
   @media (min-width: 968px) {
     .btn-subs2 {
       font-size: 17px;
@@ -200,6 +204,7 @@ a {
   text-align: center;
   font-size: 17px;
   font-weight: 500;
+  cursor: pointer;
   border-radius: 30px; }
 
 .btn-acc {
@@ -212,6 +217,7 @@ a {
 
 .btn-try-free {
   display: inline-block;
+  cursor: pointer;
   background-color: #007BFF;
   color: #fff;
   border-radius: 32px;
@@ -242,6 +248,7 @@ a {
     transition: all .2s ease-in-out; }
 
 .btn-send, .btn-cancel {
+  cursor: pointer;
   display: inline-block;
   border-radius: 32px;
   font-weight: 500;
@@ -265,6 +272,7 @@ a {
 
 .btn-send {
   background-color: #007BFF;
+  cursor: pointer;
   color: #fff; }
   .btn-send:hover {
     background-color: #0069E1;
@@ -272,6 +280,7 @@ a {
 
 .btn-cancel {
   background-color: transparent;
+  cursor: pointer;
   color: #007BFF;
   border: 1px solid #007BFF; }
   .btn-cancel:hover {
@@ -279,6 +288,7 @@ a {
 
 .btn-monts, .btn-years {
   display: inline-block;
+  cursor: pointer;
   position: relative;
   font-weight: 500; }
   @media (min-width: 1200px) {
@@ -308,6 +318,7 @@ a {
       padding: 10px 20px; } }
 
 .btn-forgot, .btn-forgot2 {
+  cursor: pointer;
   display: inline-block;
   border-radius: 32px;
   font-weight: 500;
@@ -340,27 +351,31 @@ a {
     background-color: #0069E1;
     transition: all .2s ease-in-out; }
 
-@media (min-width: 1200px) {
-  .btn-forgot-send {
-    padding: 18px 210px; } }
-@media (min-width: 768px) and (max-width: 1199px) {
-  .btn-forgot-send {
-    padding: 10px 150px; } }
-@media (max-width: 768px) {
-  .btn-forgot-send {
-    padding: 10px;
-    width: 100%;
-    text-align: center; } }
+.btn-forgot-send {
+  cursor: pointer; }
+  @media (min-width: 1200px) {
+    .btn-forgot-send {
+      padding: 18px 210px; } }
+  @media (min-width: 768px) and (max-width: 1199px) {
+    .btn-forgot-send {
+      padding: 10px 150px; } }
+  @media (max-width: 768px) {
+    .btn-forgot-send {
+      padding: 10px;
+      width: 100%;
+      text-align: center; } }
 
 .btn-cancel {
   background-color: transparent;
   color: #007BFF;
-  border: 1px solid #007BFF; }
+  border: 1px solid #007BFF;
+  cursor: pointer; }
   .btn-cancel:hover {
     background-color: #EFF2F4; }
 
 .btn-table-one, .btn-table-two {
   display: inline-block;
+  cursor: pointer;
   font-weight: 500;
   border: 1px solid #007BFF;
   border-radius: 20px; }
@@ -1090,23 +1105,22 @@ a {
 .contact_wrapper {
   margin: 75px 0; }
 
-.contact-box {
+.contact-box, .contact-box2, .contact-box3 {
   background-color: #fff;
-  padding: 44px 38px;
-  border-radius: 36px;
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11); }
 
+.contact-box {
+  padding: 44px 38px;
+  border-radius: 36px; }
+
 .contact-box2 {
-  background-color: #fff;
   border-top-left-radius: 55px;
   border-bottom-left-radius: 55px;
-  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
-  -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
-  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   position: relative;
-  z-index: 100; }
+  z-index: 100;
+  margin-left: 15px; }
   @media (min-width: 1400px) {
     .contact-box2 {
       padding: 25px 25px 25px 25px; } }
@@ -1116,6 +1130,18 @@ a {
   @media (max-width: 1199px) {
     .contact-box2 {
       padding: 25px 20px 25px 20px; } }
+
+.contact-box3 {
+  border-top-left-radius: 36px;
+  border-bottom-left-radius: 36px;
+  position: relative;
+  z-index: 100; }
+  @media (min-width: 768px) {
+    .contact-box3 {
+      padding: 60px 0 45px 60px; } }
+  @media (max-width: 767px) {
+    .contact-box3 {
+      padding: 40px 0 30px 40px; } }
 
 .contact-box-flex .contact-input-box {
   width: 100%; }
@@ -2490,7 +2516,7 @@ a {
 /* Join Meeting 2 End*/
 /* Meeting Plans Start */
 .meeting-plans-wrapper .contact-box {
-  margin-bottom: 89px; }
+  margin-bottom: 30px; }
 .meeting-plans-wrapper .user-panel-title h1 {
   font-weight: 300; }
 .meeting-plans-wrapper .user-panel-title p {
@@ -2647,6 +2673,10 @@ a {
 .again-meeting {
   display: flex;
   align-items: center; }
+  .again-meeting input[type="checkbox"] {
+    width: 18.5px;
+    height: 18.5px;
+    margin-right: 11px; }
   .again-meeting input[type="checkbox"]:disabled {
     width: 18.5px;
     height: 18.5px;
@@ -2950,7 +2980,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   background: #ffffff;
   border-radius: 32px;
   padding: 30px;
-  z-index: 10 !important;
+  z-index: 101 !important;
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); }
@@ -3315,74 +3345,74 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 /* Meeting Plans End */
 /* My Meeting Start */
 @media (min-width: 1200px) {
-  .contact-box2 .my-meeting-toptitle {
+  .my-meeting-toptitle {
     display: flex; } }
 @media (max-width: 1199px) {
-  .contact-box2 .my-meeting-toptitle {
+  .my-meeting-toptitle {
     display: block; } }
 @media (min-width: 1680px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left {
+  .my-meeting-toptitle .my-meeting-head-left {
     width: 40%; } }
 @media (min-width: 1200px) and (max-width: 1679px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left {
+  .my-meeting-toptitle .my-meeting-head-left {
     width: 44%; } }
 @media (max-width: 1199px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left {
+  .my-meeting-toptitle .my-meeting-head-left {
     text-align: center;
     margin-bottom: 20px; } }
 @media (min-width: 768px) and (max-width: 1679px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
+  .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
     padding: 12px 27px; } }
 @media (max-width: 767px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
+  .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
     padding: 8px 18px; } }
 @media (min-width: 1400px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
+  .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
     margin-right: 14px; }
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2:last-child {
+    .my-meeting-toptitle .my-meeting-head-left .btn-buy2:last-child {
       margin-right: 0; } }
 @media (max-width: 1199px) {
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
+  .my-meeting-toptitle .my-meeting-head-left .btn-buy2 {
     margin-right: 2%; }
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-left .btn-buy2:last-child {
+    .my-meeting-toptitle .my-meeting-head-left .btn-buy2:last-child {
       margin-right: 0; } }
-.contact-box2 .my-meeting-toptitle .my-meeting-head-right {
+.my-meeting-toptitle .my-meeting-head-right {
   align-items: center;
   justify-content: space-around; }
   @media (min-width: 1680px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right {
+    .my-meeting-toptitle .my-meeting-head-right {
       width: 60%;
       display: flex; } }
   @media (min-width: 1200px) and (max-width: 1679px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right {
+    .my-meeting-toptitle .my-meeting-head-right {
       width: 56%;
       display: flex; } }
   @media (max-width: 1199px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right {
+    .my-meeting-toptitle .my-meeting-head-right {
       margin-bottom: 20px; }
-      .contact-box2 .my-meeting-toptitle .my-meeting-head-right .date-plans {
+      .my-meeting-toptitle .my-meeting-head-right .date-plans {
         margin-bottom: 20px; } }
   @media (max-width: 1679px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right input {
+    .my-meeting-toptitle .my-meeting-head-right input {
       padding-top: 12px !important;
       padding-bottom: 12px !important;
       font-size: 18px; } }
-  .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
+  .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
     font-weight: 500;
     color: #007BFF;
     position: relative;
     cursor: pointer;
     display: none; }
     @media (min-width: 1200px) {
-      .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
+      .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
         width: 15%;
         margin-right: 15px; } }
     @media (max-width: 1199px) {
-      .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
+      .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
         width: 100%;
         margin-left: 35px;
         margin-bottom: 20px; } }
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1::after {
+    .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1::after {
       position: absolute;
       content: " ";
       width: 20px;
@@ -3393,47 +3423,47 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       background: url(../img/calendar-week.svg);
       background-position: center center;
       background-repeat: no-repeat; }
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1.active {
+    .my-meeting-toptitle .my-meeting-head-right .my-head-right-item1.active {
       display: block; }
   @media (min-width: 1200px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item3 {
+    .my-meeting-toptitle .my-meeting-head-right .my-head-right-item3 {
       width: 53%; } }
   @media (max-width: 1199px) {
-    .contact-box2 .my-meeting-toptitle .my-meeting-head-right .my-head-right-item3 {
+    .my-meeting-toptitle .my-meeting-head-right .my-head-right-item3 {
       width: 100%; } }
 @media (min-width: 1680px) {
-  .contact-box2 .my-meeting-toptitle .personal-popup-search-item {
+  .my-meeting-toptitle .personal-popup-search-item {
     width: 80%; } }
 @media (min-width: 1400px) and (max-width: 1679px) {
-  .contact-box2 .my-meeting-toptitle .personal-popup-search-item {
+  .my-meeting-toptitle .personal-popup-search-item {
     width: 80%; } }
 @media (min-width: 1200px) and (max-width: 1399px) {
-  .contact-box2 .my-meeting-toptitle .personal-popup-search-item {
+  .my-meeting-toptitle .personal-popup-search-item {
     width: 75%; } }
 @media (max-width: 1199px) {
-  .contact-box2 .my-meeting-toptitle .personal-popup-search-item {
+  .my-meeting-toptitle .personal-popup-search-item {
     width: 100%; } }
-.contact-box2 .my-meeting-toptitle .personal-popup-search-item input {
+.my-meeting-toptitle .personal-popup-search-item input {
   padding: 17px 24px; }
 @media (min-width: 1200px) {
-  .contact-box2 .my-meeting-toptitle .spe-proid {
+  .my-meeting-toptitle .spe-proid {
     width: auto; } }
 @media (max-width: 1199px) {
-  .contact-box2 .my-meeting-toptitle .spe-proid {
+  .my-meeting-toptitle .spe-proid {
     width: 100%; } }
-.contact-box2 .my-meeting-toptitle .spe-proid .calendar {
+.my-meeting-toptitle .spe-proid .calendar {
   border-radius: 30px;
   border-color: #007BFF;
   padding-left: 18px; }
-  .contact-box2 .my-meeting-toptitle .spe-proid .calendar::placeholder {
+  .my-meeting-toptitle .spe-proid .calendar::placeholder {
     font-weight: 500;
     font-style: italic;
     color: #90A0B3; }
     @media (min-width: 1680px) {
-      .contact-box2 .my-meeting-toptitle .spe-proid .calendar::placeholder {
+      .my-meeting-toptitle .spe-proid .calendar::placeholder {
         font-size: 17px; } }
     @media (max-width: 1679px) {
-      .contact-box2 .my-meeting-toptitle .spe-proid .calendar::placeholder {
+      .my-meeting-toptitle .spe-proid .calendar::placeholder {
         font-size: 13px; } }
 
 .sp-ac.top .spe-proid-name {
@@ -3760,6 +3790,9 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 #anlik, #kisisel {
   margin-top: 30px; }
 
+#anlik {
+  padding-left: 15px; }
+
 .disable-link {
   pointer-events: none;
   cursor: default; }
@@ -3774,6 +3807,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   width: 100%;
   padding-top: 85px;
   overflow-y: scroll;
+  padding-left: 15px;
   -ms-overflow-style: none;
   scrollbar-width: none; }
   .content-box-scroll::-webkit-scrollbar {
@@ -3943,6 +3977,8 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     height: 440px;
     overflow-y: scroll;
     margin-top: 20px; }
+    .plans-table_x table tbody tr:hover {
+      background-color: #eff2f4 !important; }
     .plans-table_x table tbody::-webkit-scrollbar {
       width: 6px;
       border-radius: 10px;
@@ -4619,6 +4655,103 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     color: #343A40; }
 
 /* Unplanned Meeting End*/
+/* Meeting Plan Join Start */
+.mpj-top {
+  cursor: pointer; }
+  @media (min-width: 768px) {
+    .mpj-top {
+      width: 75%; } }
+  @media (max-width: 767px) {
+    .mpj-top {
+      width: 100%;
+      padding-right: 15px; } }
+
+.contact-box.mpj {
+  margin-top: 30px; }
+
+.mpj-toggle {
+  display: none;
+  background-color: #F8F9FA;
+  margin-top: -32px;
+  border-bottom-left-radius: 36px; }
+  @media (min-width: 768px) {
+    .mpj-toggle {
+      padding: 75px 0 45px 60px; } }
+  @media (max-width: 767px) {
+    .mpj-toggle {
+      padding: 60px 0 30px 40px; } }
+
+.mpj-item-img {
+  transition: all .2s; }
+  .mpj-item-img.active {
+    transform: rotate(90deg); }
+
+/* Meeting Plan Join End */
+/* Meeting Plans 2 Start */
+.agm-btn {
+  margin-bottom: 15px;
+  margin-right: 15px; }
+
+.ag-content {
+  display: none; }
+
+/* Meeting Plans 2 End */
+/* My Meeting 2 Start */
+@media (min-width: 768px) {
+  .meeting-box-content-title .time-period-plans {
+    width: 35%; } }
+@media (max-width: 767px) {
+  .meeting-box-content-title .time-period-plans {
+    width: 100%; } }
+.meeting-box-content-title .time-period-plans .spe-select {
+  margin: 0; }
+@media (min-width: 768px) {
+  .meeting-box-content-title h1.mtb2 {
+    width: 65%; } }
+@media (max-width: 767px) {
+  .meeting-box-content-title h1.mtb2 {
+    width: 100%; } }
+.meeting-box-content-title h1 {
+  display: inline-block; }
+
+.my-meeting2 {
+  margin-top: -55px !important; }
+  .my-meeting2 .content-box-scroll {
+    height: 900px; }
+
+/* My Meeting 2 End */
+/* Meeting Records 2 Start */
+.total-meeting-text {
+  font-weight: 400; }
+  @media (min-width: 1680px) {
+    .total-meeting-text {
+      font-size: 24px; } }
+  @media (min-width: 1400px) and (max-width: 1679px) {
+    .total-meeting-text {
+      font-size: 22px; } }
+  @media (min-width: 1200px) and (max-width: 1399px) {
+    .total-meeting-text {
+      font-size: 18px; } }
+  @media (max-width: 1199px) {
+    .total-meeting-text {
+      font-size: 16px; } }
+  .total-meeting-text span {
+    font-weight: 600; }
+
+@media (min-width: 1200px) {
+  .my-meeting-toptitle.records-2 {
+    margin-right: 10%; } }
+
+.video {
+  display: inline-block;
+  text-align: center;
+  cursor: pointer; }
+
+@media (min-width: 1200px) {
+  .number-subs.records-2 {
+    margin-right: 7%; } }
+
+/* Meeting Records 2 End */
 .free-trial {
   display: none; }
 
