@@ -249,6 +249,14 @@ $('.calendar-popup').on('click', function(e) {
 	$('.detail-popup').removeClass('is-visible');
 });
 
+$('.path-share').on('click', function(e) {
+	e.preventDefault();
+	$('.path-pp2').toggleClass('active');
+});
+$('.calendar-popup').on('click', function(e) {
+	e.preventDefault();
+	$('.path-pp2').removeClass('active');
+});
 
 
 

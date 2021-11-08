@@ -96,6 +96,7 @@ a {
 
 .btn-buy2 {
   padding: 18px 40px;
+  cursor: pointer;
   color: #007BFF;
   border: 1px solid #007BFF;
   background: #fff;
@@ -2056,6 +2057,18 @@ a {
     .meeting-h1 {
       font-size: 22px !important; } }
 
+.meeting-span-text {
+  font-weight: 400;
+  color: #90A0B3;
+  margin-bottom: 40px;
+  display: inline-block; }
+  @media (min-width: 1200px) {
+    .meeting-span-text {
+      font-size: 20px; } }
+  @media (max-width: 1199px) {
+    .meeting-span-text {
+      font-size: 14px; } }
+
 .meeting_wrapper .contact-title .meeting-p-text {
   margin-bottom: 17px !important; }
   @media (min-width: 1200px) {
@@ -2064,17 +2077,6 @@ a {
   @media (max-width: 1199px) {
     .meeting_wrapper .contact-title .meeting-p-text {
       font-size: 16px !important; } }
-.meeting_wrapper .contact-title .meeting-span-text {
-  font-weight: 400;
-  color: #90A0B3;
-  margin-bottom: 40px;
-  display: inline-block; }
-  @media (min-width: 1200px) {
-    .meeting_wrapper .contact-title .meeting-span-text {
-      font-size: 20px; } }
-  @media (max-width: 1199px) {
-    .meeting_wrapper .contact-title .meeting-span-text {
-      font-size: 14px; } }
 @media (min-width: 1200px) {
   .meeting_wrapper .meeting-form {
     margin-bottom: 300px; } }
@@ -4176,6 +4178,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     .owned-span {
       font-size: 17px; } }
 
+@media (min-width: 1200px) {
+  .owned-span.create {
+    font-size: 24px; } }
+
 .package-owned {
   text-align: start !important; }
   .package-owned .delete {
@@ -4263,9 +4269,6 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   margin-bottom: 35px; }
 
 /* My Account End */
-.free-trial {
-  display: none; }
-
 .extra-buy {
   max-width: 1200px; }
   .extra-buy .card-ticket span {
@@ -4533,5 +4536,90 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       transform: rotate(45deg); }
 
 /* Packets Path End */
+/* Create Account Start */
+.calendar-popup-content.path-popup {
+  max-width: 447px; }
+
+.path-pp2.active {
+  display: block; }
+
+.path-span.success {
+  background: #00DD08 !important;
+  transform: rotate(45deg);
+  position: relative; }
+  .path-span.success::after {
+    height: 2px;
+    bottom: 25%;
+    left: 30%;
+    right: 45%;
+    top: auto;
+    background: white;
+    position: absolute;
+    content: " "; }
+  .path-span.success::before {
+    width: 2px;
+    height: auto;
+    bottom: 25%;
+    top: 20%;
+    left: 55%;
+    right: auto;
+    background: white;
+    position: absolute;
+    content: " "; }
+
+/* Create Account End */
+/* Success Payment Start */
+.success-payment-head {
+  text-align: center; }
+  .success-payment-head .success-payment-title {
+    font-weight: 600; }
+    @media (min-width: 1200px) {
+      .success-payment-head .success-payment-title {
+        font-size: 36px; } }
+    @media (max-width: 1199px) {
+      .success-payment-head .success-payment-title {
+        font-size: 23px; } }
+
+.path-popup-title.sc-py {
+  color: #904BFF; }
+
+.success-payment {
+  padding: 45px;
+  border-radius: 36px;
+  border: 2px solid #00DD08;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
+  -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11); }
+  .success-payment.error-payment {
+    border-color: #DD0000; }
+
+/* Success Payment End */
+/* Verification Mail Start */
+.meeting-h1.verify {
+  font-weight: 600 !important; }
+.meeting-h1 span {
+  font-weight: 400; }
+
+.verify-mail {
+  font-weight: 600; }
+  @media (min-width: 1200px) {
+    .verify-mail {
+      font-size: 28px; } }
+  @media (max-width: 1199px) {
+    .verify-mail {
+      font-size: 20px; } }
+
+/* Verification Mail End */
+/* Unplanned Meeting Start*/
+.meeting-adress {
+  font-size: 20px;
+  font-weight: 500;
+  color: #93A0B1; }
+  .meeting-adress a {
+    color: #343A40; }
+
+/* Unplanned Meeting End*/
+.free-trial {
+  display: none; }
 
 /*# sourceMappingURL=main.css.map */
