@@ -4159,6 +4159,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   object-fit: cover;
   border-radius: 36px; }
 
+.last-mb {
+  font-size: 14px;
+  color: #007BFF; }
+
 .act-flex span {
   font-size: 17px;
   font-weight: 500; }
