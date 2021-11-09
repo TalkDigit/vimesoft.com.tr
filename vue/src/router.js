@@ -64,9 +64,6 @@ export const router = new VueRouter({
     //   },
 
 
-
-
-
       //DASHBOARD GRUBU
       {
       path: '/dashboard',
