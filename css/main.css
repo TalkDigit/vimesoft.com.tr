@@ -4245,9 +4245,14 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 
 .acc-slide {
   width: 100%; }
-  @media (min-width: 1200px) {
-    .acc-slide .account-pic-line {
-      max-width: 290px; } }
+
+@media (min-width: 1200px) {
+  .account-pic-line {
+    max-width: 290px; } }
+
+@media (min-width: 1200px) {
+  .account-inp {
+    max-width: 600px; } }
 
 .package-owned-text {
   font-weight: 400; }

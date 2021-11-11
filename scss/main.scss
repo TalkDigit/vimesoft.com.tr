@@ -5109,12 +5109,17 @@ input.calendar {
 }
 .acc-slide {
     width: 100%;
-    .account-pic-line {
-        @media (min-width:1200px) { 
-            max-width: 290px;
-        }
+}
+.account-pic-line {
+    @media (min-width:1200px) { 
+        max-width: 290px;
     }
 }
+.account-inp {
+    @media (min-width:1200px) {
+        max-width: 600px;
+    }
+} 
 .package-owned-text {
     font-weight: 400;
     @media (min-width:1200px) {
