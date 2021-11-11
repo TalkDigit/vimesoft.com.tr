@@ -1323,7 +1323,27 @@ a {
     border-bottom-left-radius: 55px;
     position:relative;
     z-index:100;
-    margin-left: 15px;
+    
+}
+.contact-box2.mtr {
+    margin-bottom:30px;
+    .my-meeting-toptitle {
+        .my-meeting-head-left {
+            @media (min-width:1200px) {
+                width: 50%;
+            }
+        }
+        .my-meeting-head-right {
+            @media (min-width:1200px) {
+                width: 50%;
+            }
+        }
+    }
+}
+.my-meeting-2 {
+    .contact-box2 {
+        margin-left: 15px;
+    }
 }
 .contact-box3 {
     @media (min-width:768px) {
@@ -3578,9 +3598,15 @@ a {
         top: 12px;
     }
 }
-.spe-select .check-select-name.active {
+/*.spe-select .check-select-name.active {
   transition: all .2s ease-in-out;
   top: -10px;
+}*/
+select.selectric-select:checked + span.check-select-name {
+    top:-10px;
+}
+select.selectric-select:valid + span.check-select-name {
+    top:-10px;
 }
 
 /* Date Input */
@@ -4212,16 +4238,14 @@ input.calendar {
     }
     margin-bottom:30px!important;
 }
-.meeting-box-content-title {
-    h1 {
-        @media (min-width:968px) {
-            font-size:28px;
-        }
-        @media (max-width:967px) {
-            font-size:20px;
-        }
-        font-weight: 600;
+.meeting-box-content-title h1, .card-box-card-name {
+    @media (min-width:968px) {
+        font-size:28px;
     }
+    @media (max-width:967px) {
+        font-size:20px;
+    }
+    font-weight: 600;
     margin-bottom:28px;
 }
 .meeting-box-date {
@@ -4536,8 +4560,13 @@ input.calendar {
 #anlik, #kisisel {
     margin-top:30px;
 }
-#anlik {
-    padding-left: 15px;
+.my-meeting-2 {
+    #anlik {
+        padding-left: 15px;
+    }
+    .content-box-scroll {
+        padding-left:15px;
+    }
 }
 .disable-link {
     pointer-events: none;
@@ -4554,7 +4583,6 @@ input.calendar {
     width: 100%;
     padding-top:85px;
     overflow-y: scroll;
-    padding-left:15px;
     &::-webkit-scrollbar {
         display: none;
     }
@@ -4580,7 +4608,8 @@ input.calendar {
 }
 .calendar-popup-content {
     position: fixed;
-    top:0;
+    top:50%!important;
+    transform:translateY(-50%)!important;
     left:0;
     right:0;
     z-index: 9999;
@@ -4588,7 +4617,7 @@ input.calendar {
     border-radius: 36px;
     padding:45px;
     max-width: 536px;
-    margin:6% auto;
+    margin:0 auto!important;
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
@@ -4834,6 +4863,49 @@ input.calendar {
         }
     }
 }
+.plans-table_x.mtr {
+    border-top:none!important;
+    margin-bottom: 0!important;
+    margin-right: 0;
+    .mtr-link {
+        font-size:20px;
+        font-weight: 600;
+        color: #343A40;
+    }
+    tbody {
+        height: auto!important;
+        overflow-y: auto!important;
+    }
+    tr {
+        th {
+            font-size:24px;
+            color:#A2B2C5;
+        }
+    }
+    th {
+        &:first-child {
+            padding-left: 0!important;
+        }
+    }
+    td {
+        color:#343A40;
+        font-weight: 600;
+        padding:45px 0;
+        &:first-child {
+            padding-left: 0!important;
+        }
+    }
+    tr {
+        background:#fff!important;
+        border-bottom:1px solid #EFF2F4;
+        &:last-child {
+            border-bottom: none;
+        }
+        &:hover {
+            background:#fff!important;
+        }
+    }
+}
 .s-detail {
     font-size:20px;
     font-weight: 500;
@@ -4913,27 +4985,6 @@ input.calendar {
                             width: 100%;
                         }
                     }
-                    .detail-load {
-                        height: 42px;
-                        border:1px solid #A2B2C5;
-                        padding:1px;
-                        border-radius: 10px;
-                        .detail-loading {
-                            background:#904BFF;
-                            height: 100%;
-                            border-radius: 10px;
-                        }
-                    }
-                    .detail-load-text {
-                        position:absolute;
-                        right:0;
-                        left:0;
-                        top:10px;
-                        text-align:center;
-                        color:#fff;
-                        font-weight: 600;
-                        font-size:17px;
-                    }
                 }
             }
         }
@@ -4963,6 +5014,27 @@ input.calendar {
         }
     }
 } 
+.detail-load {
+    height: 42px;
+    border:1px solid #A2B2C5;
+    padding:1px;
+    border-radius: 10px;
+    .detail-loading {
+        background:#904BFF;
+        height: 100%;
+        border-radius: 10px;
+    }
+}
+.detail-load-text {
+    position:absolute;
+    right:0;
+    left:0;
+    top:10px;
+    text-align:center;
+    color:#fff;
+    font-weight: 600;
+    font-size:17px;
+}
 .settings-content {
     @media (max-width:1199px) {
         padding:0 15px;
@@ -5694,6 +5766,349 @@ input.calendar {
     }
 }
 /* Meeting Records 2 End */
+.acc-packets2 {
+    .package-owned {
+        .card-ticket {
+            display: inline-block;
+            span {
+                padding: 10px 50px 10px 40px;
+            }
+        }
+        .pay-section {
+            font-size:17px;
+            font-weight: 500;
+            color:#90A0B3;
+            padding-left: 20px;
+        }
+        .remaining {
+            .remaining-zone {
+                display: inline-block;
+                font-size:20px;
+                font-weight: 600;
+                color:#343A40;
+                span {
+                    color:#904BFF;
+                }
+            }
+        }
+        .detail-pop-item {
+            position:relative;
+        }
+    }
+    .plans-table_x {
+        margin-right: 0;
+    }
+}
+
+/* My Account Packets 2 Start */
+.calendar-popup-content.packets2-popup {
+    max-width:697px!important;
+}
+.acc-packets2-popup {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+.card-box {
+    cursor: pointer;
+    padding:15px 14px 15px 30px;
+    margin-bottom:15px;
+    margin-top:10px;
+    position: relative;
+    z-index: 10;
+    &:last-child {
+        margin-bottom:0;
+    }
+    background-color:#fff;
+    border-radius: 36px;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
+    &:hover {
+        background-color:#f8f9fa;
+    }
+}
+.card-box-all, .card-box-all2 {
+    display: none;
+    &.active {
+        display: block;
+    }
+    .card-toggle-name {
+        font-weight: 500;
+        padding-left: 5px;
+    }
+    .card-toggle {
+        font-size:18px;
+    }
+}
+.card-box-toggle.mpj-toggle {
+    padding-right: 25px;
+    padding-left: 25px;
+    margin-top: -43px;
+    .card-toggle {
+        margin-bottom:25px;
+    }
+}
+.card-box-arrow {
+    transition: all .2s ease-in-out;
+    &.c-rotate {
+        img {
+            transform:rotate(225deg);
+            transition: all .2s ease-in-out;
+        }
+    }
+    img {
+        transition: all .2s ease-in-out;
+    }
+}
+.acc-packets2-popup2 {
+    display: none;
+    &.active {
+        display: block;
+    }
+    .acp2-scroll {
+        @media (max-width:767px) {
+            height: 300px;
+            overflow-y: scroll;
+            padding-right: 15px;
+            &::-webkit-scrollbar {
+                width: 6px;
+                border-radius: 10px;
+                background:#EFF2F4;
+            }
+            &::-webkit-scrollbar-thumb {
+                background: #904BFF;
+                border-radius:10px;
+            }
+        }
+    }
+    .calendar-popup-content {
+        @media (max-width:767px) {
+            padding:40px 10px 40px 25px;
+            border-radius: 25px;
+        }
+        .contact-input-box {
+            margin-bottom:20px;
+        }
+        .spe-select {
+            margin-bottom:20px;
+        }
+    }
+}
+.user-invoice-info-ul {
+    li {
+        cursor: pointer;
+    }
+    li:nth-child(1) {
+        .user-gray {
+            display: inline-block;
+        }
+        .user-blue {
+            display: none;
+        }
+    }
+    li:nth-child(1).active {
+        .user-gray {
+            display: none;
+        }
+        .user-blue {
+            display: inline-block;
+        }
+    }
+    li:nth-child(2) {
+        .users-gray {
+            display: inline-block;
+        }
+        .users-blue {
+            display: none;
+        }
+    }
+    li:nth-child(2).active {
+        .users-gray {
+            display: none;
+        }
+        .users-blue {
+            display: inline-block;
+        }
+    }
+}
+/* My Account Packets 2 End */
+
+
+/* Meeting Report 2 Start */
+.mtr-2 {
+    margin-bottom:50px;
+    .owned-span {
+        padding-bottom:20px;
+        border-bottom:1px solid #eff2f4;
+    }
+    .mtr-flex {
+        padding:20px 0;
+        border-bottom:1px solid #eff2f4;
+    }
+    .mtr2-item {
+        @media (min-width:1200px) {
+            font-size:20px;
+        }
+        @media (max-width:1199px) {
+            font-size:16px;
+            &:nth-child(1) {
+                width: 70%;
+            }
+        }
+        font-weight: 500;
+    }
+    .mtr2-text {
+        font-weight: 600;
+        color:#A2B2C5;
+    }
+}
+.mtr-person2 {
+    .mtr-subs-content {
+        .mtr2-item {
+            font-weight: 400;
+        }
+    }
+}
+.mtr-person3 {
+    .mtr-subs-content {
+        .mtr2-item {
+            font-weight: 400;
+        }
+    }
+    .mtr2-item {
+        &:nth-child(1) {
+            width: 50%;
+        }
+        &:nth-child(2) {
+            width: 50%;
+        }
+    }
+    .mtr-chat-scroll {
+        height: 260px;
+        overflow-y: scroll;
+        &::-webkit-scrollbar {
+            width: 6px;
+            border-radius: 10px;
+            background:#EFF2F4;
+        }
+        
+        &::-webkit-scrollbar-thumb {
+            background: #904BFF;
+            border-radius:10px;
+        }
+    }
+}
+.mtr-subs-chat {
+    background:#F8F9FA;
+    padding:40px 30px;
+    border-radius: 36px;
+    .mtr-chat-btn{
+        @media (max-width:767px) {
+            text-align: center;
+            margin-bottom:15px;
+            a {
+                padding:8px 20px;
+            }
+        } 
+    }
+}
+.mtr2-rapor {
+    .invite-personal-item {
+        margin-bottom:30px;
+        margin-right: 3%;
+        @media (min-width:1400px) {
+            width: 19.4%;
+        }
+        @media (min-width:968px) and (max-width:1399px) {
+            width: 24.25%;
+        }
+        @media (max-width:967px) {
+            width: 48.5%;
+            &:nth-child(2n+0) {
+                margin-right: 0;
+            }
+        }
+        padding-right: 0;
+        .personal-img {
+            @media (max-width:767px) {
+                margin-right: 5px;
+            }
+        }
+    }
+    .invite-personal {
+        padding-bottom:0;
+        flex-wrap:wrap;
+    }
+    .contact-box {
+        @media (max-width:767px) {
+            padding-right: 20px;
+            padding-left: 20px;
+        }
+    }
+}
+.detail-stats {
+    cursor: pointer;
+    display: inline-block;
+}
+.mtr2-subs-item, .mtr2-subs-items {
+    &:nth-child(1) {
+        width: 40%;
+    }
+    &:nth-child(2) {
+        width: 30%;
+    }
+    &:nth-child(3) {
+        width: 30%;
+    }
+}
+.mtr-subs {
+    padding-bottom:70px;
+    margin-bottom: 30px;
+    .owned-span {
+        border-bottom: none;
+    }
+}
+.mtr-subs-head {
+    padding-bottom:20px;
+    border-bottom: 1px solid #eff2f4;
+}
+.mtr-subs-content {
+    padding:20px 0;
+    border-bottom:1px solid #EFF2F4;
+}
+
+.chart-wrapper {
+    @media (min-width:1200px) {
+        width: 800px;
+        max-width: 100%;
+        max-height: 100%;
+    }
+    @media (max-width:1199px) {
+        width: 100%;
+        height: 100%;
+        max-width: 100%;
+        max-height: 100%;
+    }
+}
+.chart-wrapper.chart-wrapper-w {
+    @media (min-width:1200px) {
+        width: 1000px;
+    }
+}
+.chart-padding {
+    height: 110px;
+    width: 100%;
+}
+.mtr-all-toggle {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+/* Meeting Report 2 End */
+
 .free-trial {
     display: none;
 }

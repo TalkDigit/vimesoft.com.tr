@@ -13,7 +13,7 @@
 	<link rel="stylesheet" type="text/css" href="css/main.css">
     	
 </head>
-<body>
+<body class="bg-still join">
 
     <div class="d-xl-flex content-flex">
         <header class="header">
@@ -166,62 +166,34 @@
 
         <main class="main">
             <div class="meeting-plans-wrapper tabs pb-5">
-                <div class="setting-title mb-md-5 mb-4 d-md-flex align-items-center justify-content-between">
-                    <h1>Toplantı Kayıtlarım</h1>
-                    <div class="number-subs records-2 active">
-                        <div class="d-flex align-items-center flex-wrap">
-                            <div class="sbs-t">Kayıt Alanı</div>
-                            <div class="btn-subs ms-md-3 ms-0">700 MB / 1 GB</div>
-                            <div><a href="#" class="btn-subs2 ms-md-3 ms-0">Yükselt/Satın Al</a></div>
-                        </div>
-                    </div>
+                <div class="user-panel-title">
+                    <h1>Selam, <span>Onur.</span></h1>
+                    <p>Tüm toplantılarını takip et!</p>
                 </div>
-                <div class="my-meeting-toptitle align-items-center records-2">
-                    <div class="my-meeting-head-left">
-                        <div class="total-meeting-text">Toplam <span>2</span> Adet Toplantı Kaydınız Bulunmaktadır.</div>
-                    </div>
-                    <div class="my-meeting-head-right">
-                        <div class="date-plans my-head-right-item2">
-                            <div class="spe-select spe-proid mb-0">
-                                <input  type="text" placeholder="Başlangıç ve Bitiş Tarihi" autocomplete="off" name="checkIn" id="datepicker" value="" class="calendar">
-                                <span class="personal-popup-search-icon">
-                                    <img src="img/calendar-range.svg" alt="">
-                                </span>
-                            </div>
+                <div class="contact-box2 mtr">
+                    <div class="my-meeting-toptitle align-items-center">
+                        <div class="my-meeting-head-left">
+                            <a href="#t_rapor" class="btn-buy2 active">Toplantı Raporu</a>
+                            <span  class="btn-buy2">Kişisel Rapor</span>
+                            <a href="#istatistik" class="btn-buy2">İstatistikler</a>
                         </div>
-                        <div class="personal-popup-search my-head-right-item3 d-flex align-items-center justify-content-between">
-                            <div class="personal-popup-search-item">
-                                <input type="search" placeholder="Katılımcı Ara">
-                                <span class="personal-popup-search-icon">
-                                    <img src="img/search.svg" alt="">
-                                </span>
-                            </div>
-                            <div class="by-date">
-                                <img src="img/listalt.svg" alt="">
-                                <div class="by-date-pop">
-                                    <div class="colm-items">
-                                        <div class="colm">Artan Tarihe Göre Sırala</div>
-                                        <div class="colm">Azalan Tarihe Göre Sırala</div>
-                                        <div class="colm">A'dan Z'ye Sırala</div>
-                                        <div class="colm">Z'den A'ya Sırala</div>
-                                        <span></span>
-                                    </div>
+                        <div class="my-meeting-head-right">
+                            <div class="date-plans my-head-right-item2">
+                                <div class="spe-select spe-proid mb-0">
+                                    <input  type="text" placeholder="Başlangıç ve Bitiş Tarihi" autocomplete="off" name="checkIn" id="datepicker" value="" class="calendar">
+                                    <span class="personal-popup-search-icon">
+                                        <img src="img/calendar-range.svg" alt="">
+                                    </span>
                                 </div>
                             </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="settings-content">
-                    <div class="settings-ct d-md-flex align-items-center justify-content-between pb-4">
-                        <div class="personal-popup-search">
-                            <div class="d-flex align-items-center">
+                            <div class="personal-popup-search my-head-right-item3 d-flex align-items-center justify-content-around">
                                 <div class="personal-popup-search-item">
-                                    <input type="search" placeholder="Katılımcı Ara">
+                                    <input type="search" placeholder="Başlık Arama">
                                     <span class="personal-popup-search-icon">
                                         <img src="img/search.svg" alt="">
                                     </span>
                                 </div>
-                                <div class="by-date ms-md-5 ms-3">
+                                <div class="by-date">
                                     <img src="img/listalt.svg" alt="">
                                     <div class="by-date-pop">
                                         <div class="colm-items">
@@ -236,53 +208,50 @@
                             </div>
                         </div>
                     </div>
-                    <div class="setting-tabs-content">
-                        <div class="plans-table_x">
+                </div>
+                <div id="t_rapor" class="tabf active">
+                    <div class="contact-box">
+                        <div class="plans-table_x mtr">
                             <table>
                                 <thead>
                                     <tr>
                                         <th>Toplantı Adı</th>
                                         <th>Toplantı ID</th>
                                         <th>Tarih</th>
-                                        <th>Boyut</th>
+                                        <th>Süre</th>
                                         <th></th>
-                                        <th><a href="#" class="delete">Tümünü Kaldır</a></th>
+                                        <th></th>
                                     </tr>
                                 </thead>
                                 <tbody>
                                     <tr>
-                                        <td>May Siber Test</td>
+                                        <td><a href="#" class="mtr-link">May Siber Test</a></td>
                                         <td>473 943 134</td>
                                         <td>05.11.2020</td>
                                         <td>125 MB</td>
-                                        <td class="text-center"><span class="video"><img src="img/play-button-r.svg" alt=""></span></td>
-                                        <td><a href="#" class="delete dl">Kaldır</a></td>
+                                        <td><span class="s-detail">Detaylı İncele</span></td>
+                                        <td><a href="#" class="delete dl">Sil</a></td>
                                     </tr>
                                     <tr>
-                                        <td>Ali Baba</td>
+                                        <td><a href="#" class="mtr-link">Ali Baba</a></td>
                                         <td>313 413 131</td>
                                         <td>02.11.2020</td>
                                         <td>175 MB</td>
-                                        <td class="text-center"><span class="video"><img src="img/play-button-r.svg" alt=""></span></td>
-                                        <td><a href="#" class="delete dl">Kaldır</a></td>
+                                        <td><span class="s-detail">Detaylı İncele</span></td>
+                                        <td><a href="#" class="delete dl">Sil</a></td>
                                     </tr>
                                 </tbody>
                             </table>
-                            <div class="settings-inp"></div>
                         </div>
                     </div>
+                </div>
+                <div id="istatistik" class="tabf">
+                    asdasd
                 </div>
             </div>
         </main>
     </div>    
 
-    <div class="detail-popup">
-        <div class="detail-popup-content calendar-popup-content">
-            dsds
-        </div>
-        <div class="calendar-popup">
-        </div>
-    </div>
 
 
     <footer class="footer">
@@ -379,11 +348,12 @@
             </div>
         </div>
     </footer>
-
+    
+ 
+    
     <script src='js/jquery.min.js'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.selectric/1.11.1/jquery.selectric.min.js'></script>
     <script src="js/script.js"></script>
-
 </body>
 </html>
