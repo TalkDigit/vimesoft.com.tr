@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="tr">
+
+<head>
+  <title>VIMESOFT</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- Bootstrap Css -->
+  <link rel="stylesheet" href="src/assets/css/bootstrap.css">
+  <!-- Owl Slider -->
+  <link rel="stylesheet" type="text/css" href="src/assets/css/owl.carousel.css">
+  <link rel="stylesheet" type="text/css" href="src/assets/css/owl.theme.default.css">
+  <!-- Css Style -->
+  <link rel="stylesheet" type="text/css" href="src/assets/css/main.css">
+  <link rel="stylesheet" type="text/css" href="src/assets/css/custom.css">
+
+  <style>
+    .fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.5s ease;
+}
+
+
+.fade-enter-from,.fade-enter,
+.fade-leave-to {
+  opacity: 0;
+}
+  </style>
+</head>
+
+<body class="bg-still">
+  <main class="main">
+    <div id="app"></div>
+  </main>
+
+  <script src="src/assets/js/jquery.min.js"></script>
+  <script src="src/assets/js/owl.carousel.min.js"></script>
+  <script>
+    $('.owl-carousel').owlCarousel({
+      rewind: true,
+      margin: 20,
+      responsiveClass: true,
+      smartSpeed: 800,
+      nav: true,
+      responsive: {
+        0: {
+          items: 1
+        },
+        1000: {
+          items: 1
+        }
+      }
+    })
+  </script>
+  <script src="src/assets/js/script.js"></script>
+  <script src="/dist/build.js"></script>
+</body>
+
+</html>
