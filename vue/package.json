@@ -1,8 +1,8 @@
 {
-  "name": "authentication",
-  "description": "A Vue.js project",
+  "name": "Vimesoft",
+  "description": "Vimesoft",
   "version": "1.0.0",
-  "author": "Gökhan Kandemir <delphixdfd@gmail.com>",
+  "author": "",
   "license": "MIT",
   "private": true,
   "scripts": {
@@ -10,10 +10,15 @@
     "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
   },
   "dependencies": {
+    "@mathieustan/vue-datepicker": "^0.2.11",
     "axios": "^0.18.0",
+    "v-calendar": "^2.3.4",
     "vue": "^2.5.11",
+    "vue-body-class": "^3.0.2",
     "vue-owl-carousel": "^2.0.3",
     "vue-router": "^3.0.1",
+    "vue-splash": "^1.2.1",
+    "vue2-datepicker": "^3.10.2",
     "vuelidate": "^0.7.6",
     "vuex": "^3.0.1"
   },

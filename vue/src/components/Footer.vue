@@ -62,19 +62,19 @@
             <h4>Sosyal Medyada bizi takip edin!</h4>
             <ul class="d-flex align-items-center">
               <li>
-                <a href="#"><img src="img/facebook-icon.svg" alt=""/></a>
+                <a href="#"><img src="/src/assets/img/facebook-icon.svg" alt=""/></a>
               </li>
               <li>
-                <a href="#"><img src="img/twitter-icon.svg" alt=""/></a>
+                <a href="#"><img src="/src/assets/img/twitter-icon.svg" alt=""/></a>
               </li>
               <li>
-                <a href="#"><img src="img/instagram-icon.svg" alt=""/></a>
+                <a href="#"><img src="/src/assets/img/instagram-icon.svg" alt=""/></a>
               </li>
               <li>
-                <a href="#"><img src="img/youtube-icon.svg" alt=""/></a>
+                <a href="#"><img src="/src/assets/img/youtube-icon.svg" alt=""/></a>
               </li>
               <li>
-                <a href="#"><img src="img/linkin.svg" alt=""/></a>
+                <a href="#"><img src="/src/assets/img/linkin.svg" alt=""/></a>
               </li>
             </ul>
           </nav>

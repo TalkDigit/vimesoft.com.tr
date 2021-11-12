@@ -1,325 +1,292 @@
 // Main menu mobile
-$(function() {
-  $(".mobile-menu-icon").click(function() {
-    $(".mobile-menu").slideToggle(400);
-  });
-  $(".mobile-menu-close").click(function() {
-    $(".mobile-menu").slideToggle(400);
-  });
+$(function(){
+    $('.mobile-menu-icon').click(function(){
+        $(".mobile-menu").slideToggle(400);
+    });
+    $('.mobile-menu-close').click(function(){
+        $(".mobile-menu").slideToggle(400);
+    });
 });
 
-$(".account-edit-text-button").click(function() {
-  $(".editable").val("");
-  $(this).hide();
-  $(".account-edit-completed").show();
-});
-$(".account-edit-complete").click(function() {
-  $(".account-edit-text-button").show();
-  $(".account-edit-completed").hide();
-});
+
+$(".account-edit-text-button").click(function(){
+	$(".editable").val("");
+	$(this).hide();
+	$(".account-edit-completed").show();
+})
+$(".account-edit-complete").click(function(){
+	$(".account-edit-text-button").show();
+	$(".account-edit-completed").hide();
+})
+
+
 
 // SSS content toggle
-$(".sss-content-box-title").click(function() {
-  $(this).toggleClass("active");
-});
+$(".sss-content-box-title").click(function(){
+	$(this).toggleClass("active");
+})
 
-$(".sss-content-box-title").click(function(e) {
-  e.preventDefault();
+$('.sss-content-box-title').click(function(e) {
+	e.preventDefault();
 
   let $this = $(this);
 
-  if ($this.next().hasClass("show")) {
-    $this.next().removeClass("show");
-    $this.next().slideUp(350);
+  if ($this.next().hasClass('show')) {
+	  $this.next().removeClass('show');
+	  $this.next().slideUp(350);
   } else {
-    $this
-      .parent()
-      .parent()
-      .find(".sss-content-box-text")
-      .removeClass("show");
-    $this
-      .parent()
-      .parent()
-      .find(".sss-content-box-text")
-      .slideUp(350);
-    $this.next().toggleClass("show");
-    $this.next().slideToggle(350);
+	  $this.parent().parent().find('.sss-content-box-text').removeClass('show');
+	  $this.parent().parent().find('.sss-content-box-text').slideUp(350);
+	  $this.next().toggleClass('show');
+	  $this.next().slideToggle(350);
   }
 });
 
-// Plans Table
-// $(".plans-title").click(function() {
-//   $(this).toggleClass("active");
-// });
 
-// $(".plans-title").click(function(e) {
-//   e.preventDefault();
-//
-//   let $this = $(this);
-//
-//   if ($this.next().hasClass("show")) {
-//     $this.next().removeClass("show");
-//     $this.next().slideUp(350);
-//   } else {
-//     $this
-//       .parent()
-//       .parent()
-//       .find(".sss-content-box-text")
-//       .removeClass("show");
-//     $this
-//       .parent()
-//       .parent()
-//       .find(".sss-content-box-text")
-//       .slideUp(350);
-//     $this.next().toggleClass("show");
-//     $this.next().slideToggle(350);
-//   }
-// });
+// Plans Table
+$(".plans-title").click(function(){
+
+	$(this).toggleClass("active");
+})
+
+$('.plans-title').click(function(e) {
+	e.preventDefault();
+
+  let $this = $(this);
+
+  if ($this.next().hasClass('show')) {
+	  $this.next().removeClass('show');
+	  $this.next().slideUp(350);
+  } else {
+	$this.parent().parent().find('.sss-content-box-text').removeClass('show');
+	$this.parent().parent().find('.sss-content-box-text').slideUp(350);
+	$this.next().toggleClass('show');
+	$this.next().slideToggle(350);
+}
+});
+
 
 // Select Box Special
-// var selectricOptions = {
-//   disableOnMobile: false,
-// };
+// var   selectricOptions = {
+// 	disableOnMobile: false,
+//   };
 //
-// $(function() {
-//   $(".spe-select select").selectric(selectricOptions);
+//   $(function() {
+// 	$('.spe-select select').selectric(selectricOptions);
+//   });
+//
+//   $('.spe-select select').on('change', function() { // fires when the value changes
+//
+// 	 var returnvalue;
+// 		  if($(this).val() !== "") {
+// 			  $(this).closest(".spe-select").find(".check-select-name").addClass("active");
+// 			  returnvalue=false;
+// 		  } else {
+// 			$(this).closest(".spe-select").find(".check-select-name").removeClass("active");
+// 		  }
+// 		  return returnvalue;
+//
 // });
-//
-// $(".spe-select select").on("change", function() {
-//   // fires when the value changes
-//
-//   var returnvalue;
-//   if ($(this).val() !== "") {
-//     $(this)
-//       .closest(".spe-select")
-//       .find(".check-select-name")
-//       .addClass("active");
-//     returnvalue = false;
-//   } else {
-//     $(this)
-//       .closest(".spe-select")
-//       .find(".check-select-name")
-//       .removeClass("active");
-//   }
-//   return returnvalue;
-// });
+
 
 // Forgot Password Input Change
 
-$(document).ready(function() {
-  $(".forgot-tabs a").click(function() {
-    var tab_idx = $(this).attr("data-tabx");
+$(document).ready(function(){
+	$('.forgot-tabs a').click(function(){
+		var tab_idx = $(this).attr('data-tabx');
 
-    $(".forgot-tabs a").removeClass("active");
-    $(".forgot-box").removeClass("active");
+		$('.forgot-tabs a').removeClass('active');
+		$('.forgot-box').removeClass('active');
 
-    $(this).addClass("active");
-    $("#" + tab_idx).addClass("active");
-  });
-});
+		$(this).addClass('active');
+		$("#"+tab_idx).addClass('active');
+	})
+})
+
 
 // Tab System all
-$(document).ready(function() {
-  $(".tab-system .tabs .tabs-item").click(function() {
-    var tab_id = $(this).attr("data-item");
-    $(this)
-      .closest(".tabs")
-      .find(".tabs-item")
-      .removeClass("active");
-    $(this)
-      .closest(".tab-system")
-      .find(".tab-content")
-      .removeClass("active");
+// $(document).ready(function(){
+// 	$('.tab-system .tabs .tabs-item').click(function(){
+// 		var tab_id = $(this).attr('data-item');
+// 		$(this).closest(".tabs").find(".tabs-item").removeClass('active');
+// 		$(this).closest(".tab-system").find('.tab-content').removeClass('active');
+//
+// 		$(this).addClass('active');
+// 		$(this).closest(".tab-system").find("#"+tab_id).addClass('active');
+// 	})
+// })
 
-    $(this).addClass("active");
-    $(this)
-      .closest(".tab-system")
-      .find("#" + tab_id)
-      .addClass("active");
-  });
-});
+
+
 
 // Join Conference Sticky Menu dropdown
-$(".sticky-opener").click(function() {
-  $(this).toggleClass("active");
-  $(this)
-    .next(".sticky-opened")
-    .slideToggle(300);
+$('.sticky-opener').click(function(){
+	$(this).toggleClass('active');
+	$(this).next('.sticky-opened').slideToggle(300);
 });
+// Join Conference Sticky Menu dropdown (Mobile)
 $(document).ready(function() {
-  $(".mobile-menu-burger").click(function() {
-    $(".sticky-nav").slideToggle(400);
-  });
+	$('.mobile-menu-burger').click(function() {
+	  $('.sticky-nav').slideToggle(400);
+	});
 });
 
 // Personal Invite
 $(document).ready(function() {
-  var max_fields = 99; //maximum input boxes allowed
-  var wrapper = $(".user-invite-items"); //Fields wrapper
-  var add_button = $(".user-invite-icon"); //Add button ID
+    var max_fields      = 99; //maximum input boxes allowed
+    var wrapper         = $(".user-invite-items"); //Fields wrapper
+    var add_button      = $(".user-invite-icon"); //Add button ID
 
-  var x = 1; //initlal text box count
-  $(add_button).click(function(e) {
-    //on add input button click
-    e.preventDefault();
-    if (x < max_fields) {
-      //max input box allowed
-      x++; //text box increment
+    var x = 1; //initlal text box count
 
-      if (x < 3) {
-        $(wrapper).append(
-          '<div class="col-lg-6 user-invite-more" id="user-invite-item' +
-            x +
-            '"><div class="user-invite-box d-flex align-items-center"><div class="contact-input-box"> <input type="email" class="form-input"  id="email" name="email[' +
-            x +
-            ']" autocomplete="off" required="required"/> <label for="email">E-posta Adresiniz</label><span class="contact-blue"></span></div><div class="user-remove-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M20.429,10.893H13.357V3.821A1.572,1.572,0,0,0,11.786,2.25H10.214A1.572,1.572,0,0,0,8.643,3.821v7.071H1.571A1.572,1.572,0,0,0,0,12.464v1.571a1.572,1.572,0,0,0,1.571,1.571H8.643v7.071a1.572,1.572,0,0,0,1.571,1.571h1.571a1.572,1.572,0,0,0,1.571-1.571V15.607h7.071A1.572,1.572,0,0,0,22,14.036V12.464A1.572,1.572,0,0,0,20.429,10.893Z" transform="translate(0 -2.25)" fill="#007bff"/></svg></div></div></div>'
-        ); // add input boxes.
-      } else if (x == 3) {
-        $(wrapper).append(
-          '<div class="col-lg-6 user-invite-more" id="user-invite-item' +
-            x +
-            '"><div class="user-invite-box d-flex align-items-center"><div class="contact-input-box"> <input type="email" class="form-input"  id="email" name="email[' +
-            x +
-            ']" autocomplete="off" required="required"/> <label for="email">E-posta Adresiniz</label><span class="contact-blue"></span></div><div class="user-remove-icon"> <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"><path id="Icon_awesome-plus" data-name="Icon awesome-plus" d="M20.429,10.893H13.357V3.821A1.572,1.572,0,0,0,11.786,2.25H10.214A1.572,1.572,0,0,0,8.643,3.821v7.071H1.571A1.572,1.572,0,0,0,0,12.464v1.571a1.572,1.572,0,0,0,1.571,1.571H8.643v7.071a1.572,1.572,0,0,0,1.571,1.571h1.571a1.572,1.572,0,0,0,1.571-1.571V15.607h7.071A1.572,1.572,0,0,0,22,14.036V12.464A1.572,1.572,0,0,0,20.429,10.893Z" transform="translate(0 -2.25)" fill="#007bff"/></svg></div></div></div><div class="col-lg-6 user-invite-more4"><button id="myBtn" class="btn-buy2">Kullanıcı Ekle</button></div>'
-        ); // add input boxes.
-      }
-    }
-  });
 
-  $(wrapper).on("click", ".user-remove-icon", function(e) {
-    //user click on remove text
-    e.preventDefault();
-
-    $(this)
-      .parent(".user-invite-box")
-      .parent(".user-invite-more")
-      .remove();
-    x--;
-
-    if (x == 2) {
-      $(this)
-        .closest(".user-invite-items")
-        .find(".user-invite-more4")
-        .remove();
-      console.log("x eşit");
-    }
-  });
 });
+
+
 
 // Password Guard CheckBox
-$(".switch_btn").click(function() {
-  $(".password-input").fadeToggle(10);
+$('.switch_btn').click(function() {
+	$('.password-input').fadeToggle(10);
 });
 
-$(document).ready(function() {
-  $(".moderator-management button").click(function() {
-    var tab_idx = $(this).attr("data-tabx");
+$(document).ready(function(){
+	$('.moderator-management button').click(function(){
+		var tab_idx = $(this).attr('data-tabx');
 
-    $(".btn-buy2").removeClass("active");
+		$('.btn-buy2').removeClass('active');
 
-    $(this).addClass("active");
-    $("#" + tab_idx).addClass("active");
-  });
+		$(this).addClass('active');
+		$("#"+tab_idx).addClass('active');
+	})
+})
+
+$(function () {
+	$('.switch_x').click(function(){
+		$(this).closest('.label-x').toggleClass('active');
+    });
 });
 
-$(function() {
-  $(".switch_x").click(function() {
-    $(this)
-      .closest(".label-x")
-      .toggleClass("active");
-  });
+$(function () {
+    $('.switch_y').click(function(){
+        $(this).closest('.label-xc').toggleClass('current');
+    });
 });
 
-$(function() {
-  $(".switch_y").click(function() {
-    $(this)
-      .closest(".label-xc")
-      .toggleClass("current");
-  });
-});
+
+
 
 //Date
-$(document).ready(function() {
-  // $("#datepicker").datepicker({
-  //   format: "dd-mm-yyyy",
-  //   startDate: "+1d",
-  // });
+$(document).ready(function () {
+    $('#datepicker').datepicker({
+        format: 'dd-mm-yyyy',
+        startDate: '+1d'
+    });
 });
+
 
 // Again Meeting Tooltip
-$(function() {
-  $(".again-meeting").on("click", function() {
-    $(".again-meeting").toggleClass("active");
-  });
+$(function () {
+    $('.again-meeting').on('click',function () {
+        $('.again-meeting').toggleClass('active');
+    });
 });
 
-$(function() {
-  $(".again-meetingx").on("click", function() {
-    $(".again-meetingx").toggleClass("active");
-  });
+$(function () {
+    $('.again-meetingx').on('click',function () {
+        $('.again-meetingx').toggleClass('active');
+    });
 });
 
-$(function() {
-  $(".sp-ac").on("click", function() {
-    $(".sp-ac").toggleClass("top");
-  });
+$(function () {
+    $('.sp-ac').on('click',function () {
+        $('.sp-ac').toggleClass('top');
+    });
 });
 
 // By Date
-$(function() {
-  $(".by-date").on("click", function() {
-    $(".by-date-pop").toggleClass("active");
-  });
+$(function () {
+    $('.by-date').on('click',function () {
+        $('.by-date-pop').toggleClass('active');
+    });
 });
 
-$(".s-detail, .share-calendar-link").on("click", function(e) {
-  e.preventDefault();
-  $(".detail-popup").toggleClass("is-visible");
+
+
+
+$('.s-detail, .share-calendar-link').on('click', function(e) {
+	e.preventDefault();
+	$('.detail-popup').toggleClass('is-visible');
 });
-$(".calendar-popup").on("click", function(e) {
-  e.preventDefault();
-  $(".detail-popup").removeClass("is-visible");
+$('.calendar-popup').on('click', function(e) {
+	e.preventDefault();
+	$('.detail-popup').removeClass('is-visible');
 });
+
+$('.path-share').on('click', function(e) {
+	e.preventDefault();
+	$('.path-pp2').toggleClass('active');
+});
+$('.calendar-popup').on('click', function(e) {
+	e.preventDefault();
+	$('.path-pp2').removeClass('active');
+});
+
+
 
 // My Meeting Tab Content
 $(document).ready(function() {
-  //alert('here');
 
-  $(".my-meeting-head-left a").click(function() {
-    $(".tabf").hide();
-    $(".my-meeting-head-left a.active").removeClass("active");
-    $(this).addClass("active");
+    //alert('here');
 
-    var panel = $(this).attr("href");
-    $(panel).fadeIn(200);
+  $('.my-meeting-head-left a').click(function(){
 
-    return false; // prevents link action
-  }); // end click
+     $('.tabf').hide();
+     $('.my-meeting-head-left a.active').removeClass('active');
+     $(this).addClass('active');
+	 $('.gecmis.active')
+	 if ($('.gecmis').hasClass("active")) {
+		$(".my-head-right-item1").addClass("active");
+	 }
+	 else if (!$('.gecmis').hasClass("active"))
+	{
+		$(".my-head-right-item1").removeClass("active");
+	}
+     var panel = $(this).attr('href');
+     $(panel).fadeIn(200);
+
+     return false;  // prevents link action
+
+  });  // end click
+
+
 }); // end ready
+
 
 // Password hide show
 $(".password-icon").click(function() {
-  $(this).toggleClass("icon-change");
-  input = $(this)
-    .parent()
-    .find("input");
-  if (input.attr("type") == "password") {
-    input.attr("type", "text");
-  } else {
-    input.attr("type", "password");
-  }
+    $(this).toggleClass("icon-change");
+    input = $(this).parent().find("input");
+    if (input.attr("type") == "password") {
+        input.attr("type", "text");
+    } else {
+        input.attr("type", "password");
+    }
 });
 
+
+
 // Personal Popup
-var modal = document.getElementById("myModal");
+var modal = document.getElementById('myModal');
 var btn = document.getElementById("myBtn");
 
 btn.onclick = function() {
-  modal.style.display = "block";
-};
+    modal.style.display = "block";
+}
 
 window.onclick = function(event) {
-  if (event.target == modal) {
-    modal.style.display = "none";
-  }
-};
+    if (event.target == modal) {
+        modal.style.display = "none";
+    }
+}
+
+

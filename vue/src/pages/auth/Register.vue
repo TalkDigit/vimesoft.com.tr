@@ -48,7 +48,19 @@
               </div>
               <div class="contact-form">
                 <div class="alert alert-info" role="alert" v-if="createStatus">
-                  Üyeliğiniz oluşturuldu. Kaydınızı tamamlamak için lütfen e-posta adresinize gelen doğrulama bağlantısını ziyaret edin.
+                  Üyeliğiniz oluşturuldu. Kaydınızı tamamlamak için lütfen e-posta adresinize gelen doğrulama
+                  bağlantısını ziyaret edin.
+
+                </div>
+                <div class="alert alert-warning" role="alert" v-if="createStatus">
+                  <br>
+                  !!!TEST ALANI!!!
+                  <br>
+                  Doğrulamak için aşağıdaki linke tıklayın.
+                  <br>
+                  <a :href="'verification?code=' + responseCode" style="    color: black;font-weight: bold;padding: 5px;border: 1px solid grey;margin-top: 10px;margin-bottom: 10px;display: block;width: 65px;">Doğrula</a>
+                  <br>
+                  !!!TEST ALANI!!!
                 </div>
                 <form @submit.prevent="onSubmit">
                   <div
@@ -62,8 +74,8 @@
                           name="fname"
                           autocomplete="off"
                           required="required"
-                           v-model="$v.info.name.$model"
-                       :class="{
+                          v-model="$v.info.name.$model"
+                          :class="{
                         'is-invalid': $v.info.name.$error,
                       }"
                       />
@@ -79,7 +91,7 @@
                           autocomplete="off"
                           required="required"
                           v-model="$v.info.surname.$model"
-                       :class="{
+                          :class="{
                         'is-invalid': $v.info.surname.$error,
                       }"
                       />
@@ -96,7 +108,7 @@
                         autocomplete="off"
                         required="required"
                         v-model="$v.info.email.$model"
-                       :class="{
+                        :class="{
                         'is-invalid': $v.info.email.$error,
                       }"
                     />
@@ -112,7 +124,7 @@
                         required="required"
                         autocomplete="off"
                         v-model="$v.info.phone.$model"
-                       :class="{
+                        :class="{
                         'is-invalid': $v.info.phone.$error,
                       }"
                     />
@@ -128,7 +140,7 @@
                         required="required"
                         autocomplete="off"
                         v-model="$v.info.password.$model"
-                       :class="{
+                        :class="{
                         'is-invalid': $v.info.password.$error,
                       }"
                     />
@@ -181,7 +193,7 @@
 </template>
 <script>
 import axios from "axios";
-import {required, minLength,numeric, email} from "vuelidate/lib/validators";
+import {required, minLength, numeric, email} from "vuelidate/lib/validators";
 
 export default {
   data() {
@@ -193,8 +205,8 @@ export default {
         phone: null,
         password: null,
       },
-      createStatus : false,
-      responseCode : ''
+      createStatus: false,
+      responseCode: ''
     };
   },
   validations: {
@@ -206,10 +218,10 @@ export default {
       name: {
         required
       },
-      surname : {
+      surname: {
         required
       },
-      phone : {
+      phone: {
         required,
         numeric
       },
@@ -219,9 +231,11 @@ export default {
     },
   },
   methods: {
+
     onSubmit() {
-          axios
-          .post("http://37.75.13.158/v1/account/create", {
+
+      axios
+          .post("/account/create", {
             account_type: "individual",
             email: this.info.email,
             password: this.info.password,
@@ -232,11 +246,13 @@ export default {
           })
           .then((response) => {
             console.log(response.data.code)
-            if(response.status == 200) {
+            if (response.status == 200) {
               this.responseCode = response.data.data.code,
-              this.createStatus = true;
-               Object.keys(this.info).forEach((i) => this.info[i] = null);
-			        this.$nextTick(() => { this.$v.$reset() })
+                  this.createStatus = true;
+              Object.keys(this.info).forEach((i) => this.info[i] = null);
+              this.$nextTick(() => {
+                this.$v.$reset()
+              })
             }
           })
           .catch((error) => {
