@@ -1,48 +1,118 @@
-.form-input.is-valid+label+span {
+.form-input.is-valid + label + span {
     background-color: #00dd08;
 }
 
-.form-input.is-invalid+label+span {
+.form-input.is-invalid + label + span {
     background-color: #dd0029;
 }
-.contact-input-box input:focus~span {
+
+.contact-input-box input:focus ~ span {
     background-color: #007bff;
 }
-.form-input.is-invalid+label {
+
+.form-input.is-invalid + label {
     top: -10px;
 }
 
 .slide-enter-active {
-   -moz-transition-duration: 0.7s;
-   -webkit-transition-duration: 0.7s;
-   -o-transition-duration: 0.7s;
-   transition-duration: 0.7s;
-   -moz-transition-timing-function: ease-in;
-   -webkit-transition-timing-function: ease-in;
-   -o-transition-timing-function: ease-in;
-   transition-timing-function: ease-in;
+    -moz-transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    -moz-transition-timing-function: ease-in;
+    -webkit-transition-timing-function: ease-in;
+    -o-transition-timing-function: ease-in;
+    transition-timing-function: ease-in;
 }
 
 .slide-leave-active {
-   -moz-transition-duration: 0.7s;
-   -webkit-transition-duration: 0.7s;
-   -o-transition-duration: 0.7s;
-   transition-duration: 0.7s;
-   -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-   -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-   -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
-   transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -moz-transition-duration: 0.7s;
+    -webkit-transition-duration: 0.7s;
+    -o-transition-duration: 0.7s;
+    transition-duration: 0.7s;
+    -moz-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -webkit-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    -o-transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
+    transition-timing-function: cubic-bezier(0, 1, 0.5, 1);
 }
 
 .slide-enter-to, .slide-leave {
-   max-height: 100px;
-   overflow: hidden;
+    max-height: 100px;
+    overflow: hidden;
 }
 
 .slide-enter, .slide-leave-to {
-   overflow: hidden;
-   max-height: 0;
+    overflow: hidden;
+    max-height: 0;
 }
+
 .packet-plans .plans-table {
-    display:block
+    display: block
+}
+
+
+.content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li.active span {
+    color: #007BFF;
+}
+
+.free-trial {
+    display: block
+}
+
+.password-input {
+    display: block
+}
+
+.my-meeting-toptitle .my-meeting-head-right .my-head-right-item1 {
+    display: block
+}
+
+.mx-input {
+    background: unset !important;
+    border: unset !important;
+    outline: unset !important;
+    box-shadow: unset !important;
+}
+
+.number-subs {
+    display: block;
+}
+.mx-datepicker-popup {
+    border-radius: 20px;
+}
+@media (min-width: 1200px) {
+     .account-pic-line {
+        max-width: unset;
+    }
+}
+
+@media (min-width: 1680px) {
+    .account-pic {
+        max-width: 100%;
+        height: 288px;
+    }
+}
+
+@media (min-width: 1920px) {
+    .account-inp {
+        max-width:620px
+    }
+    .account-content-wrapper {
+        max-width: 1600px;
+    }
+}
+
+.card-box-all, .card-box-all2 {
+display: block;
+}
+
+.content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li:hover span {
+color : #A2B2C5
+}
+.content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.active span {
+color : #007BFF
+}
+
+.headerHomeButton {
+    display:none
 }

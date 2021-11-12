@@ -55,6 +55,13 @@
                   >
                     {{ error.message }}
                   </div>
+                  <div
+                    class="alert alert-success mb-3"
+                    role="alert"
+                    v-if="error.status == false"
+                  >
+                    {{ error.message }}
+                  </div>
                 </transition>
                 <form @submit.prevent="onSubmit">
                   <div class="contact-input-box">
@@ -85,7 +92,7 @@
                       required="required"
                       autocomplete="off"
                     />
-                    <label for="sifre">Şifreniz</label>
+                    <label for="sifren">Şifreniz</label>
                     <span class="contact-blue"></span>
                   </div>
                   <div
@@ -103,7 +110,9 @@
                       <label for="oturum">Oturumu Açık Tut</label>
                     </div>
                     <div class="contact-check-box">
-                      <a href="#" class="sifre_unuttum">Şifremi Unuttum</a>
+                    <router-link :to="{name : 'forgot'}">
+                         <a  class="sifre_unuttum">Şifremi Unuttum</a>
+                    </router-link>
                     </div>
                   </div>
                   <div class="contact-buttons w-100 mt-5 mb-4">
@@ -156,7 +165,7 @@ export default {
       },
       isUser: false,
       error: {
-        status: false,
+        status: null,
         message: null,
       },
     };
@@ -172,7 +181,15 @@ export default {
   methods: {
     onSubmit() {
       this.$store.dispatch("login", { ...this.user }).then((response) => {
-        console.log(response);
+        console.log(response.error)
+          this.error.status = false;
+           this.error.message = "Giriş başarılı. Dashboard'a yönlendiriliyorsunuz."
+            setTimeout(() => {
+              this.$router.push({name : "dashboard"})
+            }, 3600);
+      }, (error) => {
+          this.error.status = true;
+           this.error.message = error.response.data.message
       });
     },
   },
