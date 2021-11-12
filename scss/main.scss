@@ -1496,6 +1496,9 @@ a {
 .card-ticket2 {
     span {
         font-size:17px;
+        @media (max-width:364px) {
+            font-size:14px;
+        }
         color:#fff;
         background:url(../img/bookmark-line.svg);
         background-repeat: no-repeat;
@@ -3598,10 +3601,10 @@ a {
         top: 12px;
     }
 }
-/*.spe-select .check-select-name.active {
+.spe-select .check-select-name.active {
   transition: all .2s ease-in-out;
   top: -10px;
-}*/
+}
 select.selectric-select:checked + span.check-select-name {
     top:-10px;
 }
@@ -3844,38 +3847,93 @@ input.calendar {
     &.model-open {
         display: block;
     }
-    .popup-modal-content {
-        background-color:#fff;
-        border-radius: 36px;
-        padding:45px 0;
-        max-width: 697px;
-        margin:6% auto;
-        -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
-        -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
-        box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+}
+.popup-modal-content {
+    background-color:#fff;
+    border-radius: 36px;
+    padding:45px 0;
+    max-width: 697px;
+    margin:6% auto;
+    -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+    -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+    box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
+}
+.personal-popup-title {
+    font-size:24px;
+    font-weight: 600;
+    margin-bottom: 29px;
+}
+.personal-popup-head {
+    padding-bottom:20px;
+    @media (min-width:1200px) {
+        margin:0 45px;
     }
-    .personal-popup-title {
-        font-size:24px;
+    @media (max-width:1199px) {
+        margin:0 15px;
+    }
+}
+.user-invite-iconx {
+    cursor: pointer;
+    width: 10%;
+    height: 60px;
+    line-height: 60px;
+    text-align: center;
+}
+.personal-popup-remove {
+    @media (min-width:968px) {
+        font-size:16px;
+    }
+    @media (max-width:967px) {
+        font-size:14px;
+    }
+    font-weight: 500;
+    color:#007BFF;
+    cursor: pointer;
+}
+.personal-popup-content {
+    @media (min-width:1200px) {
+        padding:0px 9px 0px 29px;
+        margin:0 46px 30px 46px;
+    }
+    @media (max-width:1199px) {
+        padding:0px 9px 0px 9px;
+        margin:0 15px 30px 15px;
+    }
+    border-bottom:1px solid #A2B2C5;
+    border-top:1px solid #A2B2C5;
+    .personal-popup-content-wrapper {
+        @media (min-width:768px) {
+            height: 380px;
+        }
+        @media (max-width:767px) {
+            height: 300px;
+        }
+        overflow-y:scroll;
+        padding-right: 20px;
+        margin:10px 0;
+        &::-webkit-scrollbar {
+            width: 6px;
+            border-radius: 10px;
+            background:#EFF2F4;
+        }
+        &::-webkit-scrollbar-thumb {
+            background: #904BFF;
+            border-radius:10px;
+        }
+    }
+    .personal-img {
+        margin-right: 14px;
+    }
+    .personal-name {
         font-weight: 600;
-        margin-bottom: 29px;
-    }
-    .personal-popup-head {
-        padding-bottom:20px;
-        @media (min-width:1200px) {
-            margin:0 45px;
+        @media (min-width:968px) {
+            font-size:20px;
         }
-        @media (max-width:1199px) {
-            margin:0 15px;
+        @media (max-width:967px) {
+            font-size:15px;
         }
     }
-    .user-invite-iconx {
-        cursor: pointer;
-        width: 10%;
-        height: 60px;
-        line-height: 60px;
-        text-align: center;
-    }
-    .personal-popup-remove {
+    .personal-remove {
         @media (min-width:968px) {
             font-size:16px;
         }
@@ -3886,76 +3944,24 @@ input.calendar {
         color:#007BFF;
         cursor: pointer;
     }
-    .personal-popup-content {
-        @media (min-width:1200px) {
-            padding:0px 9px 0px 29px;
-            margin:0 46px 30px 46px;
-        }
-        @media (max-width:1199px) {
-            padding:0px 9px 0px 9px;
-            margin:0 15px 30px 15px;
-        }
-        border-bottom:1px solid #A2B2C5;
-        border-top:1px solid #A2B2C5;
-        .personal-popup-content-wrapper {
-            @media (min-width:768px) {
-                height: 380px;
-            }
-            @media (max-width:767px) {
-                height: 300px;
-            }
-            overflow-y:scroll;
-            padding-right: 20px;
-            margin:10px 0;
-            &::-webkit-scrollbar {
-                width: 6px;
-                border-radius: 10px;
-                background:#EFF2F4;
-            }
-            &::-webkit-scrollbar-thumb {
-                background: #904BFF;
-                border-radius:10px;
-            }
-        }
-        .personal-img {
-            margin-right: 14px;
-        }
-        .personal-name {
-            font-weight: 600;
-            @media (min-width:968px) {
-                font-size:20px;
-            }
-            @media (max-width:967px) {
-                font-size:15px;
-            }
-        }
-        .personal-remove {
-            @media (min-width:968px) {
-                font-size:16px;
-            }
-            @media (max-width:967px) {
-                font-size:14px;
-            }
-            font-weight: 500;
-            color:#007BFF;
-            cursor: pointer;
-        }
-        .personal-popup-item {
-            padding-bottom:10px;
+    .personal-popup-item {
+        padding-bottom:10px;
+        padding-top:10px;
+        &:first-child {
             padding-top:10px;
-            &:first-child {
-                padding-top:10px;
-            }
         }
     }
-    .personal-popup-footer {
-        @media (min-width:1200px) {
-            margin:0 45px;
-        }
-        @media (max-width:1199px) {
-            margin:0 15px;
-        }
+}
+.personal-popup-footer {
+    @media (min-width:1200px) {
+        margin:0 45px;
     }
+    @media (max-width:1199px) {
+        margin:0 15px;
+    }
+}
+.calendar-popup-content.personal-popup {
+    display: block;
 }
 .personal-img {
     margin-right: 14px;
@@ -4655,10 +4661,10 @@ input.calendar {
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.21);
     h1 {
         font-weight: 600;
-        @media (min-width:1200px) {
+        @media (min-width:1400px) {
             font-size:36px;
         }
-        @media (max-width:1199px) {
+        @media (max-width:1399px) {
             font-size:25px;
         }
         color:#fff;
@@ -4917,8 +4923,13 @@ input.calendar {
     @media (min-width:968px) {
         font-size: 17px;
     }
-    @media (max-width:967px) {
+    @media (min-width:768px) and (max-width:967px) {
         font-size: 14px;
+    }
+    @media (max-width:767px) {
+        display: block;
+        width: 100%;
+        margin:10px 0;
     }
 }
 .settings-inp {
@@ -4933,6 +4944,17 @@ input.calendar {
     display: none;
     &.active {
         display: block;
+    }
+    @media (max-width:767px) {
+        div.btn-subs {
+            margin-right: 10px;
+            margin-bottom: 10px;
+        }
+        div {
+            a.btn-subs2 {
+                margin-bottom: 10px;
+            }
+        }
     }
 }
 
@@ -6107,6 +6129,33 @@ input.calendar {
     width: 100%;
 }
 .mtr-all-toggle {
+    display: none;
+    &.active {
+        display: block;
+    }
+}
+.sss-link {
+    @media (min-width:1200px) and (max-width:1399px) {
+        font-size:18px!important;
+    }
+}
+.my-account-title {
+    a.hover-bg {
+        @media (min-width:1200px) and (max-width:1399px) {
+            padding:16px 27px!important;
+            font-size:15px!important;
+        }
+        @media (max-width:364px) {
+            &:nth-child(2) {
+                margin-top: 10px;
+                padding-right: 20px!important;
+                padding-left: 20px!important;
+            }
+        }
+    }
+}
+.meeting-record-delete {
+    width: 150px;
     display: none;
     &.active {
         display: block;

@@ -281,10 +281,32 @@
                                 </div>
                                 <div class="setting-tab-item d-flex align-items-center justify-content-between">
                                     <div class="setting-item-text setting-text">Toplantı Kayıtları Silinsin</div>
+                                    <div class="meeting-record-delete">
+                                        <div class="time-period-plans ">
+                                            <label class="spe-select  mb-0">
+                                                <select class="selectric-select" id="nicer-select-id" name="mySelect" reqiured>
+                                                    <option value=""></option>
+                                                    <option value="lorem4">1</option>
+                                                    <option value="lorem4">2</option>
+                                                    <option value="lorem4">3</option>
+                                                    <option value="lorem4">4</option>
+                                                    <option value="lorem4">1</option>
+                                                    <option value="lorem4">2</option>
+                                                    <option value="lorem4">3</option>
+                                                    <option value="lorem4">4</option>
+                                                    <option value="lorem4">1</option>
+                                                    <option value="lorem4">2</option>
+                                                    <option value="lorem4">3</option>
+                                                    <option value="lorem4">4</option>
+                                                </select>
+                                                <span class="check-select-name">Gün Sonra</span>
+                                            </label>
+                                        </div>
+                                    </div>
                                     <div class="setting-item-checkbox">
                                         <div class="label-control label-xc d-flex align-items-center">
                                             <label for="e_item" class="camera-no">Hayır</label>
-                                            <input type="checkbox" class="switch_1 switch_y"  id="e_item">
+                                            <input type="checkbox" class="switch_1 switch_btn switch_y"  id="e_item">
                                             <label for="e_item" class="camera-yes">Evet</label>
                                         </div>
                                     </div>
@@ -696,6 +718,10 @@
             $('.detail-pbt').click(function(){
                 $(this).closest('.detail-pbt').toggleClass('active');
             });
+        });
+
+        $('.switch_btn').click(function() {
+            $('.meeting-record-delete').fadeToggle(10);
         });
 
     </script>

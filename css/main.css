@@ -1272,6 +1272,9 @@ a {
   background-repeat: no-repeat;
   background-position: center center;
   background-size: contain; }
+  @media (max-width: 364px) {
+    .card-ticket2 span {
+      font-size: 14px; } }
 
 .packets-head {
   margin-bottom: 95px;
@@ -2962,10 +2965,10 @@ a {
     .spe-select .check-select-name {
       top: 12px; } }
 
-/*.spe-select .check-select-name.active {
+.spe-select .check-select-name.active {
   transition: all .2s ease-in-out;
-  top: -10px;
-}*/
+  top: -10px; }
+
 select.selectric-select:checked + span.check-select-name {
   top: -10px; }
 
@@ -3188,102 +3191,112 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   background-color: rgba(0, 0, 0, 0.4); }
   .personal-popup.model-open {
     display: block; }
-  .personal-popup .popup-modal-content {
-    background-color: #fff;
-    border-radius: 36px;
-    padding: 45px 0;
-    max-width: 697px;
-    margin: 6% auto;
-    -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
-    -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
-    box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); }
-  .personal-popup .personal-popup-title {
-    font-size: 24px;
-    font-weight: 600;
-    margin-bottom: 29px; }
-  .personal-popup .personal-popup-head {
-    padding-bottom: 20px; }
-    @media (min-width: 1200px) {
-      .personal-popup .personal-popup-head {
-        margin: 0 45px; } }
-    @media (max-width: 1199px) {
-      .personal-popup .personal-popup-head {
-        margin: 0 15px; } }
-  .personal-popup .user-invite-iconx {
-    cursor: pointer;
-    width: 10%;
-    height: 60px;
-    line-height: 60px;
-    text-align: center; }
-  .personal-popup .personal-popup-remove {
+
+.popup-modal-content {
+  background-color: #fff;
+  border-radius: 36px;
+  padding: 45px 0;
+  max-width: 697px;
+  margin: 6% auto;
+  -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
+  box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); }
+
+.personal-popup-title {
+  font-size: 24px;
+  font-weight: 600;
+  margin-bottom: 29px; }
+
+.personal-popup-head {
+  padding-bottom: 20px; }
+  @media (min-width: 1200px) {
+    .personal-popup-head {
+      margin: 0 45px; } }
+  @media (max-width: 1199px) {
+    .personal-popup-head {
+      margin: 0 15px; } }
+
+.user-invite-iconx {
+  cursor: pointer;
+  width: 10%;
+  height: 60px;
+  line-height: 60px;
+  text-align: center; }
+
+.personal-popup-remove {
+  font-weight: 500;
+  color: #007BFF;
+  cursor: pointer; }
+  @media (min-width: 968px) {
+    .personal-popup-remove {
+      font-size: 16px; } }
+  @media (max-width: 967px) {
+    .personal-popup-remove {
+      font-size: 14px; } }
+
+.personal-popup-content {
+  border-bottom: 1px solid #A2B2C5;
+  border-top: 1px solid #A2B2C5; }
+  @media (min-width: 1200px) {
+    .personal-popup-content {
+      padding: 0px 9px 0px 29px;
+      margin: 0 46px 30px 46px; } }
+  @media (max-width: 1199px) {
+    .personal-popup-content {
+      padding: 0px 9px 0px 9px;
+      margin: 0 15px 30px 15px; } }
+  .personal-popup-content .personal-popup-content-wrapper {
+    overflow-y: scroll;
+    padding-right: 20px;
+    margin: 10px 0; }
+    @media (min-width: 768px) {
+      .personal-popup-content .personal-popup-content-wrapper {
+        height: 380px; } }
+    @media (max-width: 767px) {
+      .personal-popup-content .personal-popup-content-wrapper {
+        height: 300px; } }
+    .personal-popup-content .personal-popup-content-wrapper::-webkit-scrollbar {
+      width: 6px;
+      border-radius: 10px;
+      background: #EFF2F4; }
+    .personal-popup-content .personal-popup-content-wrapper::-webkit-scrollbar-thumb {
+      background: #904BFF;
+      border-radius: 10px; }
+  .personal-popup-content .personal-img {
+    margin-right: 14px; }
+  .personal-popup-content .personal-name {
+    font-weight: 600; }
+    @media (min-width: 968px) {
+      .personal-popup-content .personal-name {
+        font-size: 20px; } }
+    @media (max-width: 967px) {
+      .personal-popup-content .personal-name {
+        font-size: 15px; } }
+  .personal-popup-content .personal-remove {
     font-weight: 500;
     color: #007BFF;
     cursor: pointer; }
     @media (min-width: 968px) {
-      .personal-popup .personal-popup-remove {
+      .personal-popup-content .personal-remove {
         font-size: 16px; } }
     @media (max-width: 967px) {
-      .personal-popup .personal-popup-remove {
+      .personal-popup-content .personal-remove {
         font-size: 14px; } }
-  .personal-popup .personal-popup-content {
-    border-bottom: 1px solid #A2B2C5;
-    border-top: 1px solid #A2B2C5; }
-    @media (min-width: 1200px) {
-      .personal-popup .personal-popup-content {
-        padding: 0px 9px 0px 29px;
-        margin: 0 46px 30px 46px; } }
-    @media (max-width: 1199px) {
-      .personal-popup .personal-popup-content {
-        padding: 0px 9px 0px 9px;
-        margin: 0 15px 30px 15px; } }
-    .personal-popup .personal-popup-content .personal-popup-content-wrapper {
-      overflow-y: scroll;
-      padding-right: 20px;
-      margin: 10px 0; }
-      @media (min-width: 768px) {
-        .personal-popup .personal-popup-content .personal-popup-content-wrapper {
-          height: 380px; } }
-      @media (max-width: 767px) {
-        .personal-popup .personal-popup-content .personal-popup-content-wrapper {
-          height: 300px; } }
-      .personal-popup .personal-popup-content .personal-popup-content-wrapper::-webkit-scrollbar {
-        width: 6px;
-        border-radius: 10px;
-        background: #EFF2F4; }
-      .personal-popup .personal-popup-content .personal-popup-content-wrapper::-webkit-scrollbar-thumb {
-        background: #904BFF;
-        border-radius: 10px; }
-    .personal-popup .personal-popup-content .personal-img {
-      margin-right: 14px; }
-    .personal-popup .personal-popup-content .personal-name {
-      font-weight: 600; }
-      @media (min-width: 968px) {
-        .personal-popup .personal-popup-content .personal-name {
-          font-size: 20px; } }
-      @media (max-width: 967px) {
-        .personal-popup .personal-popup-content .personal-name {
-          font-size: 15px; } }
-    .personal-popup .personal-popup-content .personal-remove {
-      font-weight: 500;
-      color: #007BFF;
-      cursor: pointer; }
-      @media (min-width: 968px) {
-        .personal-popup .personal-popup-content .personal-remove {
-          font-size: 16px; } }
-      @media (max-width: 967px) {
-        .personal-popup .personal-popup-content .personal-remove {
-          font-size: 14px; } }
-    .personal-popup .personal-popup-content .personal-popup-item {
-      padding-bottom: 10px;
+  .personal-popup-content .personal-popup-item {
+    padding-bottom: 10px;
+    padding-top: 10px; }
+    .personal-popup-content .personal-popup-item:first-child {
       padding-top: 10px; }
-      .personal-popup .personal-popup-content .personal-popup-item:first-child {
-        padding-top: 10px; }
-  @media (min-width: 1200px) {
-    .personal-popup .personal-popup-footer {
-      margin: 0 45px; } }
-  @media (max-width: 1199px) {
-    .personal-popup .personal-popup-footer {
-      margin: 0 15px; } }
+
+@media (min-width: 1200px) {
+  .personal-popup-footer {
+    margin: 0 45px; } }
+@media (max-width: 1199px) {
+  .personal-popup-footer {
+    margin: 0 15px; } }
+
+.calendar-popup-content.personal-popup {
+  display: block; }
 
 .personal-img {
   margin-right: 14px; }
@@ -3893,10 +3906,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   .setting-title h1 {
     font-weight: 600;
     color: #fff; }
-    @media (min-width: 1200px) {
+    @media (min-width: 1400px) {
       .setting-title h1 {
         font-size: 36px; } }
-    @media (max-width: 1199px) {
+    @media (max-width: 1399px) {
       .setting-title h1 {
         font-size: 25px; } }
 
@@ -4087,9 +4100,14 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   @media (min-width: 968px) {
     .sbs-t {
       font-size: 17px; } }
-  @media (max-width: 967px) {
+  @media (min-width: 768px) and (max-width: 967px) {
     .sbs-t {
       font-size: 14px; } }
+  @media (max-width: 767px) {
+    .sbs-t {
+      display: block;
+      width: 100%;
+      margin: 10px 0; } }
 
 .settings-inp {
   padding-top: 30px;
@@ -4103,6 +4121,12 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   display: none; }
   .number-subs.active {
     display: block; }
+  @media (max-width: 767px) {
+    .number-subs div.btn-subs {
+      margin-right: 10px;
+      margin-bottom: 10px; }
+    .number-subs div a.btn-subs2 {
+      margin-bottom: 10px; } }
 
 .detail-popup .detail-popup-content {
   position: fixed;
@@ -5056,6 +5080,26 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 .mtr-all-toggle {
   display: none; }
   .mtr-all-toggle.active {
+    display: block; }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .sss-link {
+    font-size: 18px !important; } }
+
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .my-account-title a.hover-bg {
+    padding: 16px 27px !important;
+    font-size: 15px !important; } }
+@media (max-width: 364px) {
+  .my-account-title a.hover-bg:nth-child(2) {
+    margin-top: 10px;
+    padding-right: 20px !important;
+    padding-left: 20px !important; } }
+
+.meeting-record-delete {
+  width: 150px;
+  display: none; }
+  .meeting-record-delete.active {
     display: block; }
 
 /* Meeting Report 2 End */
