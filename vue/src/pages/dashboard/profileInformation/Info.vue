@@ -48,12 +48,7 @@
                 </div>
             </div>
         </div>
-        <div class="account-edit-text-button">
-            <div class="account-edit-text delete mb-4 d-flex align-items-center">
-                <img src="/src/assets/img/edit.svg" alt="">
-                <span class="ps-2">Düzenle</span>
-            </div>
-        </div>
+
         <div class="account-edit-completed">
             <div class="row">
                 <div class="col-auto">
@@ -135,6 +130,12 @@
                 <span class="check-select-name">Zaman Dilimi</span>
             </label>
         </div>
+        <div class="acc-up-btn mb-5">
+
+                                    <router-link :to="{name : 'AdditionalTab'}">
+                                        <a class="acc-btn-up"> Tamamla</a>
+                                    </router-link>
+                                </div>
     </div>
 </template>
 

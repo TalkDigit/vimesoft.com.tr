@@ -269,6 +269,18 @@
 export default {
     name: "ParticipiantSettings",
     mounted() {
+                $(".setting-btn2").click(function(){
+            $(".personal-popup-search, .number-subs").addClass("active");
+        });
+        $(".setting-btn1").click(function(){
+            $(".personal-popup-search, .number-subs").removeClass("active");
+        });
+
+        $(function () {
+            $('.detail-pbt').click(function(){
+                $(this).closest('.detail-pbt').toggleClass('active');
+            });
+        });
         $('.s-detail, .share-calendar-link').on('click', function (e) {
             e.preventDefault();
             $('.detail-popup').toggleClass('is-visible');
@@ -276,6 +288,26 @@ export default {
         $('.calendar-popup').on('click', function (e) {
             e.preventDefault();
             $('.detail-popup').removeClass('is-visible');
+        });
+        var selectricOptions = {
+            disableOnMobile: false,
+        };
+
+        $(function () {
+            $('.spe-select select').selectric(selectricOptions);
+        });
+
+        $('.spe-select select').on('change', function () { // fires when the value changes
+
+            var returnvalue;
+            if ($(this).val() !== "") {
+                $(this).closest(".spe-select").find(".check-select-name").addClass("active");
+                returnvalue = false;
+            } else {
+                $(this).closest(".spe-select").find(".check-select-name").removeClass("active");
+            }
+            return returnvalue;
+
         });
     }
 }

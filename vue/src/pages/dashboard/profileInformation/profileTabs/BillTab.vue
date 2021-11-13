@@ -140,23 +140,7 @@
                 </tr>
                 </tbody>
             </table>
-            <div class="settings-inp">
-                <div class="user-invite-box d-flex align-items-center col-xl-6 col-12">
-                    <div class="contact-input-box">
-                        <input type="email" class="form-input" id="email" name="email" autocomplete="off"
-                               required="required"/>
-                        <label for="email">Kullanıcı Ekle</label>
-                        <span class="contact-blue"></span>
-                    </div>
-                    <div class="user-invite-icon">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22">
-                            <path id="Icon_awesome-plus" data-name="Icon awesome-plus"
-                                  d="M20.429,10.893H13.357V3.821A1.572,1.572,0,0,0,11.786,2.25H10.214A1.572,1.572,0,0,0,8.643,3.821v7.071H1.571A1.572,1.572,0,0,0,0,12.464v1.571a1.572,1.572,0,0,0,1.571,1.571H8.643v7.071a1.572,1.572,0,0,0,1.571,1.571h1.571a1.572,1.572,0,0,0,1.571-1.571V15.607h7.071A1.572,1.572,0,0,0,22,14.036V12.464A1.572,1.572,0,0,0,20.429,10.893Z"
-                                  transform="translate(0 -2.25)" fill="#007bff"/>
-                        </svg>
-                    </div>
-                </div>
-            </div>
+
         </div>
     </div>
 

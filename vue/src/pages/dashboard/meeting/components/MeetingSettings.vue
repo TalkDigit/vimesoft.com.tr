@@ -75,14 +75,37 @@
                 </div>
                 <div class="setting-tab-item d-flex align-items-center justify-content-between">
                     <div class="setting-item-text setting-text">Toplantı Kayıtları Silinsin</div>
+
+                    <div class="meeting-record-delete">
+                        <div class="time-period-plans ">
+                               <label class="spe-select mb-0" >
+                            <select class="selectric-select" id="nicer-select-id" name="mySelect" reqiured>
+                                <option value=""></option>
+                                <option value="lorem4">1</option>
+                                <option value="lorem3">2</option>
+                                <option value="lorem2">3</option>
+                                <option value="lorem4">4</option>
+                                <option value="lorem3">5</option>
+                                <option value="lorem2">6</option>
+                                <option value="lorem4">7</option>
+                                <option value="lorem3">8</option>
+                                <option value="lorem2">9</option>
+                                <option value="lorem4">10</option>
+                            </select>
+                            <span class="check-select-name">Gün Sonra</span>
+                        </label>d
+                        </div>
+                    </div>
+
                     <div class="setting-item-checkbox">
                         <div class="label-control label-xc d-flex align-items-center" :class="is_free ? 'disable' : ''">
                             <label for="e_item" class="camera-no">Hayır</label>
-                            <input type="checkbox" class="switch_1 switch_y" :disabled="is_free" id="e_item">
+                            <input type="checkbox" class="switch_1 switch_btn switch_y" :disabled="is_free" id="e_item">
                             <label for="e_item" class="camera-yes">Evet</label>
                         </div>
                     </div>
                 </div>
+
                 <div class="setting-tab-item d-flex align-items-center justify-content-between">
                     <div class="setting-item-text setting-text">Katılımcılar Masaüstü/Doküman Paylaşabilir</div>
                     <div class="setting-item-checkbox">
@@ -111,13 +134,29 @@
 <script>
 export default {
     name: "MeetingSettings",
-    data () {
+    data() {
         return {
-            is_free : this.$store.state.accountInformation[0].package == 'Ücretsiz' ? true : false
+            is_free: this.$store.state.accountInformation[0].package == 'Ücretsiz' ? true : false
         }
     },
     mounted() {
         $(document).ready(function () {
+            $(".setting-btn2").click(function () {
+                $(".personal-popup-search, .number-subs").addClass("active");
+            });
+            $(".setting-btn1").click(function () {
+                $(".personal-popup-search, .number-subs").removeClass("active");
+            });
+
+            $(function () {
+                $('.detail-pbt').click(function () {
+                    $(this).closest('.detail-pbt').toggleClass('active');
+                });
+            });
+
+            $('.switch_btn').click(function () {
+                $('.meeting-record-delete').fadeToggle(10);
+            });
 
             var selectricOptions = {
                 disableOnMobile: false,

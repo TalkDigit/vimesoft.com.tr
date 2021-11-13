@@ -88,7 +88,8 @@
                     </div>
                     <div class="meeting-box-meeting-link d-flex align-items-center">
                         <a href="" class="meeting-link">http://vimesoft.com//759491938</a>
-                        <span class="copy-link"><img src="src/assets/img/icon7.svg" alt=""></span>
+                        <span class="copy-link" v-on:click="copyLink('http://vimesoft.com//759491938')"><img
+                            src="src/assets/img/icon7.svg" alt=""></span>
                     </div>
                 </div>
             </div>
@@ -149,7 +150,7 @@
                 <h1>Görüşmeye Başla!</h1>
             </div>
             <div class="mb-md-5 mb-4">
-                 <router-link :to="{name : 'meetingPlan'}">
+                <router-link :to="{name : 'meetingPlan'}">
                     <a class="btn-buy-xl2 meeting-btn">Toplantı Planla</a>
                 </router-link>
 
@@ -158,8 +159,9 @@
                 </router-link>
             </div>
             <div class="meeting-adress pb-5">
-                Kişisel Toplantı Adresim: <a href="#">http://vimesoft.com//285205328</a> <span
-                class="ps-2 copy-link"><img src="src/assets/img/icon7.svg"></span>
+                Kişisel Toplantı Adresim: <a href="#">http://vimesoft.com/285205328</a> <span
+                class="ps-2 copy-link" v-on:click="copyLink('http://vimesoft.com/285205328')"><img
+                src="src/assets/img/icon7.svg"></span>
             </div>
         </div>
     </div>
@@ -167,6 +169,20 @@
 
 <script>
 export default {
+    methods: {
+        copyLink(text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        },
+
+    },
     mounted() {
         $(document).ready(function () {
             $(".mpj-top").click(function () {
