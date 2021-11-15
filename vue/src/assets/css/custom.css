@@ -106,8 +106,9 @@
 display: block;
 }
 
-.content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.sticky-drop-ul-li:hover span {
-color : #A2B2C5
+
+.sticky-drop-ul2 sticky-opened span:hover {
+color : #007BFF
 }
 .content-flex .sticky-menu ul li.sticky-first-li .sticky-drop-ul li.active span {
 color : #007BFF
@@ -115,4 +116,9 @@ color : #007BFF
 
 .headerHomeButton {
     display:none
+}
+
+
+.mtr-all-toggle {
+display: block;
 }

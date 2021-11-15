@@ -18,7 +18,7 @@
                         <span class="sticky-user-name">{{ $store.state.accountInformation[0].account }}</span>
                     </div>
                     <div class="mobile-menu-burger">
-                        <img src="src/assets/img/menu-icon2.png" alt=""/>
+                        <img src="/src/assets/img/menu-icon2.png" alt=""/>
                     </div>
                 </div>
                 <ul class="sticky-nav">
@@ -270,13 +270,6 @@
                             <router-link tag="li" :to="{name : 'MeetingSettings'}" exact class="sticky-drop-ul-li" exact-active-class="active">
                                 <span>Toplantı</span>
                             </router-link>
-
-                            <li class="sticky-drop-ul-li">
-                                <span>Kayıt</span>
-                            </li>
-                            <li class="sticky-drop-ul-li">
-                                <span>Raporlama</span>
-                            </li>
                             <router-link tag="li" :to="{name : 'ParticipiantSettings'}" exact class="sticky-drop-ul-li" exact-active-class="active">
                                 <span>Kullanıcı</span>
                             </router-link>

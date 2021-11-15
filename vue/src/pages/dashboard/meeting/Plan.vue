@@ -41,7 +41,7 @@
                                         <label for="email">E-posta Adresiniz</label>
                                         <span class="contact-blue"></span>
                                     </div>
-                                    <div class="user-invite-icon" v-on:click="step++">
+                                    <div class="user-invite-icon" v-on:click="step == 3 ? step : step++">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                              viewBox="0 0 22 22">
                                             <path id="Icon_awesome-plus" data-name="Icon awesome-plus"
@@ -57,7 +57,7 @@
                                                                           name="email[2]" autocomplete="off"
                                                                           required="required"> <label for="email">E-posta
                                         Adresiniz</label><span class="contact-blue"></span></div>
-                                    <div class="user-remove-icon">
+                                    <div class="user-remove-icon" v-on:click="step--">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                              viewBox="0 0 22 22">
                                             <path id="Icon_awesome-plus" data-name="Icon awesome-plus"
@@ -69,11 +69,13 @@
                             </div>
                             <div class="col-lg-6 user-invite-more" id="user-invite-item3" v-show="step > 2">
                                 <div class="user-invite-box d-flex align-items-center">
-                                    <div class="contact-input-box"><input type="email" class="form-input" id="email"
-                                                                          name="email[3]" autocomplete="off"
-                                                                          required="required"> <label for="email">E-posta
-                                        Adresiniz</label><span class="contact-blue"></span></div>
-                                    <div class="user-remove-icon">
+                                    <div class="contact-input-box">
+                                        <input type="email" class="form-input" id="email" name="email[3]"
+                                               autocomplete="off" required="required">
+                                        <label for="email">E-posta Adresiniz</label>
+                                        <span class="contact-blue"></span>
+                                    </div>
+                                    <div class="user-remove-icon" v-on:click="step--">
                                         <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22"
                                              viewBox="0 0 22 22">
                                             <path id="Icon_awesome-plus" data-name="Icon awesome-plus"
@@ -99,7 +101,8 @@
                         <div class="password-guard-check me-sm-5 align-items-center">
                             <div class="label-control label-x d-flex align-items-center">
                                 <label for="psw_btn" data-name="psw_no" class="psw-no">Hayır</label>
-                                <input type="checkbox" class="switch_1 switch_x switch_btn" id="psw_btn" v-model="checked">
+                                <input type="checkbox" class="switch_1 switch_x switch_btn" id="psw_btn"
+                                       v-model="checked">
                                 <label for="psw_btn" data-name="psw_yes" class="psw-yes">Evet</label>
                             </div>
                             <div class="password-input" v-if="checked">
@@ -502,30 +505,28 @@
 
 export default {
     name: "Plan.vue",
-    data(){
-      return {
-          step : 1,
-          checked : false
-      }
+    data() {
+        return {
+            step: 1,
+            checked: false
+        }
     },
-    methods: {
-
-    },
+    methods: {},
     mounted() {
         $(document).ready(function () {
 
-           var modal = document.getElementById('myModal');
-var btn = document.getElementById("myBtn");
+            var modal = document.getElementById('myModal');
+            var btn = document.getElementById("myBtn");
 
-btn.onclick = function() {
-    modal.style.display = "block";
-}
+            btn.onclick = function () {
+                modal.style.display = "block";
+            }
 
-window.onclick = function(event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-    }
-}
+            window.onclick = function (event) {
+                if (event.target == modal) {
+                    modal.style.display = "none";
+                }
+            }
 
 
             var selectricOptions = {
@@ -574,6 +575,16 @@ window.onclick = function(event) {
                 $(".ag-content").slideToggle(300);
             });
         });
+        $(document).ready(function () {
+            $('.moderator-management button').click(function () {
+                var tab_idx = $(this).attr('data-tabx');
+
+                $('.btn-buy2').removeClass('active');
+
+                $(this).addClass('active');
+                $("#" + tab_idx).addClass('active');
+            })
+        })
     }
 
 }

@@ -33,7 +33,7 @@
                                 </div>
                                 <div class="meeting-box-meeting-link d-flex align-items-center">
                                     <a href="" class="meeting-link">http://vimesoft.com//759491938</a>
-                                    <span class="copy-link"><img src="/src/assets/img/icon7.svg" alt=""></span>
+                                    <span class="copy-link" v-on:click="copyLink('http://vimesoft.com//759491938')"><img src="/src/assets/img/icon7.svg" alt=""></span>
                                 </div>
                             </div>
                         </div>
@@ -60,6 +60,19 @@ export default {
     data(){
         return {
             date : null
+        }
+    },
+    methods: {
+        copyLink : function (text) {
+          const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
         }
     }
 }

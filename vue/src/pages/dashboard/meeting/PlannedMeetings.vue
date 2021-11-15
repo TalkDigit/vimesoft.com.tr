@@ -67,7 +67,8 @@
                                 </div>
                                 <div class="meeting-box-meeting-link d-flex align-items-center">
                                     <a href="" class="meeting-link">http://vimesoft.com//759491938</a>
-                                    <span class="copy-link"><img src="/src/assets/img/icon7.svg" alt=""></span>
+                                    <span class="copy-link" v-on:click="copyLink('http://vimesoft.com//759491938')"><img
+                                        src="/src/assets/img/icon7.svg" alt=""></span>
                                 </div>
                             </div>
                         </div>
@@ -105,7 +106,7 @@
                                     </div>
                                 </div>
                                 <div class="invite-personal-item">
-                                    <a href="" class="btn-buy2 pt-2 pb-2">+99 Daha Fazla</a>
+                                    <a href="" class="btn-buy2 pt-2 pb-2 my_btn">+99 Daha Fazla</a>
                                 </div>
                             </div>
                             <div class="meeting-box-content-btns">
@@ -185,7 +186,8 @@
                                 </div>
                                 <div class="meeting-box-meeting-link d-flex align-items-center">
                                     <a href="" class="meeting-link ">http://vimesoft.com//759491938</a>
-                                    <span class="copy-link"><img src="/src/assets/img/icon7.svg" alt=""></span>
+                                    <span class="copy-link" v-on:click="copyLink('http://vimesoft.com//759491938')"><img
+                                        src="/src/assets/img/icon7.svg" alt=""></span>
                                 </div>
                             </div>
                         </div>
@@ -223,7 +225,7 @@
                                     </div>
                                 </div>
                                 <div class="invite-personal-item">
-                                    <a href="" class="btn-buy2 pt-2 pb-2">+99 Daha Fazla</a>
+                                    <a href="" class="btn-buy2 pt-2 pb-2 my_btn">+99 Daha Fazla</a>
                                 </div>
                             </div>
                             <div class="meeting-box-content-btns">
@@ -235,12 +237,171 @@
                 </div>
             </div>
         </div>
+        <div id="myModal" class="personal-popup">
+
+        </div>
+
+        <div class="acc-packets2-popup2">
+            <div class="calendar-popup-content packets2-popup">
+                <div class="personal-popup-head m-0">
+                    <div class="personal-popup-title">Katılımcılar <span>(99)</span></div>
+                    <div class="personal-popup-search-box">
+                        <div class="personal-popup-search">
+                            <div class="personal-popup-search-item w-100">
+                                <input type="search" placeholder="Katılımcı Ara">
+                                <span class="personal-popup-search-icon">
+                                <img src="/src/assets/img/search.svg" alt="">
+                            </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="personal-popup-content m-0">
+                    <div class="personal-popup-content-wrapper">
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/gizem.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Gizem Demir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/burak.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Burak Koç
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/mehmet.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Mehmet Yılmaz
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                        <div class="personal-popup-item d-flex align-items-center justify-content-between">
+                            <div class="personal-item d-flex align-items-center">
+                                <div class="personal-img sticky-profil">
+                                    <img src="/src/assets/img/user-avatar-filled.png" alt="">
+                                </div>
+                                <div class="personal-name">
+                                    Bilge Bilir
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="calendar-popup"></div>
+        </div>
     </div>
 </template>
 
 <script>
 export default {
-    name: "PlannedMeetings.vue"
+    name: "PlannedMeetings.vue",
+    methods: {
+        copyLink: function (text) {
+            const el = document.createElement('textarea');
+            el.value = text;
+            el.setAttribute('readonly', '');
+            el.style.position = 'absolute';
+            el.style.left = '-9999px';
+            document.body.appendChild(el);
+            el.select();
+            document.execCommand('copy');
+            document.body.removeChild(el);
+        }
+    },
+    mounted() {
+        $('.my_btn').on('click', function (e) {
+            e.preventDefault();
+            $('.acc-packets2-popup2').toggleClass('active');
+        });
+        $('.calendar-popup').on('click', function (e) {
+            e.preventDefault();
+            $('.acc-packets2-popup2').removeClass('active');
+        });
+    }
 }
 </script>
 
