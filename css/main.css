@@ -3925,6 +3925,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       .setting-tabs li a {
         padding: 8px 25px; } }
 
+@media (min-width: 768px) and (max-width: 967px) {
+  .setting-tabs.tabs li a.btn-buy2 {
+    padding: 15px 35px; } }
+
 .setting-text {
   font-weight: 500; }
   @media (min-width: 968px) {
@@ -3970,7 +3974,6 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       margin-right: 10%; } }
   @media (min-width: 768px) and (max-width: 1199px) {
     .plans-table_x {
-      margin-right: 5%;
       position: relative;
       overflow-x: auto; }
       .plans-table_x table {
@@ -4442,7 +4445,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   position: relative;
   display: flex;
   align-items: center;
-  width: 75%; }
+  width: 76%; }
   .packet-path-all .packet-path::after {
     position: absolute;
     content: " ";
@@ -4450,25 +4453,26 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     height: 4px;
     background-color: #EFF2F4;
     z-index: 1;
-    top: 50%;
+    top: 27%;
     transform: translateY(-50%); }
   .packet-path-all .packet-path .path-item {
     position: relative;
     z-index: 2;
     width: 25%;
-    text-align: center; }
-    @media (min-width: 507px) {
-      .packet-path-all .packet-path .path-item {
-        top: 12px; } }
-    @media (max-width: 506px) {
-      .packet-path-all .packet-path .path-item {
-        top: 18px; } }
+    text-align: center;
+    top: 0; }
     .packet-path-all .packet-path .path-item:first-child {
       text-align: start !important; }
     .packet-path-all .packet-path .path-item:last-child {
       text-align: end !important; }
+    @media (min-width: 768px) {
+      .packet-path-all .packet-path .path-item:nth-child(2) {
+        padding-right: 5%; } }
     .packet-path-all .packet-path .path-item:nth-child(2) span.path-span {
       background-color: #775efb; }
+    @media (min-width: 768px) {
+      .packet-path-all .packet-path .path-item:nth-child(3) {
+        padding-left: 5%; } }
     .packet-path-all .packet-path .path-item:nth-child(3) span.path-span {
       background-color: #656df8; }
     .packet-path-all .packet-path .path-item:nth-child(4) span.path-span {
@@ -4498,7 +4502,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
           font-size: 14px; } }
 .packet-path-all .chosen-packets {
   position: relative;
-  width: 25%;
+  width: 24%;
   text-align: center; }
   .packet-path-all .chosen-packets .chosen-sell-icon {
     position: relative; }
@@ -5103,6 +5107,66 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     display: block; }
 
 /* Meeting Report 2 End */
+.main.settings .setting-item-checkbox {
+  position: relative; }
+  .main.settings .setting-item-checkbox .tooltipx {
+    left: 50%;
+    top: -128px;
+    transform: translateX(-50%); }
+    .main.settings .setting-item-checkbox .tooltipx:hover {
+      display: block; }
+@media (max-width: 967px) {
+  .main.settings .plans-table_x table {
+    width: 100%; } }
+@media (max-width: 967px) {
+  .main.settings .plans-table_x table thead :nth-child(2), .main.settings .plans-table_x table thead :nth-child(3), .main.settings .plans-table_x table thead :nth-child(4), .main.settings .plans-table_x table thead :nth-child(5) {
+    display: none; } }
+@media (max-width: 967px) {
+  .main.settings .plans-table_x table thead th:last-child {
+    width: 50%;
+    text-align: center; }
+    .main.settings .plans-table_x table thead th:last-child a {
+      font-size: 16px; }
+  .main.settings .plans-table_x table thead th:first-child {
+    width: 50%; } }
+@media (max-width: 967px) {
+  .main.settings .plans-table_x table tbody :nth-child(2), .main.settings .plans-table_x table tbody :nth-child(3), .main.settings .plans-table_x table tbody :nth-child(4), .main.settings .plans-table_x table tbody :nth-child(5) {
+    display: none; } }
+@media (max-width: 967px) {
+  .main.settings .plans-table_x table tbody tr td {
+    font-size: 17px; }
+    .main.settings .plans-table_x table tbody tr td:nth-child(1) {
+      text-overflow: ellipsis;
+      overflow: hidden;
+      white-space: nowrap; }
+    .main.settings .plans-table_x table tbody tr td:last-child a {
+      font-size: 15px; } }
+
+.label-control.disable:hover + .tooltipx {
+  display: block; }
+
+@media (min-width: 1200px) and (max-width: 1679px) {
+  .main.unp-meeting .user-panel-box .meeting-btn {
+    padding: 10px 50px; } }
+@media (max-width: 767px) {
+  .main.unp-meeting .meeting-adress {
+    font-size: 17px; }
+    .main.unp-meeting .meeting-adress a {
+      font-size: 15px; }
+  .main.unp-meeting .user-panel-box .meeting-btn {
+    width: 141px;
+    display: block; } }
+
+.chosen-text {
+  display: inline-block; }
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .meeting-sccw {
+    margin: 0 10%; } }
+@media (max-width: 767px) {
+  .meeting-sccw {
+    margin: 0 15px; } }
+
 .free-trial {
   display: none; }
 
