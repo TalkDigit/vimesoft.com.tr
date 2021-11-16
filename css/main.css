@@ -1135,6 +1135,9 @@ a {
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11); }
+  @media (max-width: 1199px) {
+    .contact-box, .contact-box2, .contact-box3 {
+      margin-left: 15px; } }
 
 .contact-box {
   padding: 44px 38px;
@@ -1959,6 +1962,8 @@ a {
   font-size: 14px;
   font-weight: 500;
   color: #93A0B1; }
+  .sifre_unuttum:hover {
+    color: #0069E1; }
 
 @media (max-width: 1199px) {
   .register-right .social-btn {
@@ -2150,7 +2155,7 @@ a {
     margin-bottom: 300px; } }
 @media (max-width: 1199px) {
   .meeting_wrapper .meeting-form {
-    margin-bottom: 100px; } }
+    margin-bottom: 20px; } }
 
 .meeting-btn {
   border: 1px solid #007BFF; }
@@ -2389,6 +2394,9 @@ a {
     .content-flex .join-conf-wrapper, .content-flex .meeting-plans-wrapper {
       padding-left: 0;
       padding-top: 30px; } }
+  @media (max-width: 1199px) {
+    .content-flex .join-conf-wrapper .my-meeting-toptitle, .content-flex .meeting-plans-wrapper .my-meeting-toptitle {
+      margin-left: 15px; } }
 @media (min-width: 1200px) {
   .content-flex .user-panel-title {
     margin-bottom: 79px;
@@ -3413,7 +3421,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       right: 10px; } }
   @media (max-width: 1399px) {
     .personal-popup-search-icon {
-      right: 5px; } }
+      right: 10px; } }
 
 .ui-datepicker {
   display: none; }
@@ -4118,23 +4126,43 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   margin-bottom: 0 !important;
   margin-right: 0; }
   .plans-table_x.mtr .mtr-link {
-    font-size: 20px;
     font-weight: 600;
     color: #343A40; }
+    @media (min-width: 1200px) {
+      .plans-table_x.mtr .mtr-link {
+        font-size: 20px; } }
+    @media (max-width: 1199px) {
+      .plans-table_x.mtr .mtr-link {
+        font-size: 16px; } }
   .plans-table_x.mtr tbody {
     height: auto !important;
-    overflow-y: auto !important; }
+    overflow-y: auto !important;
+    margin-top: 0 !important; }
   .plans-table_x.mtr tr th {
-    font-size: 24px;
     color: #A2B2C5; }
+    @media (min-width: 1200px) {
+      .plans-table_x.mtr tr th {
+        font-size: 24px; } }
+    @media (max-width: 1199px) {
+      .plans-table_x.mtr tr th {
+        font-size: 19px; } }
   .plans-table_x.mtr th:first-child {
     padding-left: 0 !important; }
   .plans-table_x.mtr td {
     color: #343A40;
-    font-weight: 600;
-    padding: 45px 0; }
+    font-weight: 600; }
+    @media (min-width: 1200px) {
+      .plans-table_x.mtr td {
+        padding: 45px 0; } }
+    @media (max-width: 1199px) {
+      .plans-table_x.mtr td {
+        padding: 20px 0;
+        font-size: 16px !important; } }
     .plans-table_x.mtr td:first-child {
       padding-left: 0 !important; }
+    @media (max-width: 1199px) {
+      .plans-table_x.mtr td .s-detail {
+        font-size: 16px !important; } }
   .plans-table_x.mtr tr {
     background: #fff !important;
     border-bottom: 1px solid #EFF2F4; }
@@ -4147,6 +4175,9 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   font-size: 20px;
   font-weight: 500;
   color: #90A0B3; }
+  .s-detail:hover {
+    color: #904BFF;
+    cursor: pointer; }
 
 .sbs-t {
   font-weight: 500;
@@ -4440,6 +4471,16 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   @media (max-width: 1199px) {
     .extra-buy-packet {
       min-width: 260px; } }
+  @media (max-width: 374px) {
+    .extra-buy-packet {
+      margin-right: 20px;
+      padding: 35px 20px 35px 25px; }
+      .extra-buy-packet .path-price {
+        font-size: 19px; }
+        .extra-buy-packet .path-price:first-child {
+          padding-right: 20px; }
+        .extra-buy-packet .path-price:last-child {
+          padding-left: 20px; } }
   .extra-buy-packet:hover {
     outline: 3px solid #90A0B3; }
   .extra-buy-packet.active {
@@ -4451,6 +4492,9 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 /* My Account End */
 .extra-buy {
   max-width: 1200px; }
+  @media (max-width: 1199px) {
+    .extra-buy {
+      padding-left: 20px; } }
   .extra-buy .card-ticket span {
     padding: 8px 18px 8px 12px; }
   .extra-buy .extra-regist .extra-buy-packet {
@@ -4513,6 +4557,9 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     z-index: 1;
     top: 27%;
     transform: translateY(-50%); }
+    @media (max-width: 561px) {
+      .packet-path-all .packet-path::after {
+        top: 24.5%; } }
   .packet-path-all .packet-path .path-item {
     position: relative;
     z-index: 2;
@@ -4689,7 +4736,6 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   position: absolute;
   display: none;
   top: 85px;
-  right: 0;
   z-index: 1000;
   padding: 40px 30px;
   border-radius: 36px;
@@ -4697,12 +4743,18 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11);
   box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.11); }
+  @media (min-width: 2560px) {
+    .path-popx {
+      right: 13%; } }
+  @media (min-width: 1920px) and (max-width: 2559px) {
+    .path-popx {
+      right: 0; } }
   @media (min-width: 768px) {
     .path-popx {
       width: 370px; } }
   @media (max-width: 767px) {
     .path-popx {
-      width: 300px; } }
+      width: 290px; } }
   .path-popx.active {
     display: block; }
   .path-popx .p-sp {
@@ -4713,8 +4765,25 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       background: #fff;
       width: 25px;
       height: 25px;
-      right: 44%;
       transform: rotate(45deg); }
+      @media (min-width: 1920px) {
+        .path-popx .p-sp span {
+          right: 44%; } }
+      @media (min-width: 1680px) and (max-width: 1919px) {
+        .path-popx .p-sp span {
+          right: 29%; } }
+      @media (min-width: 1400px) and (max-width: 1679px) {
+        .path-popx .p-sp span {
+          right: 25%; } }
+      @media (min-width: 768px) and (max-width: 1399px) {
+        .path-popx .p-sp span {
+          right: 20%; } }
+      @media (min-width: 499px) and (max-width: 767px) {
+        .path-popx .p-sp span {
+          right: 10%; } }
+      @media (max-width: 498px) {
+        .path-popx .p-sp span {
+          right: 0; } }
 
 /* Packets Path End */
 /* Create Account Start */
@@ -5261,6 +5330,31 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   .dtp-box-scroll::-webkit-scrollbar-thumb {
     background: #904BFF;
     border-radius: 10px; }
+
+@media (max-width: 1199px) {
+  .main.mtpj .contact-box3 {
+    margin-left: 15px; } }
+@media (max-width: 1199px) {
+  .main.mtpj .contact-box {
+    margin-left: 15px; } }
+
+@media (min-width: 1200px) {
+  .mtr-subs-chat-head .mtr-chat-btn {
+    width: 50%; }
+  .mtr-subs-chat-head .mtr-chat-search {
+    width: 50%; }
+    .mtr-subs-chat-head .mtr-chat-search .personal-popup-search-item {
+      width: 100%; } }
+@media (min-width: 1200px) and (max-width: 1399px) {
+  .mtr-subs-chat-head .btn-buy2 {
+    padding: 10px 25px; }
+  .mtr-subs-chat-head .personal-popup-search-item input {
+    padding: 9px 25px;
+    font-size: 17px; } }
+.mtr-subs-chat-head .btn-buy2 {
+  margin-right: 10px; }
+  .mtr-subs-chat-head .btn-buy2:last-child {
+    margin-right: 0; }
 
 .free-trial {
   display: none; }

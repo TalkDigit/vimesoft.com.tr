@@ -11,6 +11,7 @@
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
 	<!-- Css Style -->
 	<link rel="stylesheet" type="text/css" href="css/main.css">
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     	
 </head>
 <body class="bg-still join">
@@ -179,8 +180,8 @@
                 <div class="contact-box2 mtr">
                     <div class="my-meeting-toptitle align-items-center">
                         <div class="my-meeting-head-left">
-                            <a href="#t_rapor" class="btn-buy2 active">Toplantı Raporu</a>
-                            <span  class="btn-buy2">Kişisel Rapor</span>
+                            <a href="#t_rapor" class="btn-buy2 active mb-sm-0 mb-2">Toplantı Raporu</a>
+                            <span  class="btn-buy2 mb-sm-0 mb-2">Kişisel Rapor</span>
                             <a href="#istatistik" class="btn-buy2">İstatistikler</a>
                         </div>
                         <div class="my-meeting-head-right">
@@ -252,7 +253,15 @@
                     </div>
                 </div>
                 <div id="istatistik" class="tabf">
-                    asdasd
+                    <div class="contact-box">
+                        <div class="chart-wrapper">
+                            <canvas id="chart3" width="580" height="380"></canvas>
+                        </div>
+                        <div class="chart-padding"></div>
+                        <div class="chart-wrapper chart-wrapper-w">
+                            <canvas id="chart4" width="580" height="380"></canvas>
+                        </div>
+                    </div>
                 </div>
             </div>
         </main>
@@ -361,5 +370,68 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.selectric/1.11.1/jquery.selectric.min.js'></script>
     <script src="js/script.js"></script>
+    <script>
+        $('.detail-stats').click(function () {
+            $(".mtr-all-toggle").toggleClass("active");
+        });
+
+               var chart = document.getElementById("chart3").getContext("2d");
+               var myChart = new Chart(chart3, {
+                   type: "bar",
+                   data: {
+                       labels: ["PZT", "SAL", "ÇAR", "PER", "CUM", "CMT", "PZR"],
+                       datasets: [
+                           {
+                               label: "Katılmamış Toplantı",
+                               data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                               backgroundColor: "#A2B2C5"
+                           },
+                           {
+                               label: "Katılmış Toplantı",
+                               data: [7, 5, 12, 13, 2, 11, 1, 8, 14, 1, 6, 3, 4, 9, 15],
+                               backgroundColor: "#904BFF"
+                           }
+                       ]
+                   },
+                   options: {
+                       plugins: {
+                           title: {
+                               display: true,
+                               position: "top",
+                               text: 'Haftalık Toplantı Sayıları'
+                           }
+                       }
+                   }
+               });
+       
+               var chart = document.getElementById("chart4").getContext("2d");
+               var myChart = new Chart(chart4, {
+                   type: "bar",
+                   data: {
+                       labels: ["OCA", "ŞUB", "MAR", "NİS", "MAY", "HAZ", "TEM", "AĞU", "EYL", "EKİ", "KAS", "ARA"],
+                       datasets: [
+                           {
+                               label: "Katılmamış Toplantı",
+                               data: [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15],
+                               backgroundColor: "#A2B2C5"
+                           },
+                           {
+                               label: "Katılmış Toplantı",
+                               data: [7, 5, 12, 13, 2, 11, 1, 8, 14, 10, 6, 3, 4, 9, 15],
+                               backgroundColor: "#904BFF"
+                           }
+                       ]
+                   },
+                   options: {
+                       plugins: {
+                           title: {
+                               display: true,
+                               position: "top",
+                               text: 'Aylık Toplantı Sayıları'
+                           }
+                       }
+                   }
+               });
+   </script>
 </body>
 </html>

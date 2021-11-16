@@ -1333,6 +1333,9 @@ a {
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
     box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.11);
+    @media (max-width:1199px) {
+        margin-left: 15px;
+    }
 }
 .contact-box {
     padding:44px 38px;
@@ -2366,6 +2369,9 @@ a {
     font-size: 14px;
     font-weight: 500;
     color:#93A0B1;
+    &:hover {
+        color:#0069E1;
+    }
 }
 .register-right {
     @media (max-width:1199px) {
@@ -2611,7 +2617,7 @@ a {
             margin-bottom:300px
         }
         @media (max-width:1199px) {
-            margin-bottom:100px
+            margin-bottom:20px
         }
     }
 }
@@ -2920,6 +2926,11 @@ a {
         @media (max-width:1199px) {
             padding-left: 0;
             padding-top:30px;
+        }
+        .my-meeting-toptitle {
+            @media (max-width:1199px) {
+                margin-left: 15px;
+            }
         }
     }
     .user-panel-title {
@@ -4088,7 +4099,7 @@ input.calendar {
         right: 10px;
     }
     @media (max-width:1399px) {
-        right: 5px;
+        right: 10px;
     }
     cursor: pointer;
 }
@@ -4942,17 +4953,28 @@ input.calendar {
     margin-bottom: 0!important;
     margin-right: 0;
     .mtr-link {
-        font-size:20px;
+        @media (min-width:1200px) {
+            font-size:20px;
+        }
+        @media (max-width:1199px) {
+            font-size:16px;
+        }
         font-weight: 600;
         color: #343A40;
     }
     tbody {
         height: auto!important;
         overflow-y: auto!important;
+        margin-top:0!important;
     }
     tr {
         th {
-            font-size:24px;
+            @media (min-width:1200px) {
+                font-size:24px;
+            }
+            @media (max-width:1199px) {
+                font-size:19px;
+            }
             color:#A2B2C5;
         }
     }
@@ -4964,9 +4986,20 @@ input.calendar {
     td {
         color:#343A40;
         font-weight: 600;
-        padding:45px 0;
+        @media (min-width:1200px) {
+            padding:45px 0;
+        }
+        @media (max-width:1199px) {
+            padding:20px 0;
+            font-size:16px!important;
+        }
         &:first-child {
             padding-left: 0!important;
+        }
+        .s-detail {
+            @media (max-width:1199px) {
+                font-size:16px!important;
+            }
         }
     }
     tr {
@@ -4984,6 +5017,10 @@ input.calendar {
     font-size:20px;
     font-weight: 500;
     color:#90A0B3;
+    &:hover {
+        color:#904BFF;
+        cursor: pointer;
+    }
 }
 .sbs-t {
     font-weight: 500;
@@ -5325,6 +5362,19 @@ input.calendar {
     @media (max-width:1199px) {
         min-width: 260px;
     }
+    @media (max-width:374px) {
+        margin-right: 20px;
+        padding:35px 20px 35px 25px;
+        .path-price {
+            font-size:19px;
+            &:first-child {
+                padding-right: 20px;
+            }
+            &:last-child {
+                padding-left: 20px;
+            }
+        }
+    }
     padding:40px 25px 40px 35px;
     cursor: pointer;
     margin-right: 25px;
@@ -5344,6 +5394,9 @@ input.calendar {
 
 .extra-buy {
     max-width:1200px;
+    @media (max-width:1199px) {
+        padding-left: 20px;
+    }
     .card-ticket {
         span {
             padding: 8px 18px 8px 12px;
@@ -5351,7 +5404,7 @@ input.calendar {
     }
     .extra-regist {
         .extra-buy-packet {
-            min-width: 262px;  
+            min-width: 262px;
         } 
     }
     .extra-regist {
@@ -5421,6 +5474,9 @@ input.calendar {
             background-color:#EFF2F4;
             z-index: 1;
             top:27%;
+            @media (max-width:561px) {
+                top:24.5%;
+            }
             transform:translateY(-50%);
         }
         .path-item {
@@ -5630,13 +5686,18 @@ input.calendar {
     position:absolute;
     display: none;
     top:85px;
-    right: 0;
+    @media (min-width:2560px) {
+        right:13%;
+    }
+    @media (min-width:1920px) and (max-width:2559px) {
+        right:0;
+    }
     z-index: 1000;
     @media (min-width:768px) {
         width: 370px;
     }
     @media (max-width:767px) {
-        width: 300px;
+        width: 290px;
     }
     padding:40px 30px;
     border-radius: 36px;
@@ -5655,7 +5716,24 @@ input.calendar {
             background:#fff;
             width: 25px;
             height: 25px;
-            right: 44%;
+            @media (min-width:1920px) {
+                right: 44%;
+            }
+            @media (min-width:1680px) and (max-width:1919px) {
+                right:29%;
+            }
+            @media (min-width:1400px) and (max-width:1679px) {
+                right:25%;
+            }
+            @media (min-width:768px) and (max-width:1399px) {
+                right:20%;
+            }
+            @media (min-width:499px) and (max-width:767px) {
+                right:10%;
+            }
+            @media (max-width:498px) {
+                right:0;
+            }
             transform: rotate(45deg);
         }
     }
@@ -6383,6 +6461,48 @@ input.calendar {
     &::-webkit-scrollbar-thumb {
         background: #904BFF;
         border-radius:10px;
+    }
+}
+.main.mtpj {
+    .contact-box3 {
+        @media (max-width:1199px) {
+            margin-left:15px;
+        }
+    }
+    .contact-box {
+        @media (max-width:1199px) {
+            margin-left: 15px;
+        }
+    }
+}
+.mtr-subs-chat-head {
+    @media (min-width:1200px) {
+        .mtr-chat-btn {
+            width: 50%;
+        }
+        .mtr-chat-search {
+            width: 50%;
+            .personal-popup-search-item {
+                width: 100%;
+            }
+        }
+    }
+    @media (min-width:1200px) and (max-width:1399px) {
+        .btn-buy2 {
+            padding:10px 25px;
+        }
+        .personal-popup-search-item {
+            input {
+                padding:9px 25px;
+                font-size:17px;
+            }
+        }
+    }
+    .btn-buy2 {
+        margin-right: 10px;
+        &:last-child {
+            margin-right: 0;
+        }
     }
 }
 .free-trial {
