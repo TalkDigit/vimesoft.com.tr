@@ -252,7 +252,7 @@ a {
         font-size:20px;
     }
     @media (min-width:768px) and (max-width:1399px) {
-        padding:10px 30px;
+        padding:10px 20px;
         font-size:16px;
     }
     @media (max-width:767px) {
@@ -510,10 +510,17 @@ a {
         background-image: none!important;
     }
 }
-.bg-still.join {
+.bg-none {
     @media (max-width:1199px) {
-        background-image: none!important;
-    } 
+        background:none!important;
+    }
+}
+.join {
+    @media (max-width:1199px) {
+        background-image:url(../img/mobile-bg2.png)!important;
+        background-repeat: no-repeat!important;
+        background-position:top right!important;
+    }
 }
 
 /* Inputs */
@@ -802,6 +809,9 @@ a {
         background:none!important;
         color:#007BFF!important;
     }
+    @media (max-width:900px) {
+        display: none!important;
+    }
 }
 .owl-next {
     right:0px;
@@ -935,6 +945,13 @@ a {
             @media (max-width:767px) {
                 margin:35px 5% 0 5%;
             }
+            img {
+                @media (max-width:419px) {
+                    max-width: 100%;
+                    object-fit: cover;
+                    height: 470px;
+                }
+            }
             position: relative;
             .slider-text {
                 position: absolute;
@@ -942,6 +959,13 @@ a {
                 left:0;
                 right:0;
                 width:85%;
+                @media (max-width:419px) {
+                    bottom:10%!important;
+                    h2 {
+                        color:#fff!important;
+                        font-size:18px;
+                    }
+                }
                 h2 {
                     font-weight: 400;
                     color:#212529;
@@ -968,7 +992,7 @@ a {
                         font-size:25px;
                     }
                 }
-                @media (max-width:767px) {
+                @media (min-width:420px) and (max-width:767px) {
                     top:10%;
                     h2 {
                         font-size:16px;
@@ -1001,15 +1025,20 @@ a {
             padding:15px 15px 15px 50px;
             margin-right: 45%;
         }
-        @media (min-width:768px) and (max-width:1199px) {
+        @media (min-width:800px) and (max-width:1199px) {
             padding:10px 35px 10px 20px;
             margin-right: 40%;
             bottom:-1rem;
         }
-        @media (max-width:767px) {
+        @media (min-width:600px) and (max-width:799px) {
+            padding:10px 35px 10px 20px;
+            margin-right: 7%;
+            bottom:-6rem;
+        }
+        @media (max-width:599px) {
             padding:10px 35px 10px 20px;
             margin-right: 30%;
-            bottom:-6rem;
+            bottom:-6.5rem;
         }
         .try-free-title {
             h3 {
@@ -2378,9 +2407,14 @@ a {
                 margin-right: 32px;
             }
         }
-        @media (max-width:767px) {
+        @media (min-width:375px) and (max-width:767px) {
             &:first-child {
                 margin-right: 15px;
+            }
+        }
+        @media (max-width:374px) {
+            &:first-child {
+                margin-right:0px;
             }
         }
     }
@@ -2628,6 +2662,17 @@ a {
         border:2px solid #904BFF;
     }
 }
+.mobile-menu-burger {
+    position:absolute;
+    right: 18px;
+    top:15px;
+    @media (min-width:1200px) {
+        display:none;
+    }
+    @media (max-width:1199px) {
+        display:block;
+    }
+}
 .content-flex {
     .header {
         .main-logo {
@@ -2644,23 +2689,39 @@ a {
     }
     .sticky-menu {
         @media (max-width:1199px) {
+            left: -1500px;
             padding-right: 20px;
+            padding-top: 20px;
+            position:fixed;
+            top:0px;
+            width: 100%;
+            height: 85%;
+            overflow-y: scroll;
+            padding-bottom:40px;
+            border-bottom-right-radius: 60px;
+            z-index:9999;
+            -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+            -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+            box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.15);
+            transition: all .3s ease-in-out;
+            &.show {
+                left: 0;
+                background-color:#fff;
+                transition: all .3s ease-in-out;
+            }
+        }
+        .mobile-menu-burger {
+            top:20px;
+            right: 20px;
+        }
+        .main-logo {
+            @media (min-width:1200px) {
+                display: none;
+            }
         }
         .sticky-first-div {
             margin-bottom:15px;
             margin-left: 14px;
-            position:relative;
-            .mobile-menu-burger {
-                position:absolute;
-                right: 0;
-                top:7px;
-                @media (min-width:1200px) {
-                    display:none;
-                }
-                @media (max-width:1199px) {
-                    display:block;
-                }
-            }
             span {
                 padding-left:20px;
             }
@@ -2799,14 +2860,6 @@ a {
                         }
                     }
                 }
-            }
-        }
-        .sticky-nav {
-            @media (min-width:1200px) {
-                display: block;
-            }
-            @media (max-width:1199px) {
-                display: none;
             }
         }
     }
@@ -4051,6 +4104,8 @@ input.calendar {
     }
     @media (max-width:1199px) {
         display: block;
+        background-color:#fff;
+        padding:20px 0;
     }
     .my-meeting-head-left {
         @media (min-width:1680px) {
@@ -4365,6 +4420,11 @@ input.calendar {
 }
 .meeting-box-content-info {
     padding-bottom: 58px;
+}
+.meeting-box-content {
+    .meeting-box-content-info {
+        margin-top:15px;
+    }
 }
 .meeting-box-content-info-item {
     padding-bottom:15px;
@@ -5050,8 +5110,9 @@ input.calendar {
     padding:1px;
     border-radius: 10px;
     .detail-loading {
-        background:#904BFF;
+        background:#6FB400;
         height: 100%;
+        mix-blend-mode: difference;
         border-radius: 10px;
     }
 }
@@ -5061,13 +5122,23 @@ input.calendar {
     left:0;
     top:10px;
     text-align:center;
-    color:#fff;
+    mix-blend-mode: difference;
+    color:#6FB400;
     font-weight: 600;
     font-size:17px;
 }
 .settings-content {
     @media (max-width:1199px) {
         padding:0 15px;
+    }
+}
+
+.select-tab-system {
+    .select-tab-content {
+        display:none;
+        &.active {
+            display:block !important;
+        }
     }
 }
 
@@ -5303,7 +5374,7 @@ input.calendar {
                 left:30%;
             }
             @media (max-width:767px) {
-                left: 56%;
+                display: none!important;
             }
             span {
                 font-size:60px;
@@ -5318,7 +5389,7 @@ input.calendar {
                 left:34%;
             }
             @media (max-width:767px) {
-                left: 63%;
+                display: none!important;
             }
             span {
                 font-size:59px;
@@ -6270,6 +6341,48 @@ input.calendar {
     }
     @media (max-width:767px) {
         margin:0 15px;
+    }
+}
+.sticky-user-name {
+    font-size:20px;
+    font-weight: 600;
+    color:#343A40;
+}
+.dtp-content-msg {
+    overflow:hidden;
+    max-height: 206px;
+    border:1px solid #A2B2C5;
+    padding:8px 15px 0 30px;
+    border-radius: 32px;
+    .dtp-msg-item {
+        background-color:#904BFF;
+        color:#fff;
+        font-size:17px;
+        border-radius: 22px;
+        padding:10px 12px 5px 12px;
+        margin-bottom:10px;
+        .dtp-msg-time {
+            font-weight: 300;
+            color:#fff;
+        }
+        .dtp-msg-box {
+            font-weight: 400;
+            color:#fff;
+        }
+    }
+}
+.dtp-box-scroll {
+    max-height: 206px;
+    padding-right: 15px;
+    overflow-y: scroll;
+    &::-webkit-scrollbar {
+        width: 6px;
+        border-radius: 10px;
+        background:#EFF2F4;
+    }
+    &::-webkit-scrollbar-thumb {
+        background: #904BFF;
+        border-radius:10px;
     }
 }
 .free-trial {

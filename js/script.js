@@ -116,18 +116,72 @@ $(document).ready(function(){
 	})
 })
 
+// Tab System all
+$(document).ready(function(){
+	$('.select-tab').change(function(){
+		var tab_option = $(this).val();
+		
 
+		$(this).closest(".select-tab-system").find('.select-tab-content').removeClass('active');
+
+		$(this).closest(".select-tab-system").find("#"+tab_option).addClass('active');
+	})
+})
 
 
 // Join Conference Sticky Menu dropdown
-$('.sticky-opener').click(function(){
-	$(this).toggleClass('active');
-	$(this).next('.sticky-opened').slideToggle(300);
+/* $('.sticky-opener').click(function(){
+	let thiss = $(this);
+	if (thiss.next(".sticky-opened").hasClass("active")) {
+		thiss.parent().parent().find(".sticky-first-li").removeClass("active");
+		thiss.parent().parent().find(".sticky-opened").slideUp(300);
+		thiss.parent().parent().find(".sticky-opener").removeClass("active");
+		console.log("ss")
+	} else {
+		thiss.parent().addClass("active");
+		thiss.next(".sticky-opened").slideDown(300);
+		thiss.addClass("active");
+		console.log("sss")
+	}
+}); */
+
+
+$('.sticky-opener').click(function(e) {
+	e.preventDefault();
+
+  var $this = $(this);
+
+  $this.parent().parent().find(".sticky-opener").removeClass("active");
+
+  $this.addClass("active");
+
+  if ($this.next().hasClass('active')) {
+	  $this.next().removeClass('active');
+	  $this.next().slideUp(350);
+	  $this.removeClass('active');
+  } else {
+	  $this.parent().parent().find('.sticky-opened').removeClass('active');
+	  $this.parent().parent().find('.sticky-opened').slideUp(350);
+	  $this.next().toggleClass('active');
+	  $this.next().slideToggle(350);
+
+  }
+
+  
+
 });
+
+
+
 // Join Conference Sticky Menu dropdown (Mobile)
-$(document).ready(function() {
+/* $(document).ready(function() {
 	$('.mobile-menu-burger').click(function() {
 	  $('.sticky-nav').slideToggle(400);
+	});
+}); */
+$(document).ready(function() {
+	$('.mobile-menu-burger').click(function() {
+	  $('.sticky-menu').toggleClass("show");
 	});
 });
 

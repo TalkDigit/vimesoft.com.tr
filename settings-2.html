@@ -22,16 +22,22 @@
                 <div class="main-logo">
                     <a href="#"><img src="img/vimesoft-logo.svg" alt=""></a>
                 </div>
+                <div class="mobile-menu-burger">
+                    <img src="img/menu-icon2.png" alt="">
+                </div>
                 <nav class="sticky-menu">
+                    <div class="main-logo m-0 ms-3 mb-5 p-0">
+                        <a href="#"><img src="img/vimesoft-logo.svg" alt=""></a>
+                    </div>
+                    <div class="mobile-menu-burger">
+                        <img src="img/mobile-close.png" alt="">
+                    </div>
                     <div class="sticky-first-div">
                         <div class="d-flex align-items-center">
                             <div class="sticky-profil">
                                 <img src="img/profil-pic.png" alt="">
                             </div>
                             <span class="sticky-user-name">Onur Tan</span>
-                        </div>
-                        <div class="mobile-menu-burger">
-                            <img src="img/menu-icon2.png" alt="">
                         </div>
                     </div>
                     <ul class="sticky-nav">
@@ -220,7 +226,7 @@
                                     </div>
                                 </div>
                                 <div class="setting-tab-item">
-                                    <div class="time-period-plans  me-xl-4">
+                                    <div class="time-period-plans">
                                         <label class="spe-select">
                                             <select class="selectric-select" id="nicer-select-id" name="mySelect" reqiured>
                                                 <option value=""></option>
@@ -516,86 +522,181 @@
 
     <div class="detail-popup">
         <div class="detail-popup-content calendar-popup-content">
-            <div class="detail-popup-head d-md-flex align-items-center justify-content-between">
-                <div class="invite-personal-item w-md-50 w-100">
-                    <div class="personal-item d-flex mb-md-0 mb-3 align-items-center ">
-                        <div class="personal-img sticky-profil">
-                            <img src="img/gizem.png" alt="">
-                        </div>
-                        <div class="personal-name">
-                            Gizem Demir
-                        </div>
-                    </div>
-                </div>
-                <div class="time-period-plans w-md-50 w-100">
-                    <label class="spe-select">
-                        <select class="selectric-select" id="nicer-select-id" name="mySelect" reqiured>
-                            <option value=""></option>
-                            <option value="lorem4">Toplantı-1</option>
-                            <option value="lorem3">Toplantı-2</option>
-                            <option value="lorem2">Toplantı-3</option>
-                            <option value="lorem4">Toplantı-4</option>
-                        </select>
-                        <span class="check-select-name">Toplantıya Göre Filtrele</span>
-                    </label>
-                </div>
-            </div>
-            <div class="detail-popup-main">
-                <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
-                    <div class="detail-pop-item">Katınılan Görüşme Sayısı</div>
-                    <div class="detail-pop-item"><span>18</span>/<span>20</span></div>
-                    <div class="detail-pop-item">
-                        <div class="detail-load">
-                            <div class="detail-loading" style="width: 80%;"></div>
-                        </div>
-                        <div class="detail-load-text">
-                            80%
+            <div class="select-tab-system">
+                <div class="detail-popup-head d-md-flex align-items-center justify-content-between pb-4">
+                    <div class="invite-personal-item w-md-50 w-100">
+                        <div class="personal-item d-flex mb-md-0 mb-3 align-items-center ">
+                            <div class="personal-img sticky-profil">
+                                <img src="img/gizem.png" alt="">
+                            </div>
+                            <div class="personal-name">
+                                Gizem Demir
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
-                    <div class="detail-pop-item">Görüşmelerdeki Aktiflik</div>
-                    <div class="detail-pop-item"><span>16</span>/<span>18</span></div>
-                    <div class="detail-pop-item">
-                        <div class="detail-load">
-                            <div class="detail-loading" style="width: 87%;"></div>
-                        </div>
-                        <div class="detail-load-text">
-                            87%
-                        </div>
+                    <div class="time-period-plans w-md-50 w-100">
+                        <label class="spe-select">
+                            <select class="selectric-select select-tab" id="nicer-select-id" name="mySelect" reqiured>
+                                <option value=""></option>
+                                <option value="lorem4">Toplantı-1</option>
+                                <option value="lorem3">Toplantı-2</option>
+                                <option value="lorem2">Toplantı-3</option>
+                                <option value="lorem4">Toplantı-4</option>
+                            </select>
+                            <span class="check-select-name">Toplantıya Göre Filtrele</span>
+                        </label>
                     </div>
                 </div>
-                <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
-                    <div class="detail-pop-item">Görüntülü Görüşme</div>
-                    <div class="detail-pop-item"><span>9</span>/<span>18</span></div>
-                    <div class="detail-pop-item">
-                        <div class="detail-load">
-                            <div class="detail-loading" style="width: 50%;"></div>
+                <div class="select-tab-content active" id="lorem4">
+                    <div class="detail-popup-main">
+                        <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
+                            <div class="detail-pop-item">Katınılan Görüşme Sayısı</div>
+                            <div class="detail-pop-item"><span>18</span>/<span>20</span></div>
+                            <div class="detail-pop-item">
+                                <div class="detail-load">
+                                    <div class="detail-loading" style="width: 80%;">
+                                        <div class="detail-load-text">
+                                            80%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="detail-load-text">
-                            50%
+                        <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
+                            <div class="detail-pop-item">Görüşmelerdeki Aktiflik</div>
+                            <div class="detail-pop-item"><span>16</span>/<span>18</span></div>
+                            <div class="detail-pop-item">
+                                <div class="detail-load">
+                                    <div class="detail-loading" style="width: 87%;">
+                                        <div class="detail-load-text">
+                                            87%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
+                        <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
+                            <div class="detail-pop-item">Görüntülü Görüşme</div>
+                            <div class="detail-pop-item"><span>9</span>/<span>18</span></div>
+                            <div class="detail-pop-item">
+                                <div class="detail-load">
+                                    <div class="detail-loading" style="width: 50%;">
+                                        <div class="detail-load-text">
+                                            50%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
+                            <div class="detail-pop-item">Konuşma Süresi</div>
+                            <div class="detail-pop-item"><span>348dk.</span>/<span>823dk.</span></div>
+                            <div class="detail-pop-item">
+                                <div class="detail-load">
+                                    <div class="detail-loading" style="width: 43%;">
+                                        <div class="detail-load-text">
+                                            43%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-personal-rooms">
+                            <h3>Kişisel Odalar</h3>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Ar-Ge</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-1</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-2</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-3</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Finans</a>
+                        </div>
+    
                     </div>
                 </div>
-                <div class="detail-pop-flex d-md-flex align-items-center justify-content-between">
-                    <div class="detail-pop-item">Konuşma Süresi</div>
-                    <div class="detail-pop-item"><span>348dk.</span>/<span>823dk.</span></div>
-                    <div class="detail-pop-item">
-                        <div class="detail-load">
-                            <div class="detail-loading" style="width: 43%;"></div>
+                <div class="select-tab-content" id="lorem3">
+                    <div class="detail-popup-main">
+                        <div class="detail-pop-flex d-md-flex align-items-center justify-content-between pb-0">
+                            <div class="detail-pop-item">Görüşmelerdeki Aktiflik</div>
+                            <div class="detail-pop-item"><span>21dk.</span>/<span>42dk</span></div>
+                            <div class="detail-pop-item">
+                                <div class="detail-load">
+                                    <div class="detail-loading" style="width: 87%;">
+                                        <div class="detail-load-text">
+                                            87%
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="detail-load-text">
-                            43%
+                        <div class="row g-0 align-items-center justify-content-between">
+                            <div class="col-lg-6 col-12">
+                                <div class="setting-tab-item d-flex align-items-center justify-content-between me-lg-2">
+                                    <div class="setting-item-checkbox w-100">
+                                        <div class="label-control label-xc d-flex align-items-center justify-content-between">
+                                            <label for="4_item" class="setting-item-text setting-text">Ekran Paylaşımı</label>
+                                            <input type="checkbox" class="switch_1 switch_y" id="4_item">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-lg-6 col-12">
+                                <div class="setting-tab-item d-flex align-items-center justify-content-between ms-lg-2">
+                                    <div class="setting-item-checkbox w-100">
+                                        <div class="label-control label-xc d-flex align-items-center justify-content-between">
+                                            <label for="3_item" class="setting-item-text setting-text">Görüntülü Görüşme</label>
+                                            <input type="checkbox" class="switch_1 switch_y" id="3_item">
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="detail-personal-rooms">
+                            <h3>Paylaşılan Dosyalar</h3>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Döküman-1</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Döküman-2</a>
+                        </div>
+                        <div class="detail-personal-rooms mb-3 pb-3 pt-3">
+                            <h3>Kişisel Odalar</h3>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Ar-Ge</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-1</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-2</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-3</a>
+                            <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Finans</a>
+                        </div>
+                        <div class="dtp-message">
+                            <div class="dtp-head mb-2 d-flex align-items-center justify-content-between">
+                                <span class="sticky-user-name">Mesajlar</span>
+                                <span class="delete"><img src="img/icon7.svg" alt=""> Tümünü Kopyala</span>
+                            </div>
+                            <div class="dtp-content-msg">
+                                <div class="dtp-box-scroll">
+                                    <div class="row g-0 dtp-msg-item">
+                                        <div class="col-2"><span class="dtp-msg-time">11:00</span></div>
+                                        <div class="col-10"><div class="dtp-msg-box">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </div></div>
+                                    </div>
+                                    <div class="row g-0 dtp-msg-item">
+                                        <div class="col-2"><span class="dtp-msg-time">11:00</span></div>
+                                        <div class="col-10"><div class="dtp-msg-box">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </div></div>
+                                    </div>
+                                    <div class="row g-0 dtp-msg-item">
+                                        <div class="col-2"><span class="dtp-msg-time">11:00</span></div>
+                                        <div class="col-10"><div class="dtp-msg-box">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </div></div>
+                                    </div>
+                                    <div class="row g-0 dtp-msg-item">
+                                        <div class="col-2"><span class="dtp-msg-time">11:00</span></div>
+                                        <div class="col-10"><div class="dtp-msg-box">
+                                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                                        </div></div>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-                <div class="detail-personal-rooms">
-                    <h3>Kişisel Odalar</h3>
-                    <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Ar-Ge</a>
-                    <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-1</a>
-                    <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-2</a>
-                    <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Onur Tan Kişisel Oda-3</a>
-                    <a href="#" class="btn-buy2 detail-pbt pt-2 pb-2">Finans</a>
                 </div>
             </div>
             <div class="detail-popup-footer">
