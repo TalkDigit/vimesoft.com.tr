@@ -273,6 +273,13 @@ $(function () {
 });
 
 $(function () {
+    $('.tpx-cc').on('click',function () {
+        $(this).find(".tooltipx").closest('.tooltipx').toggleClass('active');
+    });
+});
+
+
+$(function () {
     $('.again-meetingx').on('click',function () {
         $('.again-meetingx').toggleClass('active');
     });
@@ -293,7 +300,7 @@ $(function () {
 
 
 // Gsm +90 mask
-var phoneInput = document.querySelector('#phone') 
+var phoneInput = document.querySelector('#gsm') 
  
 
 phoneInput.addEventListener('keydown', function(event) { 
@@ -309,7 +316,7 @@ phoneInput.addEventListener('keydown', function(event) {
 
         var currentString = this.value; 
         var currentLength = currentString.length; 
-		
+
         if (/[0-9]/.test(event.key)) { 
             if (mask[currentLength] == '1') { 
                 this.value = currentString + event.key; 

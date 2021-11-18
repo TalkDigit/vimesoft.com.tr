@@ -2486,11 +2486,6 @@ a {
             margin-right: 45%;
         }
     }
-    &.forgot-flex {
-        @media (max-width:767px) {
-            justify-content: space-between;
-        }
-    }
 }
 .forgot-sms-box {
     display: none;
@@ -2995,6 +2990,9 @@ a {
             @media (max-width:1199px) {
                 font-size:17px;
                 color:#343A40;
+            }
+            @media (max-width:767px) {
+                width: 85%;
             }
             font-weight: 500;
         }
@@ -3906,6 +3904,9 @@ input.calendar {
             height: 25px;
         }
     }
+    &.active {
+        display: block;
+    }
 }
 .again-meeting {
     position: relative;
@@ -4244,6 +4245,11 @@ input.calendar {
             }
             @media (max-width:1199px) {
                 width: 100%;
+            }
+        }
+        .my-head-right-item2 {
+            @media (min-width:1921px) {
+                width: 47%;
             }
         }
     }
@@ -6556,8 +6562,8 @@ input.calendar {
         }
     }
 }
-.tpx-cc {
-    position:relative;
+.p-relative {
+    position: relative;
 }
 .free-trial {
     display: none;

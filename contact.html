@@ -119,9 +119,11 @@
                                         <label for="msg">Mesajınız</label>
                                         <span class="contact-blue"></span>
                                     </div>
-                                    <div class="contact-check-box d-flex tpx-cc">
+                                    <div class="contact-check-box d-flex p-relative">
                                         <input type="checkbox" class="checkbox" id="condition" name="condition" value="condition"/>
-                                        <label for="condition">Katılım Koşulları'nı Onaylıyorum.</label>
+                                        <label for="condition" class="tpx-cc">
+                                            Katılım Koşulları'nı Onaylıyorum.
+                                        </label>
                                         <div class="tooltipx">
                                             <div class="tooltipx-text">
                                                 Sadece Ücretli Aboneler Tarafından Kullanılabilir. Paketinizi Yükseltmek için <a href="#">Hemen Tıklayın.</a>
@@ -247,5 +249,12 @@
 
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
+    <script>
+        $(function () {
+            $('.tpx-cc').on('click',function () {
+                $('.tooltipx').toggleClass('active');
+            });
+        });
+    </script>
 </body>
 </html>

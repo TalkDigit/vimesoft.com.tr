@@ -2051,9 +2051,6 @@ a {
 @media (min-width: 768px) and (max-width: 991px) {
   .forgot-box .contact-input-box {
     margin-right: 45%; } }
-@media (max-width: 767px) {
-  .forgot-box.forgot-flex {
-    justify-content: space-between; } }
 
 .forgot-sms-box {
   display: none; }
@@ -2456,6 +2453,9 @@ a {
     .content-flex .user-panel-title p {
       font-size: 17px;
       color: #343A40; } }
+  @media (max-width: 767px) {
+    .content-flex .user-panel-title p {
+      width: 85%; } }
 .content-flex .user-panel-box {
   border-top-left-radius: 36px;
   border-bottom-left-radius: 36px;
@@ -3246,6 +3246,8 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       background: #fff;
       width: 25px;
       height: 25px; }
+  .tooltipx.active {
+    display: block; }
 
 .again-meeting {
   position: relative;
@@ -3544,6 +3546,9 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   @media (max-width: 1199px) {
     .my-meeting-toptitle .my-meeting-head-right .my-head-right-item3 {
       width: 100%; } }
+  @media (min-width: 1921px) {
+    .my-meeting-toptitle .my-meeting-head-right .my-head-right-item2 {
+      width: 47%; } }
 @media (min-width: 1680px) {
   .my-meeting-toptitle .personal-popup-search-item {
     width: 80%; } }
@@ -5400,7 +5405,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   .create-btns .btn-cancel, .create-btns .btn-send {
     padding: 20px 75px; } }
 
-.tpx-cc {
+.p-relative {
   position: relative; }
 
 .free-trial {
