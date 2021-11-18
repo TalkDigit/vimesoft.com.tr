@@ -611,7 +611,13 @@ a {
   @media (min-width: 1200px) and (max-width: 1399px) {
     .header .main-menu .menu-right .nav-head-select ul li {
       padding-left: 18px; } }
-@media (min-width: 1400px) {
+@media (min-width: 2860px) {
+  .header .main-logo {
+    margin-right: 10%; } }
+@media (min-width: 2160px) and (max-width: 2859px) {
+  .header .main-logo {
+    margin-right: 7%; } }
+@media (min-width: 1400px) and (max-width: 2159px) {
   .header .main-logo {
     margin-right: 92px; } }
 @media (min-width: 1200px) and (max-width: 1399px) {
@@ -722,7 +728,7 @@ a {
       margin-bottom: 30px; } }
   @media (min-width: 768px) and (max-width: 1199px) {
     .main-slider-wrapper {
-      margin-bottom: 50px; } }
+      margin-bottom: 130px; } }
   @media (max-width: 767px) {
     .main-slider-wrapper {
       margin-bottom: 130px; } }
@@ -797,21 +803,30 @@ a {
     position: relative; }
     @media (min-width: 1920px) {
       .main-slider-wrapper .owl-carousel .item {
-        margin: 45px 4% 0 4%; } }
+        margin: 45px 4% 0 4%;
+        padding: 30px; } }
     @media (min-width: 1200px) and (max-width: 1919px) {
       .main-slider-wrapper .owl-carousel .item {
-        margin: 45px 5% 0 5%; } }
+        margin: 45px 5% 0 5%;
+        padding: 30px; } }
     @media (min-width: 768px) and (max-width: 1199px) {
       .main-slider-wrapper .owl-carousel .item {
-        margin: 35px 5% 0 5%; } }
+        margin: 35px 5% 0 5%;
+        padding: 30px; } }
     @media (max-width: 767px) {
       .main-slider-wrapper .owl-carousel .item {
-        margin: 35px 5% 0 5%; } }
-    @media (max-width: 419px) {
-      .main-slider-wrapper .owl-carousel .item img {
-        max-width: 100%;
-        object-fit: cover;
-        height: 470px; } }
+        margin: 35px 5% 0 5%;
+        padding: 19px; } }
+    .main-slider-wrapper .owl-carousel .item img {
+      border-radius: 36px;
+      -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.21);
+      -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.21);
+      box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.21); }
+      @media (max-width: 419px) {
+        .main-slider-wrapper .owl-carousel .item img {
+          max-width: 100%;
+          object-fit: cover;
+          height: 470px; } }
     .main-slider-wrapper .owl-carousel .item .slider-text {
       position: absolute;
       margin: auto;
@@ -862,11 +877,15 @@ a {
     -webkit-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
     -moz-box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1);
     box-shadow: 0px 10px 20px 0px rgba(0, 0, 0, 0.1); }
-    @media (min-width: 1921px) {
+    @media (min-width: 2160px) {
       .main-slider-wrapper .try-for-free {
-        margin-right: 60%;
+        margin-right: 55%;
         padding: 23px 23px 23px 100px; } }
-    @media (min-width: 1400px) and (max-width: 1920px) {
+    @media (min-width: 1920px) and (max-width: 2159px) {
+      .main-slider-wrapper .try-for-free {
+        margin-right: 45%;
+        padding: 23px 23px 23px 100px; } }
+    @media (min-width: 1400px) and (max-width: 1919px) {
       .main-slider-wrapper .try-for-free {
         padding: 23px 23px 23px 100px;
         margin-right: 45%; } }
@@ -878,7 +897,7 @@ a {
       .main-slider-wrapper .try-for-free {
         padding: 10px 35px 10px 20px;
         margin-right: 40%;
-        bottom: -1rem; } }
+        bottom: -5rem; } }
     @media (min-width: 600px) and (max-width: 799px) {
       .main-slider-wrapper .try-for-free {
         padding: 10px 35px 10px 20px;
@@ -1932,6 +1951,9 @@ a {
       text-align: center; }
   .register-box .contact-title {
     position: relative; }
+    @media (max-width: 374px) {
+      .register-box .contact-title .contact-h1 h1 {
+        font-size: 22px; } }
     .register-box .contact-title .login {
       position: absolute; }
       @media (min-width: 1400px) {
@@ -1952,9 +1974,12 @@ a {
         @media (min-width: 1200px) {
           .register-box .contact-title .login a {
             font-size: 20px; } }
-        @media (max-width: 1199px) {
+        @media (min-width: 375px) and (max-width: 1199px) {
           .register-box .contact-title .login a {
             font-size: 16px; } }
+        @media (max-width: 374px) {
+          .register-box .contact-title .login a {
+            font-size: 14px; } }
 
 /* Register End */
 /* Login Start */
@@ -1998,8 +2023,10 @@ a {
   .forgot-box a:first-child {
     margin-right: 15px; } }
 @media (max-width: 374px) {
-  .forgot-box a:first-child {
-    margin-right: 0px; } }
+  .forgot-box a {
+    padding: 8px 12px !important; }
+    .forgot-box a:first-child {
+      margin-right: 0px; } }
 @media (min-width: 1200px) {
   .forgot-box:nth-child(1) {
     margin-bottom: 35px; }
@@ -3820,7 +3847,8 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   cursor: pointer; }
   @media (max-width: 1199px) {
     .by-date {
-      margin-left: 20px; } }
+      margin-left: 20px;
+      margin-right: 13px; } }
   .by-date .by-date-pop {
     display: none;
     position: absolute;
@@ -4749,6 +4777,15 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   @media (min-width: 1920px) and (max-width: 2559px) {
     .path-popx {
       right: 0; } }
+  @media (min-width: 1680px) and (max-width: 1919px) {
+    .path-popx {
+      right: 15%; } }
+  @media (min-width: 768px) and (max-width: 1679px) {
+    .path-popx {
+      right: 5%; } }
+  @media (max-width: 767px) {
+    .path-popx {
+      right: 5%; } }
   @media (min-width: 768px) {
     .path-popx {
       width: 370px; } }
@@ -5355,6 +5392,16 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   margin-right: 10px; }
   .mtr-subs-chat-head .btn-buy2:last-child {
     margin-right: 0; }
+
+.contact-box3 .my-meeting-toptitle, .contact-box2 .my-meeting-toptitle, .contact-box .my-meeting-toptitle {
+  margin-left: 0 !important; }
+
+@media (min-width: 1680px) and (max-width: 1919px) {
+  .create-btns .btn-cancel, .create-btns .btn-send {
+    padding: 20px 75px; } }
+
+.tpx-cc {
+  position: relative; }
 
 .free-trial {
   display: none; }

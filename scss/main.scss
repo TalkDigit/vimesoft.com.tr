@@ -712,7 +712,13 @@ a {
         }
     }
     .main-logo {
-        @media (min-width:1400px) {
+        @media (min-width:2860px) {
+            margin-right: 10%;
+        }
+        @media (min-width:2160px) and (max-width:2859px) {
+            margin-right: 7%;
+        }
+        @media (min-width:1400px) and (max-width:2159px) {
             margin-right: 92px;
         }
         @media (min-width:1200px) and (max-width:1399px)  {
@@ -844,7 +850,7 @@ a {
         margin-bottom:30px;
     }
     @media (min-width:768px) and (max-width:1199px) {
-        margin-bottom:50px;
+        margin-bottom:130px;
     }
     @media (max-width:767px) {
         margin-bottom:130px;
@@ -935,15 +941,19 @@ a {
         .item {
             @media (min-width:1920px) {
                 margin:45px 4% 0 4%;
+                padding:30px;
             }
             @media (min-width:1200px) and (max-width:1919px) {
                 margin:45px 5% 0 5%;
+                padding:30px;
             }
             @media (min-width:768px) and (max-width:1199px) {
                 margin:35px 5% 0 5%;
+                padding:30px;
             }
             @media (max-width:767px) {
                 margin:35px 5% 0 5%;
+                padding:19px;
             }
             img {
                 @media (max-width:419px) {
@@ -951,6 +961,10 @@ a {
                     object-fit: cover;
                     height: 470px;
                 }
+                border-radius: 36px;
+                -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.21);
+                -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.21);
+                box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.21);
             }
             position: relative;
             .slider-text {
@@ -1013,11 +1027,15 @@ a {
         -webkit-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
         -moz-box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
         box-shadow: 0px 10px 20px 0px rgba(0,0,0,0.10);
-        @media (min-width:1921px) {
-            margin-right: 60%;
+        @media (min-width:2160px) {
+            margin-right: 55%;
             padding:23px 23px 23px 100px;
         }
-        @media (min-width:1400px) and (max-width:1920px) {
+        @media (min-width:1920px) and (max-width:2159px) {
+            margin-right: 45%;
+            padding:23px 23px 23px 100px;
+        }
+        @media (min-width:1400px) and (max-width:1919px) {
             padding:23px 23px 23px 100px;
             margin-right: 45%;
         }
@@ -1028,7 +1046,7 @@ a {
         @media (min-width:800px) and (max-width:1199px) {
             padding:10px 35px 10px 20px;
             margin-right: 40%;
-            bottom:-1rem;
+            bottom:-5rem;
         }
         @media (min-width:600px) and (max-width:799px) {
             padding:10px 35px 10px 20px;
@@ -2333,6 +2351,13 @@ a {
     }
     .contact-title {
         position: relative;
+        .contact-h1 {
+            h1 {
+                @media (max-width:374px){
+                    font-size:22px;
+                }
+            }
+        }
         .login {
             position: absolute;
             @media (min-width:1400px) {
@@ -2351,8 +2376,11 @@ a {
                 @media (min-width:1200px) {
                     font-size:20px;
                 }
-                @media (max-width:1199px) {
+                @media (min-width:375px) and (max-width:1199px) {
                     font-size:16px;
+                }
+                @media (max-width:374px) {
+                    font-size:14px;
                 }
                 font-weight: 500;
                 color:#007BFF;
@@ -2422,6 +2450,7 @@ a {
             &:first-child {
                 margin-right:0px;
             }
+            padding:8px 12px!important;
         }
     }
     @media (min-width:1200px) {
@@ -4569,6 +4598,7 @@ input.calendar {
     cursor: pointer;
     @media (max-width:1199px) {
         margin-left: 20px;
+        margin-right: 13px;
     }
     .by-date-pop {
         display: none;
@@ -5692,6 +5722,15 @@ input.calendar {
     @media (min-width:1920px) and (max-width:2559px) {
         right:0;
     }
+    @media (min-width:1680px) and (max-width:1919px) {
+        right: 15%;
+    }
+    @media (min-width:768px) and (max-width:1679px) {
+        right: 5%;
+    }
+    @media (max-width:767px) {
+        right: 5%;
+    }
     z-index: 1000;
     @media (min-width:768px) {
         width: 370px;
@@ -6504,6 +6543,21 @@ input.calendar {
             margin-right: 0;
         }
     }
+}
+.contact-box3, .contact-box2, .contact-box {
+    .my-meeting-toptitle {
+        margin-left: 0!important;
+    }
+}
+.create-btns {
+    .btn-cancel, .btn-send {
+        @media (min-width:1680px) and (max-width:1919px) {
+            padding:20px 75px;
+        }
+    }
+}
+.tpx-cc {
+    position:relative;
 }
 .free-trial {
     display: none;
