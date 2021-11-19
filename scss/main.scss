@@ -3307,6 +3307,13 @@ a {
                 left: 20px;
             }
         }
+        &:disabled {
+            &::after {
+                display:block !important;
+                opacity:1 !important;
+                background:#fff !important;
+            }
+        }
     }
     .psw-yes, .psw-no {
         font-size:16px;
@@ -4180,6 +4187,16 @@ input.calendar {
                 margin-right: 2%;
                 &:last-child {
                     margin-right: 0;
+                }
+            }
+        }
+        @media (max-width:325px) {
+            .btn-buy2 {
+                &:nth-child(1) {
+                    margin-bottom:8px;
+                }
+                &:nth-child(2) {
+                    margin-bottom: 8px;
                 }
             }
         }
@@ -5304,6 +5321,13 @@ input.calendar {
         font-size:17px;
     }
 }
+.col-xxl-8 {
+    .package-owned-text {
+        @media (min-width:1200px) {
+            width: 50%;
+        }
+    }
+}
 .owned-span {
     @media (min-width:1200px) {
         font-size:20px;
@@ -6008,7 +6032,7 @@ input.calendar {
             font-size:17px;
             font-weight: 500;
             color:#90A0B3;
-            padding-left: 20px;
+            padding-left: 10px;
         }
         .remaining {
             .remaining-zone {
@@ -6449,7 +6473,8 @@ input.calendar {
         }
         .user-panel-box {
             .meeting-btn {
-                width: 141px;
+                width:100%;
+                text-align: center;
                 display: block;
             }
         }
@@ -6567,4 +6592,7 @@ input.calendar {
 }
 .free-trial {
     display: none;
+}
+#calendarx {
+    margin-top:30px;
 }

@@ -10,6 +10,7 @@
     <link rel="stylesheet" type="text/css" href="css/owl.carousel.css">
     <link rel="stylesheet" type="text/css" href="css/owl.theme.default.css">
 	<!-- Css Style -->
+    <link rel="stylesheet" type="text/css" href="css/calendar-style.css">
 	<link rel="stylesheet" type="text/css" href="css/main.css">
     	
 </head>
@@ -171,7 +172,7 @@
         </header>
 
         <main class="main">
-            <div class="meeting-plans-wrapper tabs pb-5">
+            <div class="meeting-plans-wrapper meeting-plans-tabs tabs pb-5">
                 <div class="user-panel-title">
                     <h1>Selam, <span>Onur.</span></h1>
                     <p>İlk toplantını oluşturmak için her şey hazır! </p>
@@ -882,6 +883,13 @@
                         </div>
                     </div>
                 </div>
+                <div id="calendarx" class="tabf">
+                    <div class="contact-box">
+                        <div class="container_d">
+                            <div id='calendar'></div>
+                        </div>
+                    </div>
+                </div>
             </div>
             <div class="free-trial">
                 <div class="free-trial-text">
@@ -1140,6 +1148,8 @@
     <script src='js/jquery.min.js'></script>
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.selectric/1.11.1/jquery.selectric.min.js'></script>
+    <script src='https://unpkg.com/fullcalendar@5.3.2/main.min.js'></script>
+    <script src="js/calendar.js"></script>
     <script src="js/script.js"></script>
     <script>
         $('.my_btn').on('click', function(e) {

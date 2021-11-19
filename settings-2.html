@@ -826,6 +826,15 @@
             $('.meeting-record-delete').fadeToggle(10);
         });
 
+
+        $('.s-detail').on('click', function(e) {
+            e.preventDefault();
+            $('.detail-popup').toggleClass('is-visible');
+        });
+        $('.calendar-popup').on('click', function(e) {
+            e.preventDefault();
+            $('.detail-popup').removeClass('is-visible');
+        });
     </script>
 
 </body>

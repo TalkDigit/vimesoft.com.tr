@@ -282,9 +282,17 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <div class="contact-check-box d-flex mt-md-5 mt-4">
+                                    <div class="contact-check-box d-flex mt-md-5 mt-4 p-relative">
                                         <input type="checkbox" class="checkbox" id="condition" name="condition" value="condition"/>
-                                        <label for="condition">Katılım Koşulları'nı Onaylıyorum.</label>
+                                        <label for="condition" class="tpx-cc">
+                                            Katılım Koşulları'nı Onaylıyorum.
+                                        </label>
+                                        <div class="tooltipx">
+                                            <div class="tooltipx-text">
+                                                Sadece Ücretli Aboneler Tarafından Kullanılabilir. Paketinizi Yükseltmek için <a href="#">Hemen Tıklayın.</a>
+                                                <span class="tx-span"></span>
+                                            </div>
+                                        </div>
                                     </div>
                                     <div class="path-btns">
                                         <a href="#" class="btn-cancel me-md-4 me-3">İptal</a>
@@ -440,6 +448,11 @@
             });
             $('.chosen-img').click(function(){
                 $(this).closest('.chosen-sell-icon').find('.path-popx').toggleClass('active');
+            });
+        });
+        $(function () {
+            $('.tpx-cc').on('click',function () {
+                $('.tooltipx').toggleClass('active');
             });
         });
     </script>

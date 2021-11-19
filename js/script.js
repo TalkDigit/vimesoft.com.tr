@@ -223,6 +223,34 @@ $(document).ready(function() {
 
 });
 
+// My Meeting Tab Content 
+$(document).ready(function() {
+    
+    //alert('here');
+	
+  $('.my-meeting-head-left a').click(function(){
+  
+     $('.tabf').hide();
+     $('.my-meeting-head-left a.active').removeClass('active');
+     $(this).addClass('active');
+	 $('.gecmis.active')
+	 if ($('.gecmis').hasClass("active")) {
+		$(".my-head-right-item1").addClass("active");
+	 }
+	 else if (!$('.gecmis').hasClass("active")) 
+	{
+		$(".my-head-right-item1").removeClass("active");
+	}
+     var panel = $(this).attr('href');
+     $(panel).fadeIn(200);
+     
+     return false;  // prevents link action
+    
+  });  // end click 
+
+    
+}); // end ready
+
 
 
 // Password Guard CheckBox 
@@ -264,6 +292,13 @@ $(document).ready(function () {
     });
 });
 
+$(function () {
+    $('.my-head-right-item1').on('click',function () {
+        $(this).closest(".meeting-plans-tabs").find(".tabf").hide();
+		
+		$("#calendarx").fadeIn(200);
+    });
+});
 
 // Again Meeting Tooltip 
 $(function () {
@@ -357,33 +392,7 @@ $('.calendar-popup').on('click', function(e) {
 
 
 
-// My Meeting Tab Content 
-$(document).ready(function() {
-    
-    //alert('here');
-	
-  $('.my-meeting-head-left a').click(function(){
-  
-     $('.tabf').hide();
-     $('.my-meeting-head-left a.active').removeClass('active');
-     $(this).addClass('active');
-	 $('.gecmis.active')
-	 if ($('.gecmis').hasClass("active")) {
-		$(".my-head-right-item1").addClass("active");
-	 }
-	 else if (!$('.gecmis').hasClass("active")) 
-	{
-		$(".my-head-right-item1").removeClass("active");
-	}
-     var panel = $(this).attr('href');
-     $(panel).fadeIn(200);
-     
-     return false;  // prevents link action
-    
-  });  // end click 
 
-    
-}); // end ready
 
 
 // Password hide show

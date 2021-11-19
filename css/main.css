@@ -2714,6 +2714,10 @@ a {
       background: #007BFF; }
       .label-control input[type="checkbox"].switch_1:checked::after {
         left: 20px; }
+    .label-control input[type="checkbox"].switch_1:disabled::after {
+      display: block !important;
+      opacity: 1 !important;
+      background: #fff !important; }
   .label-control .psw-yes, .label-control .psw-no {
     font-size: 16px;
     font-weight: 500;
@@ -3491,6 +3495,11 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     margin-right: 2%; }
     .my-meeting-toptitle .my-meeting-head-left .btn-buy2:last-child {
       margin-right: 0; } }
+@media (max-width: 325px) {
+  .my-meeting-toptitle .my-meeting-head-left .btn-buy2:nth-child(1) {
+    margin-bottom: 8px; }
+  .my-meeting-toptitle .my-meeting-head-left .btn-buy2:nth-child(2) {
+    margin-bottom: 8px; } }
 .my-meeting-toptitle .my-meeting-head-right {
   align-items: center;
   justify-content: space-around; }
@@ -4413,6 +4422,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     .package-owned-text {
       font-size: 17px; } }
 
+@media (min-width: 1200px) {
+  .col-xxl-8 .package-owned-text {
+    width: 50%; } }
+
 .owned-span {
   font-weight: 600; }
   @media (min-width: 1200px) {
@@ -5016,7 +5029,7 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
   font-size: 17px;
   font-weight: 500;
   color: #90A0B3;
-  padding-left: 20px; }
+  padding-left: 10px; }
 .acc-packets2 .package-owned .remaining .remaining-zone {
   display: inline-block;
   font-size: 20px;
@@ -5323,7 +5336,8 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
     .main.unp-meeting .meeting-adress a {
       font-size: 15px; }
   .main.unp-meeting .user-panel-box .meeting-btn {
-    width: 141px;
+    width: 100%;
+    text-align: center;
     display: block; } }
 
 .chosen-text {
@@ -5410,5 +5424,8 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 
 .free-trial {
   display: none; }
+
+#calendarx {
+  margin-top: 30px; }
 
 /*# sourceMappingURL=main.css.map */
