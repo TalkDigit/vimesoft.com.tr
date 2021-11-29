@@ -121,15 +121,9 @@
                                     </div>
                                     <div class="contact-check-box d-flex p-relative">
                                         <input type="checkbox" class="checkbox" id="condition" name="condition" value="condition"/>
-                                        <label for="condition" class="tpx-cc">
+                                        <label for="condition" class="tpx-cc kvkk-btn">
                                             Katılım Koşulları'nı Onaylıyorum.
                                         </label>
-                                        <div class="tooltipx">
-                                            <div class="tooltipx-text">
-                                                Sadece Ücretli Aboneler Tarafından Kullanılabilir. Paketinizi Yükseltmek için <a href="#">Hemen Tıklayın.</a>
-                                                <span class="tx-span"></span>
-                                            </div>
-                                        </div>
                                     </div>
                                     <div class="contact-check-box d-flex">
                                         <input type="checkbox" class="checkbox" id="informed" name="informed" value="informed"/>
@@ -149,6 +143,21 @@
             </div>
         </div>
     </main>
+
+
+    <!-- KVKK Popup -->
+    <div class="acc-packets2-popup kvkk-popup">
+        <div class="calendar-popup-content packets2-popup">
+            <div class="path-popup-title mb-4">KVKK Lorem</div>
+            <div class="kvkk-info">
+                <p>
+                    Lorem, ipsum dolor sit amet consectetur adipisicing elit. Quia voluptatem, at laborum molestias veniam illo similique optio quo provident nam modi magni vel aliquid, quam ducimus alias nobis. Aliquid cupiditate voluptate quisquam odio quia numquam sed corrupti fuga facere error aperiam aspernatur, nesciunt laboriosam nihil ab repellat beatae, doloribus vitae.
+                </p>
+            </div>         
+        </div>
+        <div class="calendar-popup"></div>
+    </div>
+
 
     <footer class="footer">
         <div class="main-footer">
@@ -250,10 +259,13 @@
     <script src="js/jquery.min.js"></script>
     <script src="js/script.js"></script>
     <script>
-        $(function () {
-            $('.tpx-cc').on('click',function () {
-                $('.tooltipx').toggleClass('active');
-            });
+        // Kvkk Popup
+        $('.kvkk-btn').on('click', function(e) {
+            $('.kvkk-popup').toggleClass('active');
+        });
+        // Kvkk Popup close
+        $('.calendar-popup').on('click', function(e) {
+            $('.kvkk-popup').removeClass('active');
         });
     </script>
 </body>
