@@ -341,9 +341,6 @@ phoneInput.addEventListener('keydown', function(event) {
 }); 
 
 
-
-
-
 $('.s-detail, .share-calendar-link').on('click', function(e) {
 	e.preventDefault();
 	$('.detail-popup').toggleClass('is-visible');
@@ -363,20 +360,6 @@ $('.calendar-popup').on('click', function(e) {
 });
 
 
-//Scroll to fixed menu
-var $navBar = $('.step-fix');
-var navmar = $('.account-content');
-var navPos = $navBar.offset().top;
-$(window).scroll(function() {
-    var scrollPos = $(this).scrollTop();
-    if (scrollPos >= navPos) {
-        $navBar.addClass('fixed-header');
-		navmar.addClass('mt-top-fix');
-    } else {
-      $navBar.removeClass('fixed-header');
-	  navmar.removeClass('mt-top-fix');
-    }
-});
 
 
 

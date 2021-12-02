@@ -5801,6 +5801,10 @@ input.calendar {
     }
     @media (max-width:767px) {
         width: 290px;
+        .path-popx-scroll {
+            max-height: 450px;
+            overflow-y: scroll;
+        }
     }
     padding:40px 30px;
     -moz-border-radius:36px;
@@ -6775,4 +6779,12 @@ input.calendar {
     @media (max-width:1199px) {
         padding-right: 20px;
     }
+}
+.path-popx-scroll {
+    &::-webkit-scrollbar {
+    display: none;
+  }
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+
 }

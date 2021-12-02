@@ -105,32 +105,34 @@
                                 </div>
                                 <div class="path-popx">
                                     <div class="p-sp"><span></span></div>
-                                    <div class="path-popup-title">Seçilen Ürünler</div>
-                                    <div class="path-popup-flex d-flex align-items-center justify-content-between">
-                                        <div class="path-popup-item"><div class="pp-tt">Business</div><div class="delete p-0" >Düzenle</div></div>
-                                        <div class="path-popup-item"><div><b>₺69</b> Aylık</div><div class="delete p-0">Sil</div></div>
-                                    </div>
-                                    <div class="path-popup-flex d-flex align-items-center justify-content-between">
-                                        <div class="path-popup-item"><div class="pp-tt">Konferans Katılımcısı<span>(25)</span></div><div class="delete p-0">Düzenle</div></div>
-                                        <div class="path-popup-item"><div><b>₺29</b> Aylık</div><div class="delete p-0">Sil</div></div>
-                                    </div>
-                                    <div class="path-popup-flex x d-flex align-items-center justify-content-between">
-                                        <div class="path-popup-item"><div class="pp-tt">Ek Kayıt Alanı<span>(50GB)</span></div><div class="delete p-0">Düzenle</div></div>
-                                        <div class="path-popup-item"><div><b>₺400</b> Aylık</div><div class="delete p-0">Sil</div></div>
-                                    </div>
-                                    <div class="delete pb-4 pt-4 text-end">Tümünü Sil</div>
-                                    <div class="contact-input-box">
-                                        <input type="text" class="form-input" id="lname" name="lname" autocomplete="off" required="required"/>
-                                        <label for="lname">İndirim Kodu</label>
-                                    </div>
-                                    <hr>
-                                    <div class="d-flex align-items-center justify-content-between mb-4">
-                                        <div class="pp-tt">Genel Toplam</div>
-                                        <div class="px-t"><b>₺498</b> Aylık</div>
-                                    </div>
-                                    <div class="path-popup-btn">
-                                        <a href="#" class="btn-buy2 d-block btn-bg-blue pt-3 pb-3 mb-3 ">Ödeme İşlemine Geç</a>
-                                        <a href="#" class="btn-buy2 d-block pt-3 pb-3 path-share">Seçilen Ürünleri Paylaş</a>
+                                    <div class="path-popx-scroll">
+                                        <div class="path-popup-title">Seçilen Ürünler</div>
+                                        <div class="path-popup-flex d-flex align-items-center justify-content-between">
+                                            <div class="path-popup-item"><div class="pp-tt">Business</div><div class="delete p-0" >Düzenle</div></div>
+                                            <div class="path-popup-item"><div><b>₺69</b> Aylık</div><div class="delete p-0">Sil</div></div>
+                                        </div>
+                                        <div class="path-popup-flex d-flex align-items-center justify-content-between">
+                                            <div class="path-popup-item"><div class="pp-tt">Konferans Katılımcısı<span>(25)</span></div><div class="delete p-0">Düzenle</div></div>
+                                            <div class="path-popup-item"><div><b>₺29</b> Aylık</div><div class="delete p-0">Sil</div></div>
+                                        </div>
+                                        <div class="path-popup-flex x d-flex align-items-center justify-content-between">
+                                            <div class="path-popup-item"><div class="pp-tt">Ek Kayıt Alanı<span>(50GB)</span></div><div class="delete p-0">Düzenle</div></div>
+                                            <div class="path-popup-item"><div><b>₺400</b> Aylık</div><div class="delete p-0">Sil</div></div>
+                                        </div>
+                                        <div class=" pb-4 pt-4 text-end"><span class="delete">Tümünü Sil</span></div>
+                                        <div class="contact-input-box">
+                                            <input type="text" class="form-input" id="lname" name="lname" autocomplete="off" required="required"/>
+                                            <label for="lname">İndirim Kodu</label>
+                                        </div>
+                                        <hr>
+                                        <div class="d-flex align-items-center justify-content-between mb-4">
+                                            <div class="pp-tt">Genel Toplam</div>
+                                            <div class="px-t"><b>₺498</b> Aylık</div>
+                                        </div>
+                                        <div class="path-popup-btn">
+                                            <a href="#" class="btn-buy2 d-block btn-bg-blue pt-3 pb-3 mb-3 ">Ödeme İşlemine Geç</a>
+                                            <a href="#" class="btn-buy2 d-block pt-3 pb-3 path-share">Seçilen Ürünleri Paylaş</a>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -496,6 +498,21 @@
             $('.chosen-img').click(function(){
                 $(this).closest('.chosen-sell-icon').find('.path-popx').toggleClass('active');
             });
+        });
+
+        //Scroll to fixed menu
+        var $navBar = $('.step-fix');
+        var navmar = $('.account-content');
+        var navPos = $navBar.offset().top;
+        $(window).scroll(function() {
+            var scrollPos = $(this).scrollTop();
+            if (scrollPos >= navPos) {
+                $navBar.addClass('fixed-header');
+                navmar.addClass('mt-top-fix');
+            } else {
+            $navBar.removeClass('fixed-header');
+            navmar.removeClass('mt-top-fix');
+            }
         });
     </script>
 

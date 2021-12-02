@@ -4848,7 +4848,10 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
       width: 370px; } }
   @media (max-width: 767px) {
     .path-popx {
-      width: 290px; } }
+      width: 290px; }
+      .path-popx .path-popx-scroll {
+        max-height: 450px;
+        overflow-y: scroll; } }
   .path-popx.active {
     display: block; }
   .path-popx .p-sp {
@@ -5573,5 +5576,11 @@ input.calendar:focus, input.calendar:checked, input.calendar:active, input.calen
 @media (max-width: 1199px) {
   #ek_kayit, #k_katilimcisi {
     padding-right: 20px; } }
+
+.path-popx-scroll {
+  -ms-overflow-style: none;
+  scrollbar-width: none; }
+  .path-popx-scroll::-webkit-scrollbar {
+    display: none; }
 
 /*# sourceMappingURL=main.css.map */
