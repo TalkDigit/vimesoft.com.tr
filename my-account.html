@@ -282,12 +282,12 @@
                                         </div>
                                     </div>
                                     <div class="acc-language">
-                                        <label class="spe-select">
-                                            <select class="selectric-select"  id="nicer-select-id" name="mySelect" reqiured>
+                                        <label class="spe-select selectric-languagex">
+                                            <select class="selectric-select select-language"  id="nicer-select-id" value="lorem1" name="mySelect" reqiured>
                                                 <option value=""></option>
                                                 <option value="lorem1">Türkçe</option>
                                                 <option value="lorem4">İngilizce</option>
-                                                <option value="lorem3">Almanca</option>
+                                                <option value="lorem3" selected>Almanca</option>
                                             </select>
                                             <span class="check-select-name">Dil</span>
                                         </label>
@@ -438,6 +438,22 @@
     <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
     <script src='https://cdn.jsdelivr.net/jquery.selectric/1.11.1/jquery.selectric.min.js'></script>
     <script src="js/script.js"></script>
+    <script>
+        // Cache the target element
+        let $selectValue = $('.selectric-languagex');
+
+        // Get initial value
+        // $selectValue.text($('.select-language').val());
+
+        // Initialize Selectric and bind to 'change' event
+       
+            if ($(".select-language").val() == "") {
+                $selectValue.removeClass("activated");
+            } else if ($(".select-language").val() !== "") {
+                $selectValue.addClass("activated");
+            }
+       
+    </script>
 
 </body>
 </html>

@@ -128,24 +128,6 @@ $(document).ready(function(){
 	})
 })
 
-
-// Join Conference Sticky Menu dropdown
-/* $('.sticky-opener').click(function(){
-	let thiss = $(this);
-	if (thiss.next(".sticky-opened").hasClass("active")) {
-		thiss.parent().parent().find(".sticky-first-li").removeClass("active");
-		thiss.parent().parent().find(".sticky-opened").slideUp(300);
-		thiss.parent().parent().find(".sticky-opener").removeClass("active");
-		console.log("ss")
-	} else {
-		thiss.parent().addClass("active");
-		thiss.next(".sticky-opened").slideDown(300);
-		thiss.addClass("active");
-		console.log("sss")
-	}
-}); */
-
-
 $('.sticky-opener').click(function(e) {
 	e.preventDefault();
 
@@ -164,21 +146,11 @@ $('.sticky-opener').click(function(e) {
 	  $this.parent().parent().find('.sticky-opened').slideUp(350);
 	  $this.next().toggleClass('active');
 	  $this.next().slideToggle(350);
-
   }
-
-  
 
 });
 
 
-
-// Join Conference Sticky Menu dropdown (Mobile)
-/* $(document).ready(function() {
-	$('.mobile-menu-burger').click(function() {
-	  $('.sticky-nav').slideToggle(400);
-	});
-}); */
 $(document).ready(function() {
 	$('.mobile-menu-burger').click(function() {
 	  $('.sticky-menu').toggleClass("show");
@@ -390,6 +362,21 @@ $('.calendar-popup').on('click', function(e) {
 	$('.path-pp2').removeClass('active');
 });
 
+
+//Scroll to fixed menu
+var $navBar = $('.step-fix');
+var navmar = $('.account-content');
+var navPos = $navBar.offset().top;
+$(window).scroll(function() {
+    var scrollPos = $(this).scrollTop();
+    if (scrollPos >= navPos) {
+        $navBar.addClass('fixed-header');
+		navmar.addClass('mt-top-fix');
+    } else {
+      $navBar.removeClass('fixed-header');
+	  navmar.removeClass('mt-top-fix');
+    }
+});
 
 
 
