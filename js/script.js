@@ -362,9 +362,6 @@ $('.calendar-popup').on('click', function(e) {
 
 
 
-
-
-
 // Password hide show
 $(".password-icon").click(function() {
     $(this).toggleClass("icon-change");
@@ -375,8 +372,6 @@ $(".password-icon").click(function() {
         input.attr("type", "password");
     }
 });
-
-
 
 // Personal Popup
 var modal = document.getElementById('myModal');

@@ -2913,8 +2913,8 @@ a {
         .free-trial {
             background-color:#904BFF;
             @media (min-width:1200px) {
-                padding:45px;
-                bottom:123px;
+                padding:35px 25px;
+                bottom:50px;
             }
             @media (max-width:1199px) {
                 padding:25px;
@@ -2923,11 +2923,22 @@ a {
             border-top-left-radius: 32px;
             border-bottom-left-radius: 32px;
             position: fixed;
-            right: 0;
-            z-index: 15;
+            max-width: 300px;
+            @media (min-width:968px) {
+                right: -300px;
+            }
+            @media (max-width:967px) {
+                right:-200px;
+            }
+            transition:all .2s ease-in-out;
+            &.active {
+                transition:all .2s ease-in-out;
+                right:0;
+            }
+            z-index: 9999999;
             .btn-cancel.btn-free-trial {
                 @media (min-width:1200px) {
-                    padding:20px 70px;
+                    padding:15px 60px;
                 }
                 @media (max-width:1199px) {
                     padding:10px 45px;
@@ -2940,8 +2951,8 @@ a {
             }
             .free-trial-text {
                 @media (min-width:968px) {
-                    font-size:18px;
-                    width: 250px;
+                    font-size:16px;
+                    max-width: 250px;
                     margin-bottom: 18px;
                 }
                 @media (max-width:967px) {
@@ -2951,6 +2962,28 @@ a {
                 }
                 font-weight: 500;
                 color:#fff;
+            }
+            .free-trial-arrow {
+                position:absolute;
+                width: 45px;
+                height: 45px;
+                border-radius: 100%;
+                line-height: 43px;
+                padding-left: 5px;
+                background-color: #904BFF;
+                left: -20px;
+                top:50%;
+                transform:translateY(-50%);
+                opacity: 1;
+                svg {
+                    width: 15px;
+                    height: 20px;
+                }
+            }
+            &.active {
+                .free-trial-arrow {
+                    opacity: 0;
+                }
             }
         }
 
@@ -3700,7 +3733,7 @@ a {
   position: absolute;
   font-size: 17px;
   left: 20px;
-  z-index: 10000 ;
+  z-index: 5000;
   padding: 1px 10px;
   background: #fff;
   color:#93A0B1;
@@ -6653,9 +6686,6 @@ input.calendar {
 }
 .p-relative {
     position: relative;
-}
-.free-trial {
-    display: none;
 }
 #calendarx {
     margin-top:30px;

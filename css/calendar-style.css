@@ -931,10 +931,20 @@ a.fc-daygrid-event {
   border-top-left-radius: 14px;
   border-bottom-left-radius: 14px;
   justify-content: flex-end;
-  padding:5px 0px;
-  padding-right: 5px;
+  padding:5px 8px;
+  overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    display: block;
+    max-width: 150px;
 }
-
+a.fc-daygrid-event ul li {
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  max-width: 150px;
+  padding:2px 0;
+}
 .fc-v-event { /* allowed to be top-level */
   display: block;
   border: 1px solid #3788d8;
@@ -943,7 +953,9 @@ a.fc-daygrid-event {
   background-color: var(--fc-event-bg-color, #3788d8)
 
 }
-
+.fc-event-main ul li {
+  padding:2px 0;
+}
 .fc-v-event .fc-event-main {
     color: #fff;
     color: var(--fc-event-text-color, #fff);
