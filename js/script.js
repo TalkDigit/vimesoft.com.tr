@@ -22,9 +22,9 @@ $(".account-edit-complete").click(function(){
 
 
 // SSS content toggle
-$(".sss-content-box-title").click(function(){
+/* $(".sss-content-box-title").click(function(){
 	$(this).toggleClass("active");
-})
+}) */
 
 $('.sss-content-box-title').click(function(e) {
 	e.preventDefault();
@@ -33,13 +33,18 @@ $('.sss-content-box-title').click(function(e) {
 
   if ($this.next().hasClass('show')) {
 	  $this.next().removeClass('show');
+	  $this.next().removeClass('active');
 	  $this.next().slideUp(350);
+      $this.removeClass("active");
   } else {
 	  $this.parent().parent().find('.sss-content-box-text').removeClass('show');
 	  $this.parent().parent().find('.sss-content-box-text').slideUp(350);
 	  $this.next().toggleClass('show');
 	  $this.next().slideToggle(350);
+      $this.parent().parent().find('.sss-content-box-title').removeClass('active');
+      $this.addClass("active");
   }
+ 
 });
 
 
@@ -306,6 +311,27 @@ $(function () {
 });
 
 
+$('.path-share').on('click', function(e) {
+	e.preventDefault();
+	$('.path-pp2').toggleClass('active');
+});
+$('.calendar-popup').on('click', function(e) {
+	e.preventDefault();
+	$('.path-pp2').removeClass('active');
+});
+
+
+
+$('.s-detail, .share-calendar-link').on('click', function(e) {
+	e.preventDefault();
+	$('.detail-popup').toggleClass('is-visible');
+});
+$('.calendar-popup').on('click', function(e) {
+	e.preventDefault();
+	$('.detail-popup').removeClass('is-visible');
+});
+
+
 // Gsm +90 mask
 var phoneInput = document.querySelector('#gsm') 
  
@@ -341,23 +367,6 @@ phoneInput.addEventListener('keydown', function(event) {
 }); 
 
 
-$('.s-detail, .share-calendar-link').on('click', function(e) {
-	e.preventDefault();
-	$('.detail-popup').toggleClass('is-visible');
-});
-$('.calendar-popup').on('click', function(e) {
-	e.preventDefault();
-	$('.detail-popup').removeClass('is-visible');
-});
-
-$('.path-share').on('click', function(e) {
-	e.preventDefault();
-	$('.path-pp2').toggleClass('active');
-});
-$('.calendar-popup').on('click', function(e) {
-	e.preventDefault();
-	$('.path-pp2').removeClass('active');
-});
 
 
 

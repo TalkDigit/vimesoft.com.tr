@@ -89,9 +89,9 @@
                     <div class="account-packets-hide">
                         <div id="ek_a2">
                             <div class="extra-room pe-xl-0 ps-xl-0 pe-3 ps-3 pt-xl-0 pt-3">
-                                <div class="d-flex align-items-center border-bottom pb-4">
+                                <div class="d-flex ex-sm align-items-center border-bottom pb-4">
                                     <div class="owned-span create pe-xl-4 pe-0">Hesap Oluşturun</div> 
-                                    <div><span class="extra-note ps-xl-0 ps-2">Hesabınız varsa</span> <a href="#" class="delete p-0">Giriş Yapın</a></div> 
+                                    <div class="ex-sm-div"><span class="extra-note">Hesabınız varsa</span> <a href="#" class="delete p-0">Giriş Yapın</a></div> 
                                 </div>
                                 <div class="pt-4 pb-xl-5 pb-4">
                                     <div class="extra-buy-title owned-span mb-2">
@@ -320,6 +320,9 @@
         // Kvkk Popup close
         $('.calendar-popup').on('click', function(e) {
             $('.kvkk-popup2').removeClass('active');
+        });
+        $('.chosen-img').click(function(){
+                $(this).closest('.chosen-sell-icon').find('.path-popx').toggleClass('active');
         });
         // Free Trial
         $(".free-trial").click(function(){
